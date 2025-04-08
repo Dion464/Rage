@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0A3B2E;
+  --foreground: #ffffff;
+  --accent: #1EEB7A;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Chamelton10-bd', sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0A3B2E;
+    --foreground: #ffffff;
+  }
+}
+
+@font-face {
+  font-family: 'Chamelton10-bd';
+  src: url('/fonts/Chamelton10-Bd.otf') format('truetype');
+} 
+
+@font-face {
+  font-family: 'Arial-Bold';
+  src: url('/fonts/Arial-Bold.ttf') format('truetype');
+} 
+
+@font-face {
+ font-family: Arial-Black;
+ src: url('/fonts/Arial-Black.ttf') format('truetype');
+} 
+
+@font-face {
+  font-family: Charter-Bold;
+  src: url('/fonts/Charter-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Charter-Regular;
+  src: url('/fonts/Charter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Arial-Regular ;
+  src: url('/fonts/Arial.ttf') format('truetype');
+}
+
