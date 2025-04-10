@@ -40,7 +40,14 @@ const Rebellion = () => {
 
         {/* Center Image */}
         <div className="flex-1 flex justify-center items-center translate-x-[-60px]">
-          <img src="/Rebelion.svg" alt="Rebellion Card" className="w-[700px]" />
+          <Image 
+            src="/Rebelion.svg" 
+            alt="Rebellion Card" 
+            width={700}
+            height={700}
+            className="w-[700px]"
+            priority
+          />
         </div>
 
         {/* Right Content */}

@@ -36,7 +36,7 @@ export default function Hero() {
               merchants rank them as their second<br/>
               highest operating cost.
             </p>
-            <p className="text-white text-2xl" style={{fontFamily: 'Charter-Regular'}}>It's time to stop the squeeze.</p>
+            <p className="text-white text-2xl" style={{fontFamily: 'Charter-Regular'}}>It&apos;s time to stop the squeeze.</p>
           </div>
         </div>
 

@@ -34,10 +34,10 @@ export default function Testimonials() {
             <div>
               <h3 className="text-[#1EEB7A] mb-2 uppercase">Langes of Bronxville, Bronxville, NY:</h3>
               <p className="text-white mb-2 uppercase text-sm tracking-wide">
-                "Five months ago I reluctantly switched Langes Deli to the Priority
+                &ldquo;Five months ago I reluctantly switched Langes Deli to the Priority
                 Payments Cash Discount Program. I anticipated resistance from my
                 customers. There truly has been none. The monthly savings are as
-                advertised and it goes right to the bottom line."
+                advertised and it goes right to the bottom line.&rdquo;
               </p>
               <p className="text-white uppercase text-sm">Thomas Bass, Owner</p>
             </div>
@@ -45,9 +45,9 @@ export default function Testimonials() {
             <div>
               <h3 className="text-[#1EEB7A] mb-2 uppercase">Tryforos and Pernice Florist, Bronxville, NY:</h3>
               <p className="text-white mb-2 uppercase text-sm tracking-wide">
-                "The Priority Payments Cash Discount Program has delivered all that
+                &ldquo;The Priority Payments Cash Discount Program has delivered all that
                 was promised. There has been virtually no pushback on the fees and
-                the savings are real."
+                the savings are real.&rdquo;
               </p>
               <p className="text-white uppercase text-sm">Gary Tryforos, Owner</p>
             </div>
@@ -55,11 +55,11 @@ export default function Testimonials() {
             <div>
               <h3 className="text-[#1EEB7A] mb-2 uppercase">Park Place Meats, Inc., Bronxville, NY:</h3>
               <p className="text-white mb-2 uppercase text-sm tracking-wide">
-                "I am extremely satisfied with our conversion to the Cash Discount
-                Program. The transition was simple and Priority's customer service
+                &ldquo;I am extremely satisfied with our conversion to the Cash Discount
+                Program. The transition was simple and Priority&apos;s customer service
                 is exceptional. My clients understand the need for businesses to
                 reduce costs in this unprecedented time, and my credit card fees
-                have been reduced by almost 90%."
+                have been reduced by almost 90%.&rdquo;
               </p>
               <p className="text-white uppercase text-sm">Paul Chietro, owner</p>
             </div>
