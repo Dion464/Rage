@@ -8,9 +8,9 @@ export default function Hero() {
     <div className="flex flex-col min-h-screen bg-[#0A3B2E]">
       {/* Navigation */}
       <nav className={`flex justify-between px-16 py-4  font-chameleon`}>
-        <h2 className="text-white text-xl tracking-wider">THE REBELLION</h2>
-        <h2 className="text-white text-xl tracking-wider">TESTIMONIALS</h2>
-        <h2 className="text-white text-xl tracking-wider">JOIN US</h2>
+        <h2 className="text-white text-2xl tracking-wider">THE REBELLION</h2>
+        <h2 className="text-white text-2xl tracking-wider">TESTIMONIALS</h2>
+        <h2 className="text-white text-2xl tracking-wider">JOIN US</h2>
       </nav>
 
       {/* Main Content */}
@@ -18,7 +18,7 @@ export default function Hero() {
         {/* Left Content */}
         <div className="w-[45%]">
           {/* Title */}
-          <div className={`flex flex-col font-chameleon ml-3 mt-20`}>
+          <div className={`flex flex-col font-chameleon ml-{-5} mt-25`} style={{fontFamily: 'Chamelton10-bd'}}>
             <div className="flex items-baseline gap-4">
               <span className="text-white text-[100px] leading-none">RAGE</span>
               <span className="text-[#1EEB7A] text-[100px] leading-none">AGAINST</span>
@@ -41,12 +41,12 @@ export default function Hero() {
         </div>
 
         {/* Center Logo */}
-        <div className="w-[30%] flex justify-start items-center">
+        <div className="w-[30%] flex justify-center items-left">
           <div className="relative -ml-20">
             <Image
               src="/HEROICON.svg"
               alt="Merchant Rebellion Logo"
-              width={550}
+              width={600}
               height={700}
               className="mb-4"
               priority
@@ -70,42 +70,22 @@ export default function Hero() {
       </div>
 
       {/* Footer */}
-      <div className="relative px-16 pb-6 mt-auto">
-        <div className="absolute right-16 bottom-16 flex gap-3">
-          <a href="#" className="text-[#1EEB7A]">
-            <Image
-              src="/socialcon.png"
-              alt="Instagram"
-              width={32}
-              height={32}
-            />
-          </a>
-          <a href="#" className="text-[#1EEB7A]">
-            <Image
-              src="/socialcon.png"
-              alt="Facebook"
-              width={32}
-              height={32}
-            />
-          </a>
-          <a href="#" className="text-[#1EEB7A]">
-            <Image
-              src="/socialcon.png"
-              alt="X"
-              width={32}
-              height={32}
-            />
-          </a>
-          <a href="#" className="text-[#1EEB7A]">
-            <Image
-              src="/socialcon.png"
-              alt="LinkedIn"
-              width={32}
-              height={32}
-            />
-          </a>
+      <div className="mt-auto px-16 pb-4">
+        <div className="flex justify-end gap-6 mb-4">
+          <div >
+            <Image src="/instagramicon.svg" alt="Instagram" width={35} height={35} />
+          </div>
+          <div >
+            <Image src="/facbook.svg" alt="Facebook" width={35} height={35} />
+          </div>
+          <div >
+            <Image src="/socialcon.png" alt="X" width={35} height={35} />
+          </div>
+          <div >
+            <Image src="/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+          </div>
         </div>
-        <p className="absolute right-16 bottom-6 text-[#1EEB7A] text-xm">
+        <p className="text-right text-[#1EEB7A] text-sm">
           Supported by Transaction Acceptance Corp. Copyright 2025
         </p>
       </div>
