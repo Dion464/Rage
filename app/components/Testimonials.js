@@ -27,7 +27,7 @@ export default function Testimonials() {
           </div>
 
           {/* Testimonials */}
-          <div className="space-y-6 max-w-[70%] relative">
+          <div className="space-y-6 max-w-[70%] relative" style={{ fontFamily: 'Arial-Regular' }}>
             {/* Vertical Line */}
             <div className="absolute left-[-20px] top-0 bottom-0 w-[2px] bg-gray-700" />
             
@@ -67,7 +67,7 @@ export default function Testimonials() {
         </div>
 
         {/* Right Content */}
-        <div className="w-[45%]  mt-45 flex flex-col items-end relative">
+        <div className="w-[45%]  mt-45 flex flex-col items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
           <div className="text-right mb-4">
             <p className="text-[#1EEB7A] text-lg mb-2">
               Call now for U.S.-based<br/>
@@ -110,7 +110,7 @@ export default function Testimonials() {
             <Image src="/linkedin.svg" alt="LinkedIn" width={35} height={35} />
           </div>
         </div>
-        <p className="text-right text-[#1EEB7A] text-sm">
+        <p className="text-right text-[#1EEB7A] text-sm" style={{ fontFamily: 'Arial-Regular' }}>
           Supported by Transaction Acceptance Corp. Copyright 2025
         </p>
       </div>

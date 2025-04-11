@@ -55,7 +55,7 @@ export default function Hero() {
         </div>
 
         {/* Right Content */}
-        <div className="w-[25%] flex flex-col items-end pt-50">
+        <div className="w-[25%] mt-35  flex flex-col items-end pt-50">
           <p className={`text-[#1EEB7A] text-2xl text-right mb-4 font-chameleon`} style={{fontFamily: 'Arial-Regular'}}>
             Call now for U.S.-based<br/>
             single-ring concierge service

@@ -5,14 +5,14 @@ const Rebellion = () => {
   return (
     <div className="min-h-screen bg-[#004D40] p-8 text-white relative">
       {/* Navigation */}
-      <nav className="flex justify-between items-center mb-16">
+      <nav className="flex justify-between items-center mb-16" style={{ fontFamily: 'Inter' }}>
         <div className="text-[#00FF7F] text-2xl font-bold">THE REBELLION</div>
         <div className="text-white text-2xl">TESTIMONIALS</div>
         <div className="text-white text-2xl font-bold">JOIN US</div>
       </nav>
 
       {/* Main Content */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center" style={{ fontFamily: 'Arial-Regular' }}>
         {/* Left Content */}
         <div className="w-[45%]">
           <div className="flex flex-col font-chameleon ml-{-5} mt-20">
@@ -51,7 +51,7 @@ const Rebellion = () => {
         </div>
 
         {/* Right Content */}
-        <div className="text-right">
+        <div className="text-right" style={{ fontFamily: 'Arial-Regular' }}>
           <p className="text-[#00FF7F] text-xl mb-4">
             Call now for U.S.-based<br />
             single-ring concierge service
@@ -80,7 +80,7 @@ const Rebellion = () => {
             <Image src="/linkedin.svg" alt="LinkedIn" width={35} height={35} />
           </div>
         </div>
-        <p className="text-right text-[#1EEB7A] text-sm">
+        <p className="text-right text-[#1EEB7A] text-sm" style={{ fontFamily: 'Arial-Regular' }}>
           Supported by Transaction Acceptance Corp. Copyright 2025
         </p>
       </div>
