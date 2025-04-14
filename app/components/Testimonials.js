@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <div className="flex flex-col min-h-screen  bg-[#0A0A0A]">
+    <div className="flex flex-col min-h-screen bg-[#0A0A0A]">
       {/* Navigation */}
       <nav className="flex justify-between px-16 py-2">
         <h2 className="text-white mt-5 text-2xl font-bold">THE REBELLION</h2>
@@ -69,13 +69,13 @@ export default function Testimonials() {
         {/* Right Content */}
         <div className="w-[45%]  mt-45 flex flex-col items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
           <div className="text-right mb-4">
-            <p className="text-[#1EEB7A] text-lg mb-2">
+            <p className="text-[#1EEB7A] text-2xl mb-4">
               Call now for U.S.-based<br/>
               single-ring concierge service
             </p>
             <a
-              href="tel:18009411544"
-              className="inline-block border border-[#1EEB7A] text-[#1EEB7A] rounded-full py-2 px-8 hover:bg-[#1EEB7A] hover:text-black transition-colors"
+              href="tel:1-800-941-1544"
+              className="inline-block border border-[#1EEB7A] text-[#1EEB7A] rounded-full px-8 py-3"
             >
               Call 1 (800) 941-1544
             </a>
@@ -97,20 +97,12 @@ export default function Testimonials() {
       {/* Footer */}
       <div className="mt-auto px-16 pb-4">
         <div className="flex justify-end gap-6 mb-4">
-          <div >
-            <Image src="/instagramicon.svg" alt="Instagram" width={35} height={35} />
-          </div>
-          <div >
-            <Image src="/facbook.svg" alt="Facebook" width={35} height={35} />
-          </div>
-          <div >
-            <Image src="/socialcon.png" alt="X" width={35} height={35} />
-          </div>
-          <div >
-            <Image src="/linkedin.svg" alt="LinkedIn" width={35} height={35} />
-          </div>
+          <Image src="/instagram.svg" alt="Instagram" width={46} height={46} />
+          <Image src="/facebookicon.svg" alt="Facebook" width={46} height={46} />
+          <Image src="/xicon.svg" alt="X" width={46} height={46} />
+          <Image src="/linkedinicon.svg" alt="LinkedIn" width={46} height={46} />
         </div>
-        <p className="text-right text-[#1EEB7A] text-sm" style={{ fontFamily: 'Arial-Regular' }}>
+        <p className="text-right text-[#1EEB7A] text-sm">
           Supported by Transaction Acceptance Corp. Copyright 2025
         </p>
       </div>

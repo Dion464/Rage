@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charter:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +14,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Chamelton10-bd', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -51,4 +53,72 @@ body {
   font-family: Arial-Regular ;
   src: url('/fonts/Arial.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: Chamelton10 ;
+  src: url('/fonts/Chamelton10-Bd.otf') format('truetype');
+}
+@font-face {
+  font-family:Chamelton10blk ;
+  src: url('/fonts/Chamelton10-Bd.Blk') format('truetype');
+}
+
+/* Add a reusable class for the call now section */
+.call-now-text {
+  font-family: 'Charter', serif;
+  @apply text-[#1EEB7A] text-lg md:text-xl mb-4;
+}
+
+.call-now-button {
+  font-family: 'Charter', serif;
+  @apply inline-block border border-[#1EEB7A] text-[#1EEB7A] rounded-full px-6 md:px-8 py-2 md:py-3 hover:bg-[#1EEB7A] hover:text-black transition-colors text-lg md:text-xl;
+}
+
+/* Add responsive utility classes */
+@layer components {
+  .nav-text {
+    @apply text-xl md:text-2xl font-bold;
+  }
+
+  .main-heading {
+    @apply text-5xl md:text-[80px] lg:text-[100px] leading-none font-bold;
+  }
+
+  .section-padding {
+    @apply px-4 md:px-8 lg:px-16;
+  }
+}
+
+/* Base responsive styles */
+html {
+  @apply text-base;
+}
+
+body {
+  @apply m-0 p-0 min-h-screen;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Responsive text adjustments */
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl;
+}
+
+p {
+  @apply text-base md:text-lg;
+}
+
+/* Mobile menu handling */
+@media (max-width: 768px) {
+  .mobile-menu {
+    @apply fixed inset-0 bg-black bg-opacity-90 z-50;
+  }
+}
+
+
 

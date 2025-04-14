@@ -218,13 +218,13 @@ export default function JoinForm() {
       case 1:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
+            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12" style={{fontFamily: 'Arial-Regular'}}>
               Tell us more about yourself<br />
               and your business.
             </h2>
             
             <div className="pl-8">
-              <div className="flex items-start gap-4 text-white text-2xl mb-8">
+              <div className="flex items-start gap-4 text-white text-2xl mb-8" style={{fontFamily: 'Arial-Regular'}}>
                 <span className="text-[#1EEB7A]">1 →</span>
                 <p>Are you looking for payment<br />processing for your business?</p>
               </div>
@@ -264,7 +264,7 @@ export default function JoinForm() {
       case 2:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
+            <h2 className="text-[#1EEB7A] text-[60px] leading-tight mb-12" style={{fontFamily: 'Charter-Bold'}}>
               Tell us more about yourself<br />
               and your business.
             </h2>
@@ -474,45 +474,43 @@ export default function JoinForm() {
   };
 
   return (
-    <div className="h-screen bg-[#0A3B2E] flex flex-col">
-      <nav className="flex justify-between items-center px-16 py-6">
-        <div className="text-white text-2xl">THE REBELLION</div>
-        <div className="text-white text-2xl">SPEAK NOW</div>
-        <div className="text-[#1EEB7A] text-2xl">JOIN US</div>
+    <div className="min-h-screen bg-[#0A3B2E] flex flex-col">
+      <nav className="flex justify-between px-4 sm:px-16 py-6 mt-4 sm:mt-10">
+        <div className="text-white text-xl sm:text-2xl">THE REBELLION</div>
+        <div className="hidden sm:block text-white text-2xl">SPEAK NOW</div>
+        <div className="text-[#1EEB7A] text-xl sm:text-2xl">JOIN US</div>
       </nav>
 
-      <div className="flex-1 flex px-16 relative">
-        {/* Left side */}
-        <div className="w-1/2 pt-16">
-          <h1 className="text-[#1EEB7A] text-[120px] leading-[0.9] font-bold">
-            JOIN OUR<br />
-            REBELLION<br />
+      <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative">
+        <div className="w-full sm:w-1/2 pt-8 sm:pt-16 text-center sm:text-left">
+          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold">
+            <span className="text-[#1EEB7A]">JOIN OUR<br />
+            REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
           
-          <div className="mt-16">
-            <p className="text-[#1EEB7A] text-xl">
+          <div className="mt-8 sm:mt-16">
+            <p className="text-[#1EEB7A] text-lg sm:text-xl">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
 
             <a href="tel:1-800-941-1544" className="inline-block mt-6">
-              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-8 py-3 rounded-full hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors">
+              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl">
                 Call 1 (800) 941-1544
               </div>
             </a>
           </div>
 
-          <div className="absolute bottom-20 flex gap-6">
-            <Image src="/instagram.svg" alt="Instagram" width={32} height={32} />
-            <Image src="/facebook.svg" alt="Facebook" width={32} height={32} />
-            <Image src="/twitter.svg" alt="Twitter" width={32} height={32} />
-            <Image src="/linkedin.svg" alt="LinkedIn" width={32} height={32} />
+          <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16">
+            <Image src="/instagram.svg" alt="Instagram" width={46} height={46} />
+            <Image src="/facebookicon.svg" alt="Facebook" width={46} height={46} />
+            <Image src="/xicon.svg" alt="X" width={46} height={46} />
+            <Image src="/linkedinicon.svg" alt="LinkedIn" width={46} height={46} />
           </div>
         </div>
 
-        {/* Right side form */}
-        <div className="w-1/2 absolute bottom-0 right-16">
+        <div className="w-full sm:w-1/2 mt-8 sm:mt-0">
           <div className="relative h-[800px]">
             {/* Border Design */}
             <div className="absolute inset-0 pointer-events-none">
@@ -526,7 +524,7 @@ export default function JoinForm() {
             </div>
 
             {/* Form Content */}
-            <div className={`px-12 ${currentStep === 5 ? 'pt-24' : 'pt-32'} h-full ${currentStep === 5 ? '' : 'overflow-y-auto'}`}>
+            <div className={`px-12 ${currentStep === 5 ? 'pt-24' : 'pt-32'} h-full ${currentStep === 5 ? '' : 'overflow-y-auto'}`} style={{fontFamily: 'Arial-Regular'}}>
               {currentStep === 0 ? (
                 <form onSubmit={handleSubmit} className="space-y-12">
                   <div>
@@ -646,10 +644,6 @@ export default function JoinForm() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="text-[#1EEB7A] text-sm px-16 py-4">
-        Supported by Transaction Acceptance Corp. Copyright 2025
       </div>
     </div>
   );
