@@ -4,20 +4,20 @@ import Image from "next/image";
 export default function Testimonials() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0A0A0A]">
-      {/* Navigation */}
-      <nav className="flex justify-between px-16 py-2">
-        <h2 className="text-white mt-5 text-2xl font-bold">THE REBELLION</h2>
-        <h2 className="text-[#1EEB7A] mt-5 text-2xl">TESTIMONIALS</h2>
-        <h2 className="text-white mt-5 text-2xl font-bold">JOIN US</h2>
+      {/* Navigation - Updated for mobile */}
+      <nav className="flex justify-between px-4 sm:px-16 py-2">
+        <h2 className="text-white mt-2 sm:mt-5 text-lg sm:text-2xl font-bold">THE REBELLION</h2>
+        <h2 className="text-[#1EEB7A] mt-2 sm:mt-5 text-lg sm:text-2xl hidden sm:block">TESTIMONIALS</h2>
+        <h2 className="text-white mt-2 sm:mt-5 text-lg sm:text-2xl font-bold">JOIN US</h2>
       </nav>
 
-      {/* Main Content */}
-      <div className="flex px-16 mt-8">
+      {/* Main Content - Updated for mobile */}
+      <div className="flex flex-col lg:flex-row px-4 sm:px-16 mt-4 sm:mt-8">
         {/* Left Content */}
-        <div className="w-[55%]">
+        <div className="w-full lg:w-[55%] mb-8 lg:mb-0">
           {/* Title */}
-          <div className="mb-8">
-            <h1 className="text-[80px] leading-none font-bold">
+          <div className="mb-4 sm:mb-8">
+            <h1 className="text-[40px] sm:text-[60px] lg:text-[80px] leading-none font-bold">
               <div className="text-[#1EEB7A]">REAL MERCHANTS.</div>
               <div>
                 <span className="text-[#1EEB7A]">REAL </span>
@@ -27,62 +27,62 @@ export default function Testimonials() {
           </div>
 
           {/* Testimonials */}
-          <div className="space-y-6 max-w-[70%] relative" style={{ fontFamily: 'Arial-Regular' }}>
+          <div className="space-y-6 lg:max-w-[70%] relative pl-6 lg:pl-0" style={{ fontFamily: 'Arial-Regular' }}>
             {/* Vertical Line */}
-            <div className="absolute left-[-20px] top-0 bottom-0 w-[2px] bg-gray-700" />
+            <div className="absolute left-0 lg:left-[-20px] top-0 bottom-0 w-[2px] bg-gray-700" />
             
             <div>
-              <h3 className="text-[#1EEB7A] mb-2 uppercase">Langes of Bronxville, Bronxville, NY:</h3>
-              <p className="text-white mb-2 uppercase text-sm tracking-wide">
+              <h3 className="text-[#1EEB7A] mb-2 uppercase text-sm sm:text-base">Langes of Bronxville, Bronxville, NY:</h3>
+              <p className="text-white mb-2 uppercase text-xs sm:text-sm tracking-wide">
                 &ldquo;Five months ago I reluctantly switched Langes Deli to the Priority
                 Payments Cash Discount Program. I anticipated resistance from my
                 customers. There truly has been none. The monthly savings are as
                 advertised and it goes right to the bottom line.&rdquo;
               </p>
-              <p className="text-white uppercase text-sm">Thomas Bass, Owner</p>
+              <p className="text-white uppercase text-xs sm:text-sm">Thomas Bass, Owner</p>
             </div>
 
             <div>
-              <h3 className="text-[#1EEB7A] mb-2 uppercase">Tryforos and Pernice Florist, Bronxville, NY:</h3>
-              <p className="text-white mb-2 uppercase text-sm tracking-wide">
+              <h3 className="text-[#1EEB7A] mb-2 uppercase text-sm sm:text-base">Tryforos and Pernice Florist, Bronxville, NY:</h3>
+              <p className="text-white mb-2 uppercase text-xs sm:text-sm tracking-wide">
                 &ldquo;The Priority Payments Cash Discount Program has delivered all that
                 was promised. There has been virtually no pushback on the fees and
                 the savings are real.&rdquo;
               </p>
-              <p className="text-white uppercase text-sm">Gary Tryforos, Owner</p>
+              <p className="text-white uppercase text-xs sm:text-sm">Gary Tryforos, Owner</p>
             </div>
 
             <div>
-              <h3 className="text-[#1EEB7A] mb-2 uppercase">Park Place Meats, Inc., Bronxville, NY:</h3>
-              <p className="text-white mb-2 uppercase text-sm tracking-wide">
+              <h3 className="text-[#1EEB7A] mb-2 uppercase text-sm sm:text-base">Park Place Meats, Inc., Bronxville, NY:</h3>
+              <p className="text-white mb-2 uppercase text-xs sm:text-sm tracking-wide">
                 &ldquo;I am extremely satisfied with our conversion to the Cash Discount
                 Program. The transition was simple and Priority&apos;s customer service
                 is exceptional. My clients understand the need for businesses to
                 reduce costs in this unprecedented time, and my credit card fees
                 have been reduced by almost 90%.&rdquo;
               </p>
-              <p className="text-white uppercase text-sm">Paul Chietro, owner</p>
+              <p className="text-white uppercase text-xs sm:text-sm">Paul Chietro, owner</p>
             </div>
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="w-[45%]  mt-45 flex flex-col items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
-          <div className="text-right mb-4">
-            <p className="text-[#1EEB7A] text-2xl mb-4">
+        <div className="w-full lg:w-[45%] mt-8 lg:mt-0 flex flex-col items-center lg:items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
+          <div className="text-center lg:text-right mb-4">
+            <p className="text-[#1EEB7A] text-xl sm:text-2xl mb-4">
               Call now for U.S.-based<br/>
               single-ring concierge service
             </p>
             <a
               href="tel:1-800-941-1544"
-              className="inline-block border border-[#1EEB7A] text-[#1EEB7A] rounded-full px-8 py-3"
+              className="inline-block border border-[#1EEB7A] text-[#1EEB7A] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base"
             >
               Call 1 (800) 941-1544
             </a>
           </div>
 
           {/* Flag Image */}
-          <div className="absolute right-0 bottom-[-180px] w-[140%] h-[800px]">
+          <div className="relative w-full h-[400px] sm:h-[600px] lg:h-[800px] mt-8 lg:mt-0">
             <Image
               src="/flag.svg"
               alt="Rebellion Flag"
@@ -95,14 +95,14 @@ export default function Testimonials() {
       </div>
 
       {/* Footer */}
-      <div className="mt-auto px-16 pb-4">
-        <div className="flex justify-end gap-6 mb-4">
-          <Image src="/instagram.svg" alt="Instagram" width={46} height={46} />
-          <Image src="/facebookicon.svg" alt="Facebook" width={46} height={46} />
-          <Image src="/xicon.svg" alt="X" width={46} height={46} />
-          <Image src="/linkedinicon.svg" alt="LinkedIn" width={46} height={46} />
+      <div className="mt-auto px-4 sm:px-16 pb-4">
+        <div className="flex justify-center lg:justify-end gap-4 sm:gap-6 mb-4">
+          <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-8 sm:w-12" />
+          <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-8 sm:w-12" />
+          <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-8 sm:w-12" />
+          <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-8 sm:w-12" />
         </div>
-        <p className="text-right text-[#1EEB7A] text-sm">
+        <p className="text-center lg:text-right text-[#1EEB7A] text-xs sm:text-sm">
           Supported by Transaction Acceptance Corp. Copyright 2025
         </p>
       </div>
