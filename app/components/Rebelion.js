@@ -24,17 +24,14 @@ const Rebellion = () => {
             </h1>
           </div>
           
-          <div className="ml-55 mt-12 space-y-6">
-            <p className="text-2xl leading-relaxed" style={{fontFamily: 'Charter-Regular'}}>
+          <div className="mt-8 space-y-4 sm:pl-48">
+            <p className="text-xl sm:text-2xl leading-relaxed">
               Swipe fees have increased <span className="text-[#00FF7F]">700%</span><br />
               since 2001. Call the Merchant<br />
               Rebellion and talk to a real person<br />
               with real solutions.
             </p>
-            
-            <p className="text-2xl" style={{fontFamily: 'Charter-Regular'}}>
-              Stop swiping away your profits.
-            </p>
+            <p className="text-xl">Stop swiping away your profits.</p>
           </div>
         </div>
 
