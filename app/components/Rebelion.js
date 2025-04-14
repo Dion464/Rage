@@ -34,14 +34,14 @@ const Rebellion = () => {
           </div>
         </div>
 
-        {/* Center Image */}
+        {/* Center Image - Adjusted size and position */}
         <div className="w-full sm:w-[45%] flex justify-center mt-8 sm:mt-0">
           <Image 
             src="/Rebelion.svg" 
             alt="Rebellion Card" 
             width={700}
             height={700}
-            className="w-full max-w-[500px] sm:max-w-[700px]"
+            className="w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[450px] lg:-ml-60"
             priority
           />
         </div>

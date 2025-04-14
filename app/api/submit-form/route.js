@@ -2,12 +2,6 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
-  // Debug log to check environment variables
-  console.log('Environment variables check:', {
-    emailUser: process.env.EMAIL_USER,
-    hasEmailPass: !!process.env.EMAIL_PASS
-  });
-
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
     console.error('Missing environment variables:', {
       hasUser: !!process.env.EMAIL_USER,
@@ -15,31 +9,26 @@ export async function POST(request) {
     });
     return NextResponse.json({ 
       success: false, 
-      error: 'Email configuration missing. Please check environment variables.' 
+      error: 'Email configuration missing' 
     }, { status: 500 });
   }
 
   try {
     const data = await request.json();
     
-    // Create transporter with OAuth2
+    // Create transporter with simple auth
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
+      service: 'gmail',
       secure: true,
       auth: {
-        type: 'OAuth2',
-        user: 'curridion31@gmail.com',
-        clientId: '1234567890-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com', // You need this
-        clientSecret: 'ABCDEF-GHIJKLMNOP-1234567890', // You need this
-        refreshToken: 'YOUR_REFRESH_TOKEN', // You need this
-        accessToken: 'YOUR_ACCESS_TOKEN' // You need this
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
     });
 
     const mailOptions = {
-      from: 'curridion31@gmail.com',
-      to: 'curridion31@gmail.com',
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Sending to the same email
       subject: 'New Merchant Rebellion Form Submission',
       html: `
         <h2>New Form Submission</h2>
@@ -68,4 +57,4 @@ export async function POST(request) {
       error: error.message 
     }, { status: 500 });
   }
-}
+} 

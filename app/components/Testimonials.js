@@ -67,7 +67,7 @@ export default function Testimonials() {
         </div>
 
         {/* Right Content */}
-        <div className="w-full lg:w-[45%] mt-8 lg:mt-0 flex flex-col items-center lg:items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
+        <div className="w-full lg:w-[45%] mt-4 lg:mt-0 flex flex-col items-center lg:items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
           <div className="text-center lg:text-right mb-4">
             <p className="text-[#1EEB7A] text-xl sm:text-2xl mb-4">
               Call now for U.S.-based<br/>
@@ -81,8 +81,8 @@ export default function Testimonials() {
             </a>
           </div>
 
-          {/* Flag Image */}
-          <div className="relative w-full h-[400px] sm:h-[600px] lg:h-[800px] mt-8 lg:mt-0">
+          {/* Flag Image - Adjusted for bottom positioning */}
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[600px] mt-4 lg:mt-0 flex items-end">
             <Image
               src="/flag.svg"
               alt="Rebellion Flag"
