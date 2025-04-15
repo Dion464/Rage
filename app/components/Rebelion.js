@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Rebellion = () => {
   return (
-    <div className="min-h-screen bg-[#004D40] p-4 sm:p-8 text-white relative">
+    <div className="min-h-[100vh] bg-[#004D40] p-4 sm:p-8 text-white relative">
       {/* Navigation */}
       <nav className="flex justify-between items-center mb-8 sm:mb-16 font-bold overflow-x-auto gap-4 sm:gap-8">
         <div className="text-[#00FF7F] text-sm sm:text-lg font-bold whitespace-nowrap">THE REBELLION</div>

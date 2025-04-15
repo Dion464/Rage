@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0A0A0A]">
+    <div className=" min-h-[100vh] bg-[#0A0A0A]">
       {/* Navigation */}
       <nav className="flex justify-between px-4 sm:px-16 py-2 font-bold overflow-x-auto gap-4 sm:gap-8">
         <h2 className="text-white mt-5 text-sm sm:text-lg font-bold whitespace-nowrap">THE REBELLION</h2>
@@ -67,7 +67,7 @@ export default function Testimonials() {
         </div>
 
         {/* Right Content */}
-        <div className="w-full md:w-[45%] mt-8 md:mt-45 flex flex-col items-center md:items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
+        <div className="w-full relative md:w-[45%] mt-8 md:mt-45 flex flex-col items-center md:items-end relative" style={{ fontFamily: 'Arial-Regular' }}>
           <div className="text-center md:text-right mb-4">
             <p className="text-[#1EEB7A] text-base sm:text-lg mb-2">
               Call now for U.S.-based<br/>
@@ -82,14 +82,15 @@ export default function Testimonials() {
           </div>
 
           {/* Flag Image */}
-          <div className="relative w-full md:absolute md:right-0 md:bottom-[-180px] md:w-[140%] h-[400px] md:h-[800px]">
-            <Image
+          <div className="relative w-full">
+            {/* <Image
               src="/flag.svg"
               alt="Rebellion Flag"
               fill
               className="object-contain object-bottom"
               priority
-            />
+            /> */}
+            <img src="/flag.png" alt="Rebellion Flag" className="object-contain object-bottom" />
           </div>
         </div>
       </div>

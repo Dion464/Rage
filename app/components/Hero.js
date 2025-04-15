@@ -5,7 +5,7 @@ import localFont from 'next/font/local';
 
 export default function Hero() {
   return (
-    <div className="min-h-[90vh] flex flex-col">
+    <div className="min-h-[100vh] flex flex-col bg-[#004D40]">
       {/* Navigation */}
       <nav className={`flex justify-between px-4 sm:px-16 py-4 font-bold overflow-x-auto gap-4 sm:gap-8`}>
         <h2 className="text-white text-sm sm:text-lg tracking-wider whitespace-nowrap">THE REBELLION</h2>
