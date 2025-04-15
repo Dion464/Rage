@@ -19,10 +19,7 @@ export async function POST(request) {
     // Add a preview parameter check
     const isPreview = request.headers.get('x-preview-email') === 'true';
     
-    const protocol = request.headers['x-forwarded-proto'] || 'http';
-    const host = request.headers.host;
-    const baseUrl = `${protocol}://${host}`;
-
+    
     // Create an HTML template for the email with better styling
     const htmlContent = `
       <!DOCTYPE html>
@@ -38,7 +35,7 @@ export async function POST(request) {
             <div style="background-color: rgba(30, 235, 122, 0.1); border-radius: 16px; overflow: hidden;">
               <!-- Header -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="cid:logo@myapp" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
+                <img src="https://rage-neon.vercel.app/mailer.png" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
                 <h1 style="color: #1EEB7A; font-size: 28px; margin: 0;">New Rebellion Application</h1>
               </div>
 
@@ -119,19 +116,15 @@ export async function POST(request) {
       }
     });
 
+    // Get the absolute path to the SVG file and convert to base64
+   
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: 'New Merchant Rebellion Application',
       html: htmlContent,
-      attachments: [
-        {
-          filename: 'hero1.svg',
-          content: './hero1.svg',
-          contentType: 'image/svg+xml',
-          cid: 'logo@myapp'
-        }
-      ]
+      
     };
 
     await transporter.sendMail(mailOptions);
