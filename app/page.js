@@ -1,46 +1,38 @@
 'use client';
 import { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
+import ReactFullpage from '@fullpage/react-fullpage';
 import Hero from "./components/Hero";
 import Rebelion from "./components/Rebelion";
 import Testimonials from "./components/Testimonials";
 import JoinForm from "./components/JoinForm";
 import Stop from "./components/stop";
-import ContactForm from "./components/contactform";
-
-const ReactFullpage = dynamic(() => import('@fullpage/react-fullpage'), {
-  ssr: false
-});
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Check if window exists (client-side)
     if (typeof window !== 'undefined') {
-      // Initial check
-      setIsMobile(window.innerWidth < 768);
+      // Check if width is >= 768px for desktop
+      setIsDesktop(window.innerWidth >= 768);
 
-      // Add resize listener
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setIsDesktop(window.innerWidth >= 768);
       };
 
       window.addEventListener('resize', handleResize);
-
-      // Cleanup
       return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
 
-  // Mobile view with Fullpage
-  if (isMobile) {
+  // Desktop view WITH Fullpage
+  if (isDesktop) {
     return (
       <ReactFullpage
+        licenseKey={'YOUR_KEY_HERE'} // Remove if using free version
         scrollingSpeed={1000}
         render={({ state, fullpageApi }) => {
           return (
-            <ReactFullpage.Wrapper>
+            <div id="fullpage-wrapper">
               <div className="section">
                 <Hero />
               </div>
@@ -56,16 +48,16 @@ export default function Home() {
               <div className="section">
                 <JoinForm />
               </div>
-            </ReactFullpage.Wrapper>
+            </div>
           );
         }}
       />
     );
   }
 
-  // Desktop view without Fullpage
+  // Mobile view WITHOUT Fullpage
   return (
-    <div className="desktop-layout">
+    <div className="mobile-layout">
       <div className="section">
         <Hero />
       </div>

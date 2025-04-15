@@ -120,16 +120,16 @@ p {
   }
 }
 
-/* For desktop layout */
-.desktop-layout {
+/* For mobile layout */
+.mobile-layout {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
 
-/* Ensure sections take full height on mobile */
+/* Ensure sections take appropriate height on mobile */
 @media (max-width: 767px) {
   .section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
   }
 }
