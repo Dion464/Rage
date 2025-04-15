@@ -7,10 +7,10 @@ export default function Hero() {
   return (
     <div className="min-h-[90vh] flex flex-col">
       {/* Navigation */}
-      <nav className={`flex justify-between px-4 sm:px-16 py-4 font-bold overflow-x-auto`}>
-        <h2 className="text-white text-lg sm:text-2xl tracking-wider whitespace-nowrap">THE REBELLION</h2>
-        <h2 className="text-white text-lg sm:text-2xl tracking-wider whitespace-nowrap">TESTIMONIALS</h2>
-        <h2 className="text-white text-lg sm:text-2xl tracking-wider whitespace-nowrap">JOIN US</h2>
+      <nav className={`flex justify-between px-4 sm:px-16 py-4 font-bold overflow-x-auto gap-4 sm:gap-8`}>
+        <h2 className="text-white text-sm sm:text-lg tracking-wider whitespace-nowrap">THE REBELLION</h2>
+        <h2 className="text-white text-sm sm:text-lg tracking-wider whitespace-nowrap">TESTIMONIALS</h2>
+        <h2 className="text-white text-sm sm:text-lg tracking-wider whitespace-nowrap">JOIN US</h2>
       </nav>
 
       {/* Main Content */}

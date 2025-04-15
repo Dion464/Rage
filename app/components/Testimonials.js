@@ -5,10 +5,10 @@ export default function Testimonials() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0A0A0A]">
       {/* Navigation */}
-      <nav className="flex justify-between px-4 sm:px-16 py-2 font-bold overflow-x-auto">
-        <h2 className="text-white mt-5 text-lg sm:text-2xl font-bold whitespace-nowrap">THE REBELLION</h2>
-        <h2 className="text-[#1EEB7A] mt-5 text-lg sm:text-2xl whitespace-nowrap">TESTIMONIALS</h2>
-        <h2 className="text-white mt-5 text-lg sm:text-2xl font-bold whitespace-nowrap">JOIN US</h2>
+      <nav className="flex justify-between px-4 sm:px-16 py-2 font-bold overflow-x-auto gap-4 sm:gap-8">
+        <h2 className="text-white mt-5 text-sm sm:text-lg font-bold whitespace-nowrap">THE REBELLION</h2>
+        <h2 className="text-[#1EEB7A] mt-5 text-sm sm:text-lg whitespace-nowrap">TESTIMONIALS</h2>
+        <h2 className="text-white mt-5 text-sm sm:text-lg font-bold whitespace-nowrap">JOIN US</h2>
       </nav>
 
       {/* Main Content */}

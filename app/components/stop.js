@@ -4,10 +4,10 @@ import Image from 'next/image';
 export default function Stop() {
   return (
     <div className="min-h-[80vh] bg-[#004D40] flex flex-col">
-      <nav className="flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-4 md:py-5 gap-4 md:gap-0 font-bold">
-        <div className="text-[#1EEB7A] text-xl md:text-2xl font-bold">THE REBELLION</div>
-        <div className="text-white text-xl md:text-2xl">TESTIMONIALS</div>
-        <div className="text-[#1EEB7A] text-xl md:text-2xl font-bold">JOIN US</div>
+      <nav className="flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-4 md:py-5 gap-4 md:gap-8 font-bold">
+        <div className="text-[#1EEB7A] text-sm sm:text-lg font-bold">THE REBELLION</div>
+        <div className="text-white text-sm sm:text-lg">TESTIMONIALS</div>
+        <div className="text-[#1EEB7A] text-sm sm:text-lg font-bold">JOIN US</div>
       </nav>
 
       <div className="flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">

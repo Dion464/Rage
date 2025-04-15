@@ -5,10 +5,10 @@ const Rebellion = () => {
   return (
     <div className="min-h-screen bg-[#004D40] p-4 sm:p-8 text-white relative">
       {/* Navigation */}
-      <nav className="flex justify-between items-center mb-8 sm:mb-16 font-bold overflow-x-auto">
-        <div className="text-[#00FF7F] text-lg sm:text-2xl font-bold whitespace-nowrap">THE REBELLION</div>
-        <div className="text-white text-lg sm:text-2xl whitespace-nowrap">TESTIMONIALS</div>
-        <div className="text-white text-lg sm:text-2xl font-bold whitespace-nowrap">JOIN US</div>
+      <nav className="flex justify-between items-center mb-8 sm:mb-16 font-bold overflow-x-auto gap-4 sm:gap-8">
+        <div className="text-[#00FF7F] text-sm sm:text-lg font-bold whitespace-nowrap">THE REBELLION</div>
+        <div className="text-white text-sm sm:text-lg whitespace-nowrap">TESTIMONIALS</div>
+        <div className="text-white text-sm sm:text-lg font-bold whitespace-nowrap">JOIN US</div>
       </nav>
 
       {/* Main Content */}
