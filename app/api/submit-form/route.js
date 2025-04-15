@@ -127,7 +127,7 @@ export async function POST(request) {
       attachments: [
         {
           filename: 'hero1.svg',
-          content: fs.readFileSync('./public/hero1.svg'),
+          content: '/hero1.svg',
           contentType: 'image/svg+xml'
         }
       ]
