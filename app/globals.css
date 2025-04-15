@@ -119,3 +119,17 @@ p {
     @apply fixed inset-0 bg-black bg-opacity-90 z-50;
   }
 }
+
+/* For desktop layout */
+.desktop-layout {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Ensure sections take full height on mobile */
+@media (max-width: 767px) {
+  .section {
+    height: 100vh;
+    width: 100%;
+  }
+}
