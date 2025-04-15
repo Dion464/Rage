@@ -12,7 +12,7 @@ export default function Home() {
       <Testimonials />
       <Stop />
       <JoinForm />  
-     
+    
       {/* Other components can go here */}
     </div>
   );
