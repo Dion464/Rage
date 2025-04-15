@@ -38,7 +38,7 @@ export async function POST(request) {
             <div style="background-color: rgba(30, 235, 122, 0.1); border-radius: 16px; overflow: hidden;">
               <!-- Header -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="/hero1.svg" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
+                <img src="https://rage-neon.vercel.app/hero1.svg" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
                 <h1 style="color: #1EEB7A; font-size: 28px; margin: 0;">New Rebellion Application</h1>
               </div>
 
@@ -94,7 +94,7 @@ export async function POST(request) {
             <!-- Footer -->
             <div style="text-align: center; margin-top: 20px;">
               <p style="color: #1EEB7A; margin: 0; font-size: 14px;">
-                Supported by Transaction Acceptance Corp. ${baseUrl}
+                Supported by Transaction Acceptance Corp.
               </p>
             </div>
           </div>
@@ -124,13 +124,6 @@ export async function POST(request) {
       to: process.env.EMAIL_USER,
       subject: 'New Merchant Rebellion Application',
       html: htmlContent,
-      attachments: [
-        {
-          filename: 'hero1.svg',
-          content: '/hero1.svg',
-          contentType: 'image/svg+xml'
-        }
-      ]
     };
 
     await transporter.sendMail(mailOptions);
