@@ -19,6 +19,10 @@ export async function POST(request) {
     // Add a preview parameter check
     const isPreview = request.headers.get('x-preview-email') === 'true';
     
+    const protocol = request.headers['x-forwarded-proto'] || 'http';
+    const host = request.headers.host;
+    const baseUrl = `${protocol}://${host}`;
+
     // Create an HTML template for the email with better styling
     const htmlContent = `
       <!DOCTYPE html>
@@ -34,7 +38,7 @@ export async function POST(request) {
             <div style="background-color: rgba(30, 235, 122, 0.1); border-radius: 16px; overflow: hidden;">
               <!-- Header -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="/hero1.svg" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
+                <img src="https://rage-3vto7o7yu-dions-projects-0816e6c4.vercel.app/hero1.svg" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
                 <h1 style="color: #1EEB7A; font-size: 28px; margin: 0;">New Rebellion Application</h1>
               </div>
 
@@ -90,7 +94,7 @@ export async function POST(request) {
             <!-- Footer -->
             <div style="text-align: center; margin-top: 20px;">
               <p style="color: #1EEB7A; margin: 0; font-size: 14px;">
-                Supported by Transaction Acceptance Corp.
+                Supported by Transaction Acceptance Corp. ${baseUrl}
               </p>
             </div>
           </div>
