@@ -4,4 +4,4 @@ const nextConfig = {
   // ... any other existing config
 }
 
-module.exports = nextConfig
+export default nextConfig;
