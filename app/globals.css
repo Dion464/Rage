@@ -125,11 +125,22 @@ p {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
-
+.fullpagescroller-pagination {
+  display: none !important;
+}
 /* Ensure sections take appropriate height on mobile */
 @media (max-width: 767px) {
   .section {
     min-height: 100vh;
     width: 100%;
   }
+}
+
+/* Hide fullPage.js credit link */
+.fp-watermark {
+  display: none !important;
+}
+
+#fp-nav {
+  display: none !important;
 }

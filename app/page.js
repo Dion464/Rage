@@ -28,7 +28,7 @@ export default function Home() {
   if (isDesktop) {
     return (
       <ReactFullpage
-        licenseKey={'YOUR_KEY_HERE'} // Remove if using free version
+       
         scrollingSpeed={1000}
         render={({ state, fullpageApi }) => {
           return (
