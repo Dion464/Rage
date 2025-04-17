@@ -40,15 +40,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Center Logo - Adjusted for larger size and better centering */}
+        {/* Center Logo - Adjusted for larger desktop size */}
         <div className="md:col-span-5 lg:col-span-4 flex justify-center items-center mt-8 md:mt-0">
           <div className="relative flex justify-center items-center">
             <Image
               src="/hero1.svg"
               alt="Merchant Rebellion Logo"
-              width={600}
-              height={700}
-              className="w-[320px] md:w-[400px] lg:w-[500px] xl:w-[600px]"
+              width={700}
+              height={800}
+              className="w-[320px] md:w-[400px] lg:w-[600px] xl:w-[700px]"
               priority
             />
           </div>
