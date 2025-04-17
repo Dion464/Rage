@@ -264,7 +264,7 @@ export default function JoinForm() {
       case 2:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[60px] leading-tight mb-12" style={{fontFamily: 'Charter-Bold'}}>
+            <h2 className="text-[#1EEB7A] text-[40px] leading-tight mb-12" >
               Tell us more about yourself<br />
               and your business.
             </h2>
@@ -309,18 +309,18 @@ export default function JoinForm() {
         );
       case 3:
         return (
-          <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
+          <div className="space-y-6 sm:space-y-8">
+            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[38px] lg:text-[42px] leading-tight mb-8 sm:mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
-            <div className="pl-8">
-              <div className="flex items-start gap-4 text-white text-2xl mb-8">
+            <div className="pl-4 sm:pl-8">
+              <div className="flex items-start gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
                 <span className="text-[#1EEB7A]">3 →</span>
-                <p>What is your annual processing volume?</p>
+                <p className="pr-4">What is your annual processing volume?</p>
               </div>
-              <div className="flex flex-col gap-4 ml-12">
+              <div className="flex flex-col gap-3 sm:gap-4 ml-8 sm:ml-12">
                 {[
                   { label: '<$250K', value: 'under250k' },
                   { label: '$250K - $1M', value: '250kTo1m' },
@@ -332,11 +332,11 @@ export default function JoinForm() {
                     key={option.value}
                     type="button"
                     onClick={() => setStepAnswers(prev => ({ ...prev, step3: option.value }))}
-                    className={`w-[280px] py-2 px-6 rounded-full border border-[#1EEB7A] text-left ${
+                    className={`w-full max-w-[280px] py-2 px-6 rounded-full border border-[#1EEB7A] text-left ${
                       stepAnswers.step3 === option.value 
                         ? 'bg-[#1EEB7A] text-[#0A3B2E]' 
                         : 'text-[#1EEB7A]'
-                    } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors`}
+                    } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors text-sm sm:text-base`}
                   >
                     {option.label}
                   </button>
@@ -384,18 +384,18 @@ export default function JoinForm() {
         );
       case 5:
         return (
-          <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
+          <div className="space-y-6 sm:space-y-8">
+            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[38px] lg:text-[42px] leading-tight mb-8 sm:mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
-            <div className="pl-8">
-              <div className="flex items-start gap-4 text-white text-2xl mb-8">
+            <div className="pl-4 sm:pl-8">
+              <div className="flex items-start gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
                 <span className="text-[#1EEB7A]">5 →</span>
-                <p>Is it e-commerce or brick-and-mortar?</p>
+                <p className="pr-4">Is it e-commerce or brick-and-mortar?</p>
               </div>
-              <div className="flex flex-col gap-4 ml-12">
+              <div className="flex flex-col gap-3 sm:gap-4 ml-8 sm:ml-12">
                 {[
                   { label: 'E-commerce', value: 'ecommerce' },
                   { label: 'Brick-and-Mortar', value: 'brick-and-mortar' },
@@ -405,11 +405,11 @@ export default function JoinForm() {
                     key={option.value}
                     type="button"
                     onClick={() => setStepAnswers(prev => ({ ...prev, step5: option.value }))}
-                    className={`w-[280px] py-2 px-6 rounded-full border border-[#1EEB7A] text-left ${
+                    className={`w-full max-w-[280px] py-2 px-6 rounded-full border border-[#1EEB7A] text-left ${
                       stepAnswers.step5 === option.value 
                         ? 'bg-[#1EEB7A] text-[#0A3B2E]' 
                         : 'text-[#1EEB7A]'
-                    } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors`}
+                    } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors text-sm sm:text-base`}
                   >
                     {option.label}
                   </button>
@@ -483,7 +483,7 @@ export default function JoinForm() {
 
       <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative">
         <div className="w-full sm:w-1/2 pt-8 sm:pt-16 text-center sm:text-left">
-          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold">
+          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px]">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>

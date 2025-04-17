@@ -16,7 +16,7 @@ const Rebellion = () => {
         {/* Left Content */}
         <div className="w-full md:w-[45%] text-center md:text-left">
           <div className="flex flex-col font-chameleon mt-8 md:mt-20">
-            <h1 className="text-[50px] sm:text-[80px] md:text-[100px] font-bold leading-none" style={{fontFamily: 'Chamelton10-bd'}}>
+            <h1 className="text-[50px] sm:text-[80px] md:text-[100px] pr-12 font-bold leading-none" style={{fontFamily: 'Chamelton10-bd'}}>
               <span className="text-white">STOP </span>
               <span className="text-[#00FF7F]">SWIPING</span><br />
               <span className="text-[#00FF7F]">AWAY YOUR</span><br />
