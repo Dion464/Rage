@@ -474,28 +474,28 @@ export default function JoinForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A3B2E] flex flex-col">
+    <div className="min-h-screen bg-[#0A3B2E] flex flex-col" style={{fontFamily: 'Chamelton10-bd'}}>
       <nav className="flex justify-between px-4 sm:px-16 py-6 mt-4 sm:mt-10">
-        <div className="text-white text-xl sm:text-2xl">THE REBELLION</div>
-        <div className="hidden sm:block text-white text-2xl">SPEAK NOW</div>
-        <div className="text-[#1EEB7A] text-xl sm:text-2xl">JOIN US</div>
+        <div className="text-white text-base sm:text-xl">THE REBELLION</div>
+        <div className="hidden sm:block text-white text-base sm:text-xl">TESTIMONIALS</div>
+        <div className="text-[#1EEB7A] text-base sm:text-xl">JOIN US</div>
       </nav>
 
       <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative">
         <div className="w-full sm:w-1/2 pt-8 sm:pt-16 text-center sm:text-left">
-          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px]">
+          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px]" style={{fontFamily: 'Chamelton10-bd '}}>
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
           
           <div className="mt-8 sm:mt-16">
-            <p className="text-[#1EEB7A] text-lg sm:text-xl">
+            <p className="text-[#1EEB7A] text-lg sm:text-xl" style={{fontFamily: 'Arial-Regular'}}>
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
 
-            <a href="tel:1-800-941-1544" className="inline-block mt-6">
+            <a href="tel:1-800-941-1544" className="inline-block mt-6" style={{fontFamily: 'Arial-Regular'}}>
               <div className="border border-[#1EEB7A] text-[#1EEB7A] px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl">
                 Call 1 (800) 941-1544
               </div>
@@ -508,6 +508,9 @@ export default function JoinForm() {
             <Image src="/xicon.svg" alt="X" width={46} height={46} />
             <Image src="/linkedinicon.svg" alt="LinkedIn" width={46} height={46} />
           </div>
+          <p className="text-center sm:text-left text-[#1EEB7A] text-xs sm:text-sm mt-4" style={{ fontFamily: 'Arial-Regular' }}>
+            Supported by Transaction Acceptance Corp. Copyright 2025
+          </p>
         </div>
 
         <div className="w-full sm:w-1/2 mt-8 sm:mt-0">

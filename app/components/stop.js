@@ -4,16 +4,16 @@ import Image from 'next/image';
 export default function Stop() {
   return (
     <div className="min-h-[100vh] bg-[#004D40] flex flex-col">
-      <nav className="flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-4 md:py-5 gap-4 md:gap-8 font-bold">
-        <div className="text-[#1EEB7A] text-sm sm:text-lg font-bold">THE REBELLION</div>
-        <div className="text-white text-sm sm:text-lg">TESTIMONIALS</div>
-        <div className="text-[#1EEB7A] text-sm sm:text-lg font-bold">JOIN US</div>
-      </nav>
+      <nav className="flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-4 md:py-5 gap-4 md:gap-8 font-bold" style={{fontFamily: 'Chamelton10-bd'}}>
+  <div className="text-[#1EEB7A] text-base sm:text-xl font-bold">THE REBELLION</div>
+  <div className="text-white text-base sm:text-xl">TESTIMONIALS</div>
+  <div className="text-[#1EEB7A] text-base sm:text-xl font-bold">JOIN US</div>
+</nav>
 
       <div className="flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">
         {/* Left side content */}
         <div className="pt-4 md:pt-8 w-full md:max-w-[85%] text-center md:text-left">
-          <h1 className="text-[#1EEB7A] text-4xl md:text-[90px] leading-tight font-black tracking-tight" style={{ fontFamily: 'Chameleon-Bold, sans-serif' }}>
+          <h1 className="text-[#1EEB7A] text-4xl md:text-[90px] leading-tight font-black tracking-tight" style={{fontFamily: 'Chamelton10-bd'}}>
             STOP SWIPING AWAY<br />
             YOUR PROFITS.<br />
             SWIPE FEES<br />
@@ -25,22 +25,16 @@ export default function Stop() {
           </h1>
 
           <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <p className="text-white text-lg md:text-xl text-center md:text-left" style={{ fontFamily: 'Charter-Regular, serif' }}>
+            <p className="text-white text-lg md:text-xl text-center md:text-left" style={{ fontFamily: 'Charter' }}>
               Call the <span className="text-[#1EEB7A]">Merchant Rebellion</span> and talk<br className="hidden md:block" />
               to a real person with real solutions.
             </p>
-            <Image 
-              src="/smallicon.svg"
-              alt="Card Icon"
-              width={100}
-              height={100}
-              className="md:w-[120px] md:h-[120px]"
-            />
+           
           </div>
         </div>
 
         {/* Right side content */}
-        <div className="relative md:absolute md:right-16 md:top-1/4 text-center md:text-right mt-8 md:mt-0">
+        <div className="relative md:absolute md:right-16 md:top-8 text-center md:text-right mt-8 md:mt-0" style={{ marginTop: "4.5rem" }}>
           <p className="text-[#1EEB7A] text-lg md:text-xl mb-4">
             Call now for U.S.-based<br />
             single-ring concierge service
@@ -55,19 +49,7 @@ export default function Stop() {
       </div>
 
       {/* Social Media Icons */}
-      <div className="flex justify-end gap-6 px-4 md:px-16 py-4">
-        <Image src="/instagram.svg" alt="Instagram" width={40} height={40} />
-        <Image src="/facebookicon.svg" alt="Facebook" width={40} height={40} />
-        <Image src="/xicon.svg" alt="X" width={40} height={40} />
-        <Image src="/linkedinicon.svg" alt="LinkedIn" width={40} height={40} />
-      </div>
-
-      {/* Footer Text */}
-      <div className="text-right px-4 md:px-16 pb-2">
-        <p className="text-[#1EEB7A] text-sm">
-          Supported by Transaction Acceptance Corp. Copyright 2025
-        </p>
-      </div>
+      
     </div>
   );
 }

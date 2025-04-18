@@ -7,56 +7,54 @@ export default function Hero() {
   return (
     <div className="min-h-[100vh] flex flex-col bg-[#004D40]">
       {/* Navigation */}
-      <nav className={`flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 font-bold overflow-x-auto gap-4 sm:gap-8`}>
-        <h2 className="text-white text-xs sm:text-sm md:text-base lg:text-lg tracking-wider whitespace-nowrap">THE REBELLION</h2>
-        <h2 className="text-white text-xs sm:text-sm md:text-base lg:text-lg tracking-wider whitespace-nowrap">TESTIMONIALS</h2>
-        <h2 className="text-white text-xs sm:text-sm md:text-base lg:text-lg tracking-wider whitespace-nowrap">JOIN US</h2>
+      <nav className={`flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 font-bold overflow-x-auto gap-4 sm:gap-8`} style={{fontFamily: 'Chamelton10-bd'}}>
+        <h2 className="text-white text-base sm:text-xl tracking-wider whitespace-nowrap">THE REBELLION</h2>
+        <h2 className="text-white text-base sm:text-xl tracking-wider whitespace-nowrap">TESTIMONIALS</h2>
+        <h2 className="text-white text-base sm:text-xl tracking-wider whitespace-nowrap">JOIN US</h2>
       </nav>
 
       {/* Main Content */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-4 px-4 sm:px-8 md:px-12 lg:px-16 mt-4 md:mt-8 lg:mt-16">
         {/* Left Content */}
-        <div className="md:col-span-4 lg:col-span-5 text-center md:text-left">
+        <div className="md:col-span-4 lg:col-span-5 text-center md:text-left mt-12 md:mt-24 lg:mt-32">
           {/* Title */}
-          <div className="flex flex-col font-chameleon mt-4 md:mt-6 lg:mt-19 font-bold">
-            <div className="flex flex-col items-baseline gap-2 justify-center md:justify-start">
-              <span className="text-white text-5xl sm:text-6xl md:text-[40px] lg:text-[100px] xl:text-[100px] leading-none">RAGE</span>
-              <span className="text-[#1EEB7A] text-5xl sm:text-6xl md:text-[40px] lg:text-[100px] xl:text-[100px] leading-none">AGAINST</span>
-            </div>
-            <div>
-              <span className="text-[#1EEB7A] text-5xl sm:text-6xl md:text-[40px] lg:text-[100px] xl:text-[100px] leading-none">THE FEES!</span>
-            </div>
+          <div className="flex flex-col font-chameleon font-bold" style={{fontFamily: 'Chamelton10-bd'}}>
+            <span className="text-white text-4xl sm:text-5xl md:text-[60px] lg:text-[80px] xl:text-[100px] leading-none flex whitespace-nowrap">
+              <span>RAGE</span>
+              <span className="text-[#1EEB7A] ml-2 sm:ml-3 md:ml-4 lg:ml-5">AGAINST</span>
+            </span>
+            <span className="text-[#1EEB7A] text-4xl sm:text-5xl md:text-[60px] lg:text-[80px] xl:text-[100px] leading-none mt-2 sm:mt-3 md:mt-4">THE FEES!</span>
           </div>
 
           {/* Subtitle */}
-          <div className="mt-6 md:mt-8 lg:mt-16 space-y-4 md:ml-[20px] lg:ml-[60px]">
-            <p className="text-white text-lg md:text-base lg:text-2xl leading-relaxed font-bold" style={{fontFamily: 'Charter-Regular'}}>
+          <div className="mt-8 md:mt-12 lg:mt-16 space-y-4 md:pl-12 lg:pl-24" style={{fontFamily: 'Charter'}}>
+            <p className="text-white text-lg md:text-base lg:text-2xl leading-relaxed " style={{fontFamily: 'Charter-Regular'}}>
               U.S. Merchants paid <span className="text-[#1EEB7A] font-bold">$224 billion</span><br className="hidden md:block"/>
               dollars in swipe fees in 2023. Many<br className="hidden md:block"/>
               merchants rank them as their second<br className="hidden md:block"/>
               highest operating cost.
             </p>
-            <p className="text-white text-lg md:text-base lg:text-2xl">It&apos;s time to stop the squeeze.</p>
+            <p className="text-white text-lg mt-6 md:text-base lg:text-2xl">It&apos;s time to stop the squeeze.</p>
           </div>
         </div>
 
-        {/* Center Logo - Adjusted for larger desktop size */}
-        <div className="md:col-span-5 lg:col-span-4 flex justify-center items-center mt-8 md:mt-0">
-          <div className="relative flex justify-center items-center">
+        {/* Center Logo - Adjusted position higher */}
+        <div className="md:col-span-3 lg:col-span-4 flex justify-center items-start -mt-24">
+          <div className="relative">
             <Image
               src="/hero1.svg"
-              alt="Merchant Rebellion Logo"
-              width={700}
-              height={800}
-              className="w-[320px] md:w-[400px] lg:w-[600px] xl:w-[700px]"
+              alt="Logo"
+              width={1000}
+              height={1000}
+              className="w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] xl:w-[800px] xl:h-[800px] 2xl:w-[900px] 2xl:h-[900px] transform scale-110 md:scale-125"
               priority
             />
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="md:col-span-3 lg:col-span-3 mt-8 md:mt-12 lg:mt-24 flex flex-col items-center md:items-end">
-          <p className="text-[#1EEB7A] text-lg md:text-base lg:text-2xl text-center md:text-right mb-4">
+        <div className="md:col-span-3 lg:col-span-3 flex flex-col items-center md:items-end mt-12 md:mt-24 lg:mt-32">
+          <p className="text-[#1EEB7A] text-lg md:text-xl text-center md:text-right mb-4">
             Call now for U.S.-based<br/>
             single-ring concierge service
           </p>
@@ -69,26 +67,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="mt-auto pt-8 md:pt-12 lg:pt-20 px-4 sm:px-8 md:px-12 lg:px-16 pb-4">
-        <div className="flex justify-center md:justify-end gap-3 sm:gap-4 lg:gap-6 mb-4">
-          <div>
-            <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-[32px] md:w-[36px] lg:w-[46px]" />
-          </div>
-          <div>
-            <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-[32px] md:w-[36px] lg:w-[46px]" />
-          </div>
-          <div>
-            <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-[32px] md:w-[36px] lg:w-[46px]" />
-          </div>
-          <div>
-            <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-[32px] md:w-[36px] lg:w-[46px]" />
-          </div>
-        </div>
-        <p className="text-center md:text-right text-[#1EEB7A] text-xs sm:text-sm">
-          Supported by Transaction Acceptance Corp. Copyright 2025
-        </p>
-      </div>
+     
+      
     </div>
   );
 }

@@ -5,10 +5,10 @@ const Rebellion = () => {
   return (
     <div className="min-h-[100vh] bg-[#004D40] p-4 sm:p-8 text-white relative">
       {/* Navigation */}
-      <nav className="flex justify-between items-center mb-8 sm:mb-16 font-bold overflow-x-auto gap-4 sm:gap-8">
-        <div className="text-[#00FF7F] text-sm sm:text-lg font-bold whitespace-nowrap">THE REBELLION</div>
-        <div className="text-white text-sm sm:text-lg whitespace-nowrap">TESTIMONIALS</div>
-        <div className="text-white text-sm sm:text-lg font-bold whitespace-nowrap">JOIN US</div>
+      <nav className="flex justify-between items-center mb-8 px-4 sm:mb-16 font-bold overflow-x-auto gap-4 sm:gap-8" style={{fontFamily: 'Chamelton10-bd'}}>
+        <div className="text-[#00FF7F] text-base sm:text-xl font-bold whitespace-nowrap">THE REBELLION</div>
+        <div className="text-white text-base sm:text-xl whitespace-nowrap">TESTIMONIALS</div>
+        <div className="text-white text-base sm:text-xl font-bold whitespace-nowrap">JOIN US</div>
       </nav>
 
       {/* Main Content */}
@@ -48,7 +48,7 @@ const Rebellion = () => {
         </div>
 
         {/* Right Content */}
-        <div className="text-center md:text-right w-full md:w-auto" style={{ fontFamily: 'Arial-Regular' }}>
+        <div className="text-center md:text-right w-full md:w-auto" style={{ marginTop: "4.5rem" }}>
           <p className="text-[#00FF7F] text-lg sm:text-xl mb-4">
             Call now for U.S.-based<br />
             single-ring concierge service

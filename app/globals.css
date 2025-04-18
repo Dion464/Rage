@@ -29,6 +29,10 @@ body {
   font-family: 'Chamelton10-bd';
   src: url('/fonts/Chamelton10-Bd.otf') format('truetype');
 } 
+@font-face {
+  font-family: 'Charter';
+  src: url('/Fonts/Charter.ttc') format('truetype');
+} 
 
 @font-face {
   font-family: 'Arial-Bold';
@@ -60,7 +64,7 @@ body {
 }
 @font-face {
   font-family:Chamelton10blk ;
-  src: url('/fonts/Chamelton10-Bd.Blk') format('truetype');
+  src: url('/fonts/Chamelton10.Blk') format('truetype');
 }
 
 /* Add a reusable class for the call now section */
