@@ -209,7 +209,7 @@ export default function JoinForm() {
 
             <button
               type="submit"
-              className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-4 rounded-full mt-12 text-lg font-bold"
+              className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-4 rounded-full mt-12 text-lg font-bold font-arial-bold"
             >
               Submit
             </button>
@@ -218,14 +218,14 @@ export default function JoinForm() {
       case 1:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12" style={{fontFamily: 'Arial-Regular'}}>
+            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
             <div className="pl-8">
-              <div className="flex items-start gap-4 text-white text-2xl mb-8" style={{fontFamily: 'Arial-Regular'}}>
-                <span className="text-[#1EEB7A]">1 →</span>
+              <div className="flex items-start gap-4 text-white text-2xl mb-8">
+                <span className="text-[#1EEB7A] font-arial-bold">1 →</span>
                 <p>Are you looking for payment<br />processing for your business?</p>
               </div>
               <div className="flex flex-col gap-4 ml-12">
@@ -253,7 +253,7 @@ export default function JoinForm() {
                 </button>
                 <button
                   onClick={() => stepAnswers.step1 && handleStepSubmit(1, stepAnswers.step1)}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
                 >
                   Submit
                 </button>
@@ -264,14 +264,14 @@ export default function JoinForm() {
       case 2:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[40px] leading-tight mb-12" >
+            <h2 className="text-[#1EEB7A] text-[40px] leading-tight mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
             <div className="pl-8">
               <div className="flex items-start gap-4 text-white text-2xl mb-8">
-                <span className="text-[#1EEB7A]">2 →</span>
+                <span className="text-[#1EEB7A] font-arial-bold">2 →</span>
                 <p>Is your business based in<br />the United States?</p>
               </div>
               <div className="flex flex-col gap-4 ml-12">
@@ -299,7 +299,7 @@ export default function JoinForm() {
                 </button>
                 <button
                   onClick={() => stepAnswers.step2 && handleStepSubmit(2, stepAnswers.step2)}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
                 >
                   Submit
                 </button>
@@ -317,7 +317,7 @@ export default function JoinForm() {
             
             <div className="pl-4 sm:pl-8">
               <div className="flex items-start gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
-                <span className="text-[#1EEB7A]">3 →</span>
+                <span className="text-[#1EEB7A] font-arial-bold">3 →</span>
                 <p className="pr-4">What is your annual processing volume?</p>
               </div>
               <div className="flex flex-col gap-3 sm:gap-4 ml-8 sm:ml-12">
@@ -343,7 +343,7 @@ export default function JoinForm() {
                 ))}
                 <button
                   onClick={() => stepAnswers.step3 && handleStepSubmit(3, stepAnswers.step3)}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
                 >
                   Submit
                 </button>
@@ -361,7 +361,7 @@ export default function JoinForm() {
             
             <div className="pl-8">
               <div className="flex items-start gap-4 text-white text-2xl mb-8">
-                <span className="text-[#1EEB7A]">4 →</span>
+                <span className="text-[#1EEB7A] font-arial-bold">4 →</span>
                 <p>What type of business do you do?</p>
               </div>
               <div className="flex flex-col gap-4 ml-12">
@@ -374,7 +374,7 @@ export default function JoinForm() {
                 />
                 <button
                   onClick={() => stepAnswers.step4 && handleStepSubmit(4, stepAnswers.step4)}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
                 >
                   Submit
                 </button>
@@ -392,7 +392,7 @@ export default function JoinForm() {
             
             <div className="pl-4 sm:pl-8">
               <div className="flex items-start gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
-                <span className="text-[#1EEB7A]">5 →</span>
+                <span className="text-[#1EEB7A] font-arial-bold">5 →</span>
                 <p className="pr-4">Is it e-commerce or brick-and-mortar?</p>
               </div>
               <div className="flex flex-col gap-3 sm:gap-4 ml-8 sm:ml-12">
@@ -416,7 +416,7 @@ export default function JoinForm() {
                 ))}
                 <button
                   onClick={() => stepAnswers.step5 && handleStepSubmit(5, stepAnswers.step5)}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
                 >
                   Submit
                 </button>
@@ -427,15 +427,15 @@ export default function JoinForm() {
       case 6:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12" style={{ fontFamily: 'Charter-Regular' }}>
+            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
             <div className="pl-8">
               <div className="flex items-start gap-4 text-white text-2xl mb-8">
-                <span className="text-[#1EEB7A]">6 →</span>
-                <p style={{ fontFamily: 'Arial-Regular' }}>What is your job title?</p>
+                <span className="text-[#1EEB7A] font-arial-bold">6 →</span>
+                <p>What is your job title?</p>
               </div>
               <div className="flex flex-col gap-4 ml-12">
                 <input
@@ -447,7 +447,7 @@ export default function JoinForm() {
                 />
                 <button
                   onClick={handleFinalSubmit}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium" style={{ fontFamily: 'Arial-Regular' }}
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
                 >
                   Submit
                 </button>
@@ -455,11 +455,11 @@ export default function JoinForm() {
 
               {submitted && (
                 <div className="mt-12">
-                  <p className="text-[#1EEB7A] text-2xl mb-4" style={{ fontFamily: 'Charter-Regular' }}>
+                  <p className="text-[#1EEB7A] text-2xl mb-4 font-charter">
                     Thank you for your interest in joining<br />
                     the Merchant Rebellion.
                   </p>
-                  <p className="text-[#1EEB7A] text-xl" style={{ fontFamily: 'Charter-Regular' }}>
+                  <p className="text-[#1EEB7A] text-xl font-charter">
                     We will review your information and<br />
                     contact you as soon as possible.
                   </p>
@@ -474,8 +474,8 @@ export default function JoinForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A3B2E] flex flex-col">
-      <nav className="flex justify-between px-4 sm:px-16 py-6 mt-4 sm:mt-10">
+    <div className="h-screen bg-[#0A3B2E] flex flex-col font-arial">
+      <nav className="flex justify-between px-4 sm:px-16 py-6 font-chamelton-bd">
         <div className="text-white text-xl sm:text-2xl">THE REBELLION</div>
         <div className="hidden sm:block text-white text-2xl">SPEAK NOW</div>
         <div className="text-[#1EEB7A] text-xl sm:text-2xl">JOIN US</div>
@@ -483,20 +483,20 @@ export default function JoinForm() {
 
       <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative">
         <div className="w-full sm:w-1/2 pt-8 sm:pt-16 text-center sm:text-left">
-          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px]">
+          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px] font-chamelton-blk">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
           
           <div className="mt-8 sm:mt-16">
-            <p className="text-[#1EEB7A] text-lg sm:text-xl">
+            <p className="text-[#1EEB7A] text-lg sm:text-xl font-arial">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
 
             <a href="tel:1-800-941-1544" className="inline-block mt-6">
-              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl">
+              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-arial">
                 Call 1 (800) 941-1544
               </div>
             </a>
@@ -524,7 +524,7 @@ export default function JoinForm() {
             </div>
 
             {/* Form Content */}
-            <div className={`px-12 ${currentStep === 5 ? 'pt-24' : 'pt-32'} h-full ${currentStep === 5 ? '' : 'overflow-y-auto'}`} style={{fontFamily: 'Arial-Regular'}}>
+            <div className={`px-12 ${currentStep === 5 ? 'pt-24' : 'pt-32'} h-full ${currentStep === 5 ? '' : 'overflow-y-auto'}`}>
               {currentStep === 0 ? (
                 <form onSubmit={handleSubmit} className="space-y-12">
                   <div>
@@ -631,7 +631,7 @@ export default function JoinForm() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-4 rounded-full mt-12 text-lg font-bold"
+                    className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-4 rounded-full mt-12 text-lg font-bold font-arial-bold"
                   >
                     Submit
                   </button>

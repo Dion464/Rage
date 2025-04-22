@@ -2,20 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Charter:wght@400;700&display=swap');
 
 @tailwind base;
+
+/* Explicitly remove default margins/padding from block elements */
+@layer base {
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+    @apply m-0 p-0;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #0A3B2E;
+  --background: #0A0A0A;
   --foreground: #ffffff;
-  --accent: #1EEB7A;
+  --accent: #23F972;
+}
+
+html {
+  @apply text-base h-full;
 }
 
 body {
-
+  @apply m-0 p-0 h-full;
   color: var(--foreground);
-  margin: 0;
-  padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,41 +36,54 @@ body {
 }
 
 @font-face {
-  font-family: 'Chamelton10-bd';
-  src: url('/fonts/Chamelton10-Bd.otf') format('truetype');
+  font-family: 'Chamelton10-Bd';
+  src: url('/Fonts/Chamelton10-Bd.otf') format('opentype');
 } 
 
 @font-face {
   font-family: 'Arial-Bold';
-  src: url('/fonts/Arial-Bold.ttf') format('truetype');
+  src: url('/Fonts/Arial-Bold.ttf') format('truetype');
 } 
 
 @font-face {
- font-family: Arial-Black;
- src: url('/fonts/Arial-Black.ttf') format('truetype');
+  font-family: 'Arial-Black';
+  src: url('/Fonts/Arial.ttf') format('truetype');
+  font-weight: 900;
 } 
 
 @font-face {
-  font-family: Charter-Bold;
-  src: url('/fonts/Charter-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: Charter-Regular;
-  src: url('/fonts/Charter-Regular.ttf') format('truetype');
+  font-family: 'Charter-Bold';
+  src: url('/Fonts/Charter Bold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: Arial-Regular ;
-  src: url('/fonts/Arial.ttf') format('truetype');
+  font-family: 'Charter-Regular';
+  src: url('/Fonts/Charter Regular.otf') format('opentype');
 }
 
 @font-face {
-  font-family: Chamelton10 ;
-  src: url('/fonts/Chamelton10-Bd.otf') format('truetype');
+  font-family: 'Arial-Regular';
+  src: url('/Fonts/Arial.ttf') format('truetype');
 }
+
 @font-face {
-  font-family:Chamelton10blk ;
-  src: url('/fonts/Chamelton10-Bd.Blk') format('truetype');
+  font-family: 'Chamelton10';
+  src: url('/Fonts/Chamelton10-Bd.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chamelton10-Blk';
+  src: url('/Fonts/Chamelton10-Blk.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Charter-Italic';
+  src: url('/Fonts/Charter Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Charter-Bold-Italic';
+  src: url('/Fonts/Charter Bold Italic.otf') format('opentype');
 }
 
 /* Add a reusable class for the call now section */
@@ -89,17 +112,6 @@ body {
   }
 }
 
-/* Base responsive styles */
-html {
-  @apply text-base;
-}
-
-body {
-  @apply m-0 p-0 min-h-screen;
-  
-  color: var(--foreground);
-}
-
 /* Responsive text adjustments */
 h1 {
   @apply text-4xl md:text-5xl lg:text-6xl;
@@ -120,27 +132,14 @@ p {
   }
 }
 
-/* For mobile layout */
-.mobile-layout {
-  overflow-y: auto;
-  scroll-behavior: smooth;
-}
-.fullpagescroller-pagination {
-  display: none !important;
-}
-/* Ensure sections take appropriate height on mobile */
-@media (max-width: 767px) {
-  .section {
-    min-height: 100vh;
-    width: 100%;
-  }
+/* Removed fullpage.js specific rules */
+
+/* CSS for react-scroll-snap */
+.scroll-snap-container {
+  @apply h-screen overflow-y-scroll snap-y snap-mandatory;
 }
 
-/* Hide fullPage.js credit link */
-.fp-watermark {
-  display: none !important;
-}
-
-#fp-nav {
-  display: none !important;
+/* Ensure direct children of the container are snap points */
+.scroll-snap-container > * {
+  @apply snap-start;
 }
