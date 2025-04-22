@@ -5,7 +5,7 @@ import localFont from 'next/font/local';
 
 export default function Hero() {
   return (
-    <div className="h-screen flex flex-col bg-[#004D40]">
+    <div className="min-h-screen flex flex-col bg-[#004D40]">
       {/* Navigation */}
       <nav className={`flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 font-bold overflow-x-auto gap-4 sm:gap-8`} style={{fontFamily: 'Chamelton10-Bd'}}>
         <h2 className="text-white text-xs sm:text-sm md:text-base lg:text-lg tracking-wider whitespace-nowrap">THE REBELLION</h2>

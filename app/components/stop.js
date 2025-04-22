@@ -4,16 +4,16 @@ import Image from 'next/image';
 export default function Stop() {
   return (
     <div className="h-screen bg-[#004D40] flex flex-col">
-      <nav className="flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-4 md:py-5 gap-4 md:gap-8 font-bold" style={{fontFamily: 'Chamelton10-bd'}}>
-        <div className="text-[#23F972] text-sm sm:text-lg font-bold">THE REBELLION</div>
-        <div className="text-white text-sm sm:text-lg">TESTIMONIALS</div>
-        <div className="text-[#23F972] text-sm sm:text-lg font-bold">JOIN US</div>
+      <nav className="flex flex-row justify-between items-center px-4 md:px-16 py-4 md:py-5 gap-4 sm:gap-8 font-bold overflow-x-auto" style={{fontFamily: 'Chamelton10-bd'}}>
+        <div className="text-[#23F972] text-xs sm:text-lg font-bold whitespace-nowrap">THE REBELLION</div>
+        <div className="text-white text-xs sm:text-lg whitespace-nowrap">TESTIMONIALS</div>
+        <div className="text-white text-xs sm:text-lg font-bold whitespace-nowrap">JOIN US</div>
       </nav>
 
-      <div className="flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">
+      <div className="mt-24 md:mt-0 flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">
         {/* Left side content */}
         <div className="pt-4 md:pt-8 w-full md:max-w-[85%] text-center md:text-left">
-          <h1 className="text-[#23F972] text-4xl md:text-[90px] leading-tight font-black tracking-tight  font-chamelton-blk" >
+          <h1 className="text-[#23F972] text-3xl md:text-[90px] leading-tight font-black tracking-tight" style={{fontFamily: 'Chamelton10-bd'}}>
             STOP SWIPING AWAY<br />
             YOUR PROFITS.<br />
             SWIPE FEES<br />
@@ -24,7 +24,7 @@ export default function Stop() {
             </div>
           </h1>
 
-          <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
+          <div className="mt-12 md:mt-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <p className="text-white text-lg md:text-xl text-center md:text-left" style={{ fontFamily: 'Charter-Regular, serif' }}>
               Call the <span className="text-[#23F972]">Merchant Rebellion</span> and talk<br className="hidden md:block" />
               to a real person with real solutions.
@@ -40,7 +40,7 @@ export default function Stop() {
         </div>
 
         {/* Right side content */}
-        <div className="relative md:absolute md:right-16 md:top-1/4 text-center md:text-right mt-8 md:mt-0 font-arial">
+        <div className="relative md:absolute md:right-16 md:top-1/4 text-center md:text-right mt-16 md:mt-0">
           <p className="text-[#23F972] text-lg md:text-xl mb-4 font-arial">
             Call now for U.S.-based<br />
             single-ring concierge service

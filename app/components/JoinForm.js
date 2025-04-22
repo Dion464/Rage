@@ -474,11 +474,11 @@ export default function JoinForm() {
   };
 
   return (
-    <div className="h-screen bg-[#0A3B2E] flex flex-col font-arial">
+    <div className="min-h-screen bg-[#0A3B2E] flex flex-col font-arial">
       <nav className="flex justify-between px-4 sm:px-16 py-6 font-chamelton-bd">
-        <div className="text-white text-xl sm:text-2xl">THE REBELLION</div>
-        <div className="hidden sm:block text-white text-2xl">SPEAK NOW</div>
-        <div className="text-[#1EEB7A] text-xl sm:text-2xl">JOIN US</div>
+        <div className="text-white text-xl sm:text-xl">THE REBELLION</div>
+        <div className="hidden sm:block text-white text-xl">Testimonials</div>
+        <div className="text-[#1EEB7A] text-xl sm:text-xl">JOIN US</div>
       </nav>
 
       <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative">
