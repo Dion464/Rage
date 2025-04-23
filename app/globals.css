@@ -21,11 +21,28 @@
 
 html {
   @apply text-base h-full;
+  scroll-behavior: smooth;
 }
 
 body {
   @apply m-0 p-0 h-full;
   color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Full Page Scrolling */
+.fullpage-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.fullpage-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
 }
 
 @media (prefers-color-scheme: dark) {

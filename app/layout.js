@@ -1,14 +1,17 @@
+import { Inter } from 'next/font/google';
 import './globals.css';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata = {
-  title: 'Merchant Rebellion - Rage Against The Fees',
-  description: 'Stop the squeeze on merchant fees',
-}
+  title: 'The Merchant Rebellion',
+  description: 'Join the Merchant Rebellion against high payment processing fees.',
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
       </body>
     </html>

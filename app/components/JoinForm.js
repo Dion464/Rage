@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useFormStore } from '../store/formStore';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function JoinForm() {
   const [countries, setCountries] = useState([]);
@@ -143,7 +144,7 @@ export default function JoinForm() {
                     {selectedCountry && (
                       <>
                         <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-6 h-4" />
-                        <span className="text-gray-400">+{selectedCountry.code}</span>
+                        <span className="text-gray-400">{selectedCountry.code}</span>
                         <span className="text-gray-400 ml-1">▼</span>
                       </>
                     )}
@@ -163,7 +164,7 @@ export default function JoinForm() {
                         >
                           <img src={country.flag} alt={country.name} className="w-6 h-4" />
                           <span>{country.name}</span>
-                          <span className="text-gray-400">+{country.code}</span>
+                          <span className="text-gray-400">{country.code}</span>
                         </button>
                       ))}
                     </div>
@@ -474,14 +475,16 @@ export default function JoinForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A3B2E] flex flex-col font-arial">
-      <nav className="flex justify-between px-4 sm:px-16 py-6 font-chamelton-bd">
-        <div className="text-white text-xl sm:text-xl">THE REBELLION</div>
-        <div className="hidden sm:block text-white text-xl">Testimonials</div>
-        <div className="text-[#1EEB7A] text-xl sm:text-xl">JOIN US</div>
+    <div id="join" className="min-h-screen bg-[#0A3B2E] flex flex-col font-arial-bold">
+      {/* Component-specific navigation */}
+      <nav className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
+        <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</h2>
+        <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">TESTIMONIALS</h2>
+        <h2 className="text-[#23F972] text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</h2>
       </nav>
 
-      <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative">
+      {/* Main content section */}
+      <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative pt-16 md:pt-12">
         <div className="w-full sm:w-1/2 pt-8 sm:pt-16 text-center sm:text-left">
           <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px] font-chamelton-blk">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
@@ -497,7 +500,7 @@ export default function JoinForm() {
 
             <a href="tel:1-800-941-1544" className="inline-block mt-6">
               <div className="border border-[#1EEB7A] text-[#1EEB7A] px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-arial">
-                Call 1 (800) 941-1544
+                Call  + 1 (800) 941-1544
               </div>
             </a>
           </div>
@@ -565,7 +568,7 @@ export default function JoinForm() {
                           {selectedCountry && (
                             <>
                               <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-6 h-4" />
-                              <span className="text-gray-400">+{selectedCountry.code}</span>
+                              <span className="text-gray-400">{selectedCountry.code}</span>
                               <span className="text-gray-400 ml-1">▼</span>
                             </>
                           )}
@@ -585,7 +588,7 @@ export default function JoinForm() {
                               >
                                 <img src={country.flag} alt={country.name} className="w-6 h-4" />
                                 <span>{country.name}</span>
-                                <span className="text-gray-400">+{country.code}</span>
+                                <span className="text-gray-400">{country.code}</span>
                               </button>
                             ))}
                           </div>
