@@ -65,7 +65,7 @@ export default function Hero() {
       </div>
       
       {/* Scroll Down Indicator */}
-      <ScrollDownIndicator />
+    
     </div>
   );
 }
