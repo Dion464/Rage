@@ -35,17 +35,31 @@ export default function Stop() {
         </div>
 
         {/* Right side content */}
-        <div className="relative md:absolute md:right-16 md:top-1/4 text-center md:text-right md:mt-0">
-          <p className="text-[#23F972] text-lg md:text-xl mb-4 font-arial">
-            Call now for U.S.-based<br />
-            single-ring concierge service
-          </p>
-          <a 
-            href="tel:18009411544"
-            className="inline-block px-8 md:px-12 py-2 md:py-3 border border-[#23F972] rounded-full text-[#23F972] hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors text-lg md:text-xl font-arial-bold"
-          >
-            Call + 1 (800) 941-1544
-          </a>
+        <div className="relative md:absolute md:right-16 md:top-16 text-center md:text-right md:mt-0 flex flex-col items-center md:items-end">
+          {/* New Logo */}
+          <div className="mb-8 z-10">
+            <Image
+              src="/MR_Badge.svg"
+              alt="Merchant Rebellion Badge"
+              width={384}
+              height={384}
+              className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+            />
+          </div>
+          
+          {/* Call To Action */}
+          <div className="mt-4 flex flex-col items-center md:items-end md:pr-14">
+            <p className="text-[#23F972] text-lg md:text-xl mb-4 font-arial">
+              Call now for U.S.-based<br />
+              single-ring concierge service
+            </p>
+            <a 
+              href="tel:18009411544"
+              className="inline-block px-8 md:px-12 py-2 md:py-3 border border-[#23F972] rounded-full text-[#23F972] hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors text-lg md:text-xl font-arial-bold"
+            >
+              Call + 1 (800) 941-1544
+            </a>
+          </div>
         </div>
       </div>
 

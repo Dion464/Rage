@@ -475,11 +475,11 @@ export default function JoinForm() {
   };
 
   return (
-    <div id="join" className="min-h-screen bg-[#0A3B2E] flex flex-col font-arial-bold">
+    <div id="join" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col font-arial-bold">
       {/* Component-specific navigation */}
       <nav className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</h2>
-        <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">TESTIMONIALS</h2>
+        <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">SPEAK NOW</h2>
         <h2 className="text-[#23F972] text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</h2>
       </nav>
 
