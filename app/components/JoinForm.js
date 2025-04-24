@@ -226,7 +226,7 @@ export default function JoinForm() {
       case 1:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[42px] leading-tight mb-8 sm:mb-12">
+            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[40px] leading-tight mb-8 sm:mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
@@ -493,7 +493,7 @@ export default function JoinForm() {
       {/* Main content section */}
       <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-8 sm:pt-16 md:pt-12">
         <div className="w-full sm:w-1/2 pt-4 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
-          <h1 className="text-[45px] sm:text-[70px] md:text-[100px] lg:text-[120px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0">
+          <h1 className="text-[45px] sm:text-[70px] md:text-[100px] lg:text-[120px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
@@ -655,6 +655,20 @@ export default function JoinForm() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @media screen and (width: 1280px) {
+          /* Specific styles for Nest Hub Max */
+          .join-title {
+            font-size: 60px !important;
+            line-height: 0.9;
+          }
+          
+          #join nav h2 {
+            font-size: 24px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
