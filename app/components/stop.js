@@ -20,7 +20,7 @@ export default function Stop() {
             SWIPE FEES<br />
             HAVE INCREASED<br />
             <div className="flex items-center justify-center md:justify-start">
-              <span className="text-white">700% </span>
+              <span className="text-white">700% <span className="inline md:hidden">&nbsp;</span> </span>
               <span className="text-[#23F972]">SINCE 2001.</span>
             </div>
           </h1>
@@ -28,7 +28,7 @@ export default function Stop() {
           <div className="mt-12 md:mt-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
             <p className="text-white text-lg md:text-xl text-center md:text-left font-charter">
               Call the <span className="text-[#23F972]">Merchant Rebellion</span> and talk<br className="hidden md:block" />
-              to a real person with real solutions.
+              <span className="inline md:hidden">&nbsp;</span>to a real person with real solutions.
             </p>
            
           </div>
@@ -66,6 +66,14 @@ export default function Stop() {
       {/* Social Media Icons */}
      
       {/* Footer Text */}
+      
+      <style jsx>{`
+        @media (max-width: 767px) {
+          #stop p {
+            word-spacing: 2px;
+          }
+        }
+      `}</style>
     
     </div>
   );

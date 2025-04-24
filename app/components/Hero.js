@@ -9,29 +9,29 @@ export default function Hero() {
       
 
       {/* Main Content */}
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-12 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center pb-16 md:pb-0 pt-16 md:pt-0">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center pb-16 md:pb-0 pt-8 md:pt-0">
         {/* Left Content */}
-        <div className="md:col-span-4 text-center md:text-left pt-16 md:pt-0">
+        <div className="md:col-span-4 text-center md:text-left pt-8 md:pt-0">
           {/* Title */}
           <div className="font-chamelton-blk">
-            <div className="flex flex-row items-baseline gap-4 justify-center md:justify-start">
-              <span className="text-white text-4xl sm:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
-              <span className="text-[#23F972] text-4xl sm:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">AGAINST</span>
+            <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
+              <span className="text-white text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
+              <span className="text-[#23F972] text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">AGAINST</span>
             </div>
             <div>
-              <span className="text-[#23F972] text-4xl sm:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">THE FEES!</span>
+              <span className="text-[#23F972] text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">THE FEES!</span>
             </div>
           </div>
 
           {/* Subtitle */}
-          <div className="mt-12 md:mt-10 lg:mt-12 font-charter space-y-4">
-            <p className="text-white text-base lg:text-xl xl:text-2xl leading-relaxed">
-              U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span><br className="hidden md:block"/>
-              dollars in swipe fees in 2023. Many<br className="hidden md:block"/>
-              merchants rank them as their second<br className="hidden md:block"/>
+          <div className="mt-8 md:mt-10 lg:mt-12 font-charter space-y-3 md:space-y-4">
+            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed">
+              U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span>{" "}
+              dollars in swipe fees in 2023. Many{" "}
+              merchants rank them as their second{" "}
               highest operating cost.
             </p>
-            <p className="text-white text-base lg:text-xl xl:text-2xl">It&apos;s time to stop the squeeze.</p>
+            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl">It&apos;s time to stop the squeeze.</p>
           </div>
         </div>
 
@@ -51,23 +51,31 @@ export default function Hero() {
         </div>
 
         {/* Right Content */}
-        <div className="md:col-span-2 flex flex-col items-center md:items-end justify-center pt-0 pb-16 md:py-0">
-          <p className="text-[#23F972] text-sm lg:text-lg xl:text-xl text-center md:text-right mb-4 font-charter">
-            Call now for U.S.-based<br/>
-            single-ring concierge service
-          </p>
-          <a
-            href="tel:18009411544"
-            className="inline-block border-2 border-[#23F972] text-[#23F972] rounded-full px-4 py-2 text-sm lg:text-base xl:text-lg font-charter-bold hover:bg-[#23F972] hover:text-black transition-colors whitespace-nowrap"
-          >
-            Call (800) 941-1544
-          </a>
+        <div className="md:col-span-2 flex flex-col items-center md:items-end justify-center pt-0 pb-12 md:py-0">
+          <div className="text-center md:text-right mb-4 relative">
+            <p className="text-[#23F972] text-sm lg:text-lg xl:text-xl mb-3 md:mb-2 font-charter text-right whitespace-nowrap">
+              Call now for U.S.-based<br/>
+              single-ring concierge service
+            </p>
+            <a
+              href="tel:18009411544"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-full px-6 py-2 text-sm lg:text-base xl:text-lg font-charter-bold hover:bg-[#23F972] hover:text-black transition-colors whitespace-nowrap mt-2"
+            >
+              Call 1 (800) 941-1544
+            </a>
+          </div>
         </div>
       </div>
       
       <style jsx global>{`
         .logo-container {
-          min-height: 400px;
+          min-height: 260px;
+        }
+        
+        @media (min-width: 640px) {
+          .logo-container {
+            min-height: 320px;
+          }
         }
         
         @media (min-width: 768px) {
@@ -91,6 +99,13 @@ export default function Hero() {
           }
           .logo-image {
             transform: scale(1.5);
+          }
+        }
+        
+        @media (max-width: 767px) {
+          #hero p {
+            word-spacing: 2px;
+            line-height: 1.6;
           }
         }
       `}</style>

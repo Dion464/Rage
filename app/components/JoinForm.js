@@ -31,7 +31,7 @@ export default function JoinForm() {
           .map(country => ({
             name: country.name.common,
             flag: country.flags.svg,
-            code: country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : '')
+            code: formatCountryCode(country)
           }))
           .sort((a, b) => a.name.localeCompare(b.name));
         
@@ -40,6 +40,13 @@ export default function JoinForm() {
         setSelectedCountry(us);
       });
   }, []);
+
+  const formatCountryCode = (country) => {
+    if (country.name.common === 'United States') {
+      return '+1 ';
+    }
+    return country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : '');
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -105,9 +112,9 @@ export default function JoinForm() {
     switch (currentStep) {
       case 0:
         return (
-          <form onSubmit={handleSubmit} className="space-y-12">
+          <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
             <div>
-              <label htmlFor="firstName" className="text-white text-sm mb-2 block">First Name*</label>
+              <label htmlFor="firstName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">First Name*</label>
               <input
                 id="firstName"
                 type="text"
@@ -120,7 +127,7 @@ export default function JoinForm() {
             </div>
 
             <div>
-              <label htmlFor="lastName" className="text-white text-sm mb-2 block">Last Name*</label>
+              <label htmlFor="lastName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Last Name*</label>
               <input
                 id="lastName"
                 type="text"
@@ -133,8 +140,8 @@ export default function JoinForm() {
             </div>
 
             <div>
-              <label htmlFor="phone" className="text-white text-sm mb-2 block">Phone Number*</label>
-              <div className="flex gap-4 relative">
+              <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
+              <div className="flex gap-2 sm:gap-4 relative">
                 <div className="relative">
                   <button
                     type="button"
@@ -183,7 +190,7 @@ export default function JoinForm() {
             </div>
 
             <div>
-              <label htmlFor="email" className="text-white text-sm mb-2 block">Email*</label>
+              <label htmlFor="email" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Email*</label>
               <input
                 id="email"
                 type="email"
@@ -196,7 +203,7 @@ export default function JoinForm() {
             </div>
 
             <div>
-              <label htmlFor="company" className="text-white text-sm mb-2 block">Company*</label>
+              <label htmlFor="company" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Company*</label>
               <input
                 id="company"
                 type="text"
@@ -210,7 +217,7 @@ export default function JoinForm() {
 
             <button
               type="submit"
-              className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-4 rounded-full mt-12 text-lg font-bold font-arial-bold"
+              className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-3 sm:py-4 rounded-full mt-8 sm:mt-12 text-base sm:text-lg font-bold font-arial-bold"
             >
               Submit
             </button>
@@ -219,13 +226,13 @@ export default function JoinForm() {
       case 1:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
+            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[42px] leading-tight mb-8 sm:mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
-            <div className="pl-8">
-              <div className="flex items-start gap-4 text-white text-2xl mb-8">
+            <div className="pl-4 sm:pl-8">
+              <div className="flex items-start gap-2 sm:gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
                 <span className="text-[#1EEB7A] font-arial-bold">1 →</span>
                 <p>Are you looking for payment<br />processing for your business?</p>
               </div>
@@ -265,13 +272,13 @@ export default function JoinForm() {
       case 2:
         return (
           <div className="space-y-8">
-            <h2 className="text-[#1EEB7A] text-[40px] leading-tight mb-12">
+            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[40px] leading-tight mb-8 sm:mb-12">
               Tell us more about yourself<br />
               and your business.
             </h2>
             
-            <div className="pl-8">
-              <div className="flex items-start gap-4 text-white text-2xl mb-8">
+            <div className="pl-4 sm:pl-8">
+              <div className="flex items-start gap-2 sm:gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
                 <span className="text-[#1EEB7A] font-arial-bold">2 →</span>
                 <p>Is your business based in<br />the United States?</p>
               </div>
@@ -478,38 +485,38 @@ export default function JoinForm() {
     <div id="join" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col font-arial-bold">
       {/* Component-specific navigation */}
       <nav className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
-        <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</h2>
-        <h2 className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">SPEAK NOW</h2>
-        <h2 className="text-[#23F972] text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</h2>
+        <h2 className="text-white text-xs sm:text-sm md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</h2>
+        <h2 className="text-white text-xs sm:text-sm md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">SPEAK NOW</h2>
+        <h2 className="text-[#23F972] text-xs sm:text-sm md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</h2>
       </nav>
 
       {/* Main content section */}
-      <div className="flex flex-col sm:flex-row px-4 sm:px-16 relative pt-16 md:pt-12">
-        <div className="w-full sm:w-1/2 pt-8 sm:pt-16 text-center sm:text-left">
-          <h1 className="text-[70px] sm:text-[120px] leading-[0.9] font-bold md:text-[100px] font-chamelton-blk">
+      <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-8 sm:pt-16 md:pt-12">
+        <div className="w-full sm:w-1/2 pt-4 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
+          <h1 className="text-[45px] sm:text-[70px] md:text-[100px] lg:text-[120px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
           
-          <div className="mt-8 sm:mt-16">
-            <p className="text-[#1EEB7A] text-lg sm:text-xl font-arial">
+          <div className="mt-8 sm:mt-16 flex flex-col items-center sm:items-start">
+            <p className="text-[#1EEB7A] text-base sm:text-lg md:text-xl font-arial text-center sm:text-left">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
 
-            <a href="tel:1-800-941-1544" className="inline-block mt-6">
-              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-6 sm:px-8 py-2 sm:py-3 rounded-full text-lg sm:text-xl font-arial">
-                Call  + 1 (800) 941-1544
+            <a href="tel:1-800-941-1544" className="inline-block mt-4 sm:mt-6">
+              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-arial">
+                Call + 1 (800) 941-1544
               </div>
             </a>
           </div>
 
-          <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16">
-            <Image src="/instagram.svg" alt="Instagram" width={46} height={46} />
-            <Image src="/facebookicon.svg" alt="Facebook" width={46} height={46} />
-            <Image src="/xicon.svg" alt="X" width={46} height={46} />
-            <Image src="/linkedinicon.svg" alt="LinkedIn" width={46} height={46} />
+          <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16 mx-auto sm:mx-0">
+            <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </div>
         </div>
 
@@ -529,9 +536,9 @@ export default function JoinForm() {
             {/* Form Content */}
             <div className={`px-12 ${currentStep === 5 ? 'pt-24' : 'pt-32'} h-full ${currentStep === 5 ? '' : 'overflow-y-auto'}`}>
               {currentStep === 0 ? (
-                <form onSubmit={handleSubmit} className="space-y-12">
+                <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
                   <div>
-                    <label htmlFor="firstName" className="text-white text-sm mb-2 block">First Name*</label>
+                    <label htmlFor="firstName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">First Name*</label>
                     <input
                       id="firstName"
                       type="text"
@@ -544,7 +551,7 @@ export default function JoinForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="lastName" className="text-white text-sm mb-2 block">Last Name*</label>
+                    <label htmlFor="lastName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Last Name*</label>
                     <input
                       id="lastName"
                       type="text"
@@ -557,8 +564,8 @@ export default function JoinForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="text-white text-sm mb-2 block">Phone Number*</label>
-                    <div className="flex gap-4 relative">
+                    <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
+                    <div className="flex gap-2 sm:gap-4 relative">
                       <div className="relative">
                         <button
                           type="button"
@@ -607,7 +614,7 @@ export default function JoinForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="text-white text-sm mb-2 block">Email*</label>
+                    <label htmlFor="email" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Email*</label>
                     <input
                       id="email"
                       type="email"
@@ -620,7 +627,7 @@ export default function JoinForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="text-white text-sm mb-2 block">Company*</label>
+                    <label htmlFor="company" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Company*</label>
                     <input
                       id="company"
                       type="text"
@@ -634,7 +641,7 @@ export default function JoinForm() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-4 rounded-full mt-12 text-lg font-bold font-arial-bold"
+                    className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-3 sm:py-4 rounded-full mt-8 sm:mt-12 text-base sm:text-lg font-bold font-arial-bold"
                   >
                     Submit
                   </button>
@@ -650,4 +657,9 @@ export default function JoinForm() {
       </div>
     </div>
   );
-} 
+}
+
+const styles = {
+  wordSpacing: '2px',
+  lineHeight: 1.6
+}; 

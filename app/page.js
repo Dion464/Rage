@@ -7,9 +7,34 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isMobileOrSmallScreen, setIsMobileOrSmallScreen] = useState(true);
+
+  // Check screen size and update state
+  useEffect(() => {
+    const checkScreenSize = () => {
+      // Disable fullpage scroll on screens smaller than 1280px (typical xl breakpoint)
+      setIsMobileOrSmallScreen(window.innerWidth < 1280);
+    };
+    
+    // Initial check
+    checkScreenSize();
+    
+    // Listen for resize events
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   // Handle keyboard navigation and wheel events
   useEffect(() => {
+    // If on mobile or small screen, don't enable fullpage scrolling
+    if (isMobileOrSmallScreen) {
+      return;
+    }
+    
     let scrollTimeout;
     
     const handleWheel = (e) => {
@@ -112,20 +137,20 @@ export default function Home() {
       window.removeEventListener('wheel', handleWheel);
       clearTimeout(scrollTimeout);
     };
-  }, [isScrolling]);
+  }, [isScrolling, isMobileOrSmallScreen]);
 
   return (
-    <main className="fullpage-container">
-      <section className="fullpage-section">
+    <main className={`${isMobileOrSmallScreen ? '' : 'fullpage-container'}`}>
+      <section className={`${isMobileOrSmallScreen ? '' : 'fullpage-section'}`}>
         <Hero />
       </section>
-      <section className="fullpage-section">
+      <section className={`${isMobileOrSmallScreen ? '' : 'fullpage-section'}`}>
         <Stop />
       </section>
-      <section className="fullpage-section">
+      <section className={`${isMobileOrSmallScreen ? '' : 'fullpage-section'}`}>
         <Testimonials />
       </section>
-      <section className="fullpage-section">
+      <section className={`${isMobileOrSmallScreen ? '' : 'fullpage-section'}`}>
         <JoinForm />
       </section>
     </main>
