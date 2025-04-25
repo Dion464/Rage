@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Stop() {
   return (
-    <div id="stop" className="h-screen bg-[#0A3B2E] flex flex-col">
+    <div id="stop" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col">
     
       <nav className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <h2 className="text-[#23F972] text-base sm:text-lg md:text-2xl lg:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</h2>
@@ -12,7 +12,6 @@ export default function Stop() {
       </nav>
    
       <div className="mt-16 sm:mt-24 md:mt-0 flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">
-        {/* Left side content */}
         <div className="pt-4 md:pt-8 w-full md:max-w-[85%] text-center md:text-left">
           <h1 className="text-[#23F972] text-3xl md:text-[90px] leading-tight font-chamelton-blk tracking-tight">
             STOP SWIPING AWAY<br />
@@ -34,9 +33,7 @@ export default function Stop() {
           </div>
         </div>
 
-        {/* Right side content */}
         <div className="relative md:absolute md:right-16 md:top-16 text-center md:text-right mt-6 mb-10 md:mt-0 flex flex-col items-center md:items-end">
-          {/* New Logo */}
           <div className="mb-4 sm:mb-8 z-10">
             <Image
               src="/MR_Badge.svg"
@@ -47,7 +44,6 @@ export default function Stop() {
             />
           </div>
           
-          {/* Call To Action */}
           <div className="mt-2 sm:mt-4 flex flex-col items-center md:items-end md:pr-14">
             <p className="text-[#23F972] text-base sm:text-lg md:text-xl mb-2 sm:mb-4 font-arial">
               Call now for U.S.-based<br />
@@ -62,10 +58,6 @@ export default function Stop() {
           </div>
         </div>
       </div>
-
-      {/* Social Media Icons */}
-     
-      {/* Footer Text */}
       
       <style jsx>{`
         @media (max-width: 767px) {

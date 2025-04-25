@@ -3,19 +3,15 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <div id="testimonials" className="min-h-screen bg-[#0A0A0A] flex flex-col relative overflow-hidden">
-      {/* Navigation */}
+    <div id="testimonials" className="min-h-[100vh] bg-[#0A0A0A] flex flex-col relative overflow-hidden">
       <nav className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
         <h2 className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</h2>
         <h2 className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">TESTIMONIALS</h2>
         <h2 className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</h2>
       </nav>
 
-      {/* Main Content */}
       <div className="flex flex-col md:flex-row px-4 sm:px-8 md:px-16 mt-2 sm:mt-4 md:mt-6 flex-1 pb-8 sm:pb-12 md:pb-16 z-10">
-        {/* Left Content */}
         <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4">
-          {/* Title */}
           <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
             <div className="text-[#23F972] text-[30px] sm:text-[38px] md:text-[45px] lg:text-[80px] xl:text-[100px] leading-[0.9] font-extrabold tracking-tighter whitespace-nowrap md:leading-tight">
               REAL MERCHANTS.
@@ -26,9 +22,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* All Testimonials */}
           <div className="border-l border-gray-700 pl-3 sm:pl-4 md:pl-8 mt-4 sm:mt-6 md:mt-3 md:max-h-[200px] md:overflow-y-auto lg:max-h-none lg:overflow-visible lg:mt-8 space-y-4 sm:space-y-5 md:space-y-1 lg:space-y-6 nest-hub-testimonials">
-            {/* First testimonial */}
             <div>
               <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Langes of Bronxville, Bronxville, NY:</h3>
               <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[95%] md:max-w-[95%]">
@@ -40,7 +34,6 @@ export default function Testimonials() {
               <p className="text-white text-xs md:text-xs lg:text-sm">Thomas Bass, Owner</p>
             </div>
 
-            {/* Second testimonial */}
             <div>
               <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Tryforos and Pernice Florist, Bronxville, NY:</h3>
               <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[95%] md:max-w-[95%]">
@@ -51,7 +44,6 @@ export default function Testimonials() {
               <p className="text-white text-xs md:text-xs lg:text-sm">Gary Tryforos, Owner</p>
             </div>
 
-            {/* Hide third testimonial on medium screens */}
             <div className="md:hidden lg:block">
               <h3 className="text-[#23F972] mb-1 text-xs sm:text-sm md:text-base font-bold">Park Place Meats, Inc., Bronxville, NY:</h3>
               <p className="text-white mb-1 sm:mb-2 text-xs md:text-sm leading-relaxed max-w-[95%] md:max-w-[80%]">
@@ -66,9 +58,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Right Content */}
         <div className="w-full md:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-center md:items-end relative overflow-visible">
-          {/* Call To Action */}
           <div className="text-center md:text-right mb-4 z-10 relative w-full mt-0 sm:mt-2 md:mt-2 lg:mt-12 nest-hub-cta">
             <p className="text-[#23F972] text-sm sm:text-base md:text-xs lg:text-lg mb-3 md:mb-0.5 lg:mb-2 font-arial">
               Call now for U.S.-based<br/>
@@ -84,7 +74,6 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Flag - ONLY displayed on DESKTOP and tablet */}
       <div className="standard-flag hidden sm:block absolute bottom-0 right-0 pointer-events-none z-0">
         <div className="relative lg:w-[700px] lg:h-[800px] xl:w-[900px] xl:h-[1000px]">
           <Image
@@ -97,7 +86,6 @@ export default function Testimonials() {
         </div>
       </div>
       
-      {/* Special flag just for Nest Hub Max */}
       <div className="nest-hub-flag">
         <Image
           src="/flag.svg"
@@ -110,14 +98,12 @@ export default function Testimonials() {
       </div>
 
       <style jsx>{`
-        /* Standard desktop flag */
         @media not all and (width: 1280px) {
           .nest-hub-flag {
             display: none;
           }
         }
         
-        /* Special styling for Nest Hub Max */
         @media screen and (width: 1280px) {
           .standard-flag {
             display: block !important;
@@ -148,7 +134,6 @@ export default function Testimonials() {
             display: none;
           }
           
-          /* Adjust the standard flag for Nest Hub Max */
           .standard-flag {
             bottom: 30px !important;
             right: -50px !important;
@@ -160,7 +145,6 @@ export default function Testimonials() {
           }
         }
         
-        /* Additional mobile responsiveness */
         @media screen and (max-width: 640px) {
           #testimonials {
             min-height: calc(100vh - 20px);

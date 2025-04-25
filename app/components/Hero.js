@@ -4,15 +4,11 @@ import Navigation from "./Navigation";
 
 export default function Hero() {
   return (
-    <div id="hero" className="min-h-screen flex flex-col bg-[#0A3B2E] relative">
+    <div id="hero" className="min-h-[100vh] flex flex-col bg-[#0A3B2E] relative">
       <Navigation />
       
-
-      {/* Main Content */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center pb-16 md:pb-0 pt-8 md:pt-0">
-        {/* Left Content */}
         <div className="md:col-span-4 text-center md:text-left pt-8 md:pt-0">
-          {/* Title */}
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
               <span className="text-white text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
@@ -23,7 +19,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Subtitle */}
           <div className="mt-8 md:mt-10 lg:mt-12 font-charter space-y-3 md:space-y-4">
             <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed">
               U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span>{" "}
@@ -35,7 +30,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Center Logo - Fixed Height and Width */}
         <div className="md:col-span-6 flex justify-center items-center md:order-none py-0">
           <div className="logo-container w-full h-full flex items-center justify-center">
             <Image
@@ -50,7 +44,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Content */}
         <div className="md:col-span-2 flex flex-col items-center md:items-end justify-center pt-0 pb-12 md:py-0">
           <div className="text-center md:text-right mb-4 relative">
             <p className="text-[#23F972] text-sm lg:text-lg xl:text-xl mb-3 md:mb-2 font-charter text-right whitespace-nowrap">
