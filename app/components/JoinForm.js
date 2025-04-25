@@ -43,7 +43,7 @@ export default function JoinForm() {
 
   const formatCountryCode = (country) => {
     if (country.name.common === 'United States') {
-      return '+1 ';
+      return '+1 (201) ';
     }
     return country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : '');
   };
@@ -183,7 +183,7 @@ export default function JoinForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="(201) 555-0123"
+                  placeholder=" "
                   className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                 />
               </div>
@@ -607,7 +607,7 @@ export default function JoinForm() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="(201) 555-0123"
+                        placeholder=" 555-0123"
                         className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                       />
                     </div>
