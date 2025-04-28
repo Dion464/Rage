@@ -27,10 +27,10 @@ export default function Testimonials() {
               <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Langes Deli:
               :</h3>
               <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[85%] md:max-w-[80%]">
-                &ldquo;Five months ago I reluctantly switched to the Cash Discount Program
-                 I anticipated resistance from my
-                customers. There truly has been none. The monthly savings are as
-                advertised and it goes right to the bottom line.&rdquo;
+                &ldquo;Five months ago I reluctantly switched Langes Deli to the Cash Discount Program.
+                I anticipated resistance from my customers. There truly has been none.
+                 
+                 The monthly savings are as advertised and it goes right to the bottom line..&rdquo;
               </p>
               <p className="text-white text-xs md:text-xs lg:text-sm">Thomas Bass, Owner</p>
             </div>
