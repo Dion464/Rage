@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from 'next/link';
 export default function Testimonials() {
   return (
-    <div id="testimonials" className="min-h-[100vh] bg-[#0A0A0A] flex flex-col relative overflow-hidden">
+    <div id="testimonials" className="min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden">
       <div className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
       <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</Link>
       <Link href="#testimonials" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
