@@ -8,17 +8,12 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [isMobileOrSmallScreen, setIsMobileOrSmallScreen] = useState(true);
-  const [isNestHubMax, setIsNestHubMax] = useState(false);
 
   // Check screen size and update state
   useEffect(() => {
     const checkScreenSize = () => {
-      // Check if this is the Nest Hub Max (exactly 1280px width)
-      const isExactlyNestHubWidth = window.innerWidth === 1280;
-      setIsNestHubMax(isExactlyNestHubWidth);
-      
-      // Disable fullpage scroll on screens smaller than 1280px or on Nest Hub Max
-      setIsMobileOrSmallScreen(window.innerWidth < 1280 || isExactlyNestHubWidth);
+      // Disable fullpage scroll on screens smaller than 1280px
+      setIsMobileOrSmallScreen(window.innerWidth < 1280);
     };
     
     // Initial check
@@ -35,7 +30,7 @@ export default function Home() {
 
   // Handle keyboard navigation and wheel events
   useEffect(() => {
-    // If on mobile or small screen or Nest Hub Max, don't enable fullpage scrolling
+    // If on mobile or small screen, don't enable fullpage scrolling
     if (isMobileOrSmallScreen) {
       return;
     }
@@ -158,19 +153,6 @@ export default function Home() {
       <section className={`${isMobileOrSmallScreen ? '' : 'fullpage-section'}`}>
         <JoinForm />
       </section>
-      
-      {isNestHubMax && (
-        <style jsx global>{`
-          html, body {
-            scroll-behavior: smooth;
-            overflow-y: auto !important;
-          }
-          
-          body {
-            overflow: visible !important;
-          }
-        `}</style>
-      )}
     </main>
   );
 } 
