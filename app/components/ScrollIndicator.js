@@ -12,7 +12,7 @@ export default function ScrollIndicator() {
       const windowHeight = window.innerHeight;
       
       // Get all section elements
-      const sections = document.querySelectorAll('.fullpage-section');
+      const sections = document.querySelectorAll('section');
       
       // Determine which section is in view
       let newActiveSection = 0;
@@ -45,7 +45,7 @@ export default function ScrollIndicator() {
   }, [activeSection]);
 
   const scrollToSection = (index) => {
-    const sections = document.querySelectorAll('.fullpage-section');
+    const sections = document.querySelectorAll('section');
     if (sections[index]) {
       sections[index].scrollIntoView({ behavior: 'smooth' });
     }
