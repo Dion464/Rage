@@ -24,10 +24,11 @@ export default function Testimonials() {
 
           <div className="border-l border-gray-700 pl-3 sm:pl-4 md:pl-8 mt-4 sm:mt-6 md:mt-3 md:max-h-[200px] md:overflow-y-auto lg:max-h-none lg:overflow-visible lg:mt-8 space-y-4 sm:space-y-5 md:space-y-1 lg:space-y-6 nest-hub-testimonials">
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Langes of Bronxville, Bronxville, NY:</h3>
-              <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[95%] md:max-w-[95%]">
-                &ldquo;Five months ago I reluctantly switched Langes Deli to the Priority
-                Payments Cash Discount Program. I anticipated resistance from my
+              <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Langes Deli:
+              :</h3>
+              <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[85%] md:max-w-[80%]">
+                &ldquo;Five months ago I reluctantly switched to the Cash Discount Program
+                 I anticipated resistance from my
                 customers. There truly has been none. The monthly savings are as
                 advertised and it goes right to the bottom line.&rdquo;
               </p>
@@ -35,23 +36,24 @@ export default function Testimonials() {
             </div>
 
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Tryforos and Pernice Florist, Bronxville, NY:</h3>
-              <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[95%] md:max-w-[95%]">
-                &ldquo;The Priority Payments Cash Discount Program has delivered all that
-                was promised. There has been virtually no pushback on the fees and
-                the savings are real.&rdquo;
+              <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Tryforos and Pernice Florist:
+              </h3>
+              <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[85%] md:max-w-[80%]">
+              "The Cash Discount Program has delivered all that was promised.
+               There has been virtually no pushback on the fees and the savings are real."
               </p>
               <p className="text-white text-xs md:text-xs lg:text-sm">Gary Tryforos, Owner</p>
             </div>
 
             <div className="md:hidden lg:block">
-              <h3 className="text-[#23F972] mb-1 text-xs sm:text-sm md:text-base font-bold">Park Place Meats, Inc., Bronxville, NY:</h3>
-              <p className="text-white mb-1 sm:mb-2 text-xs md:text-sm leading-relaxed max-w-[95%] md:max-w-[80%]">
-                &ldquo;I am extremely satisfied with our conversion to the Cash Discount
-                Program. The transition was simple and Priority&apos;s customer service
-                is exceptional. My clients understand the need for businesses to
-                reduce costs in this unprecedented time, and my credit card fees
-                have been reduced by almost 90%.&rdquo;
+              <h3 className="text-[#23F972] mb-1 text-xs sm:text-sm md:text-base font-bold">Park Place Meats, Inc.:
+              </h3>
+              <p className="text-white mb-1 sm:mb-2 text-xs md:text-sm leading-relaxed max-w-[85%] md:max-w-[70%]">
+              "I am extremely satisfied with our conversion to the Cash Discount Program.
+               The transition was simple and the customer service is exceptional. 
+               My clients understand the need for businesses to reduce costs in this unprecedented time, 
+               and my credit card fees have been reduced by almost 90%."
+
               </p>
               <p className="text-white text-xs md:text-sm">Paul Chietro, Owner</p>
             </div>
