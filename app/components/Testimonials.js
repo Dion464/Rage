@@ -22,82 +22,67 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="border-l border-gray-700 pl-3 sm:pl-4 md:pl-8 mt-4 sm:mt-6 md:mt-3 md:max-h-[200px] md:overflow-y-auto lg:max-h-none lg:overflow-visible lg:mt-8 space-y-4 sm:space-y-5 md:space-y-1 lg:space-y-6 nest-hub-testimonials">
+          <div className="border-l border-gray-700 pl-3 sm:pl-4 md:pl-8 mt-4 sm:mt-6 md:mt-3 lg:mt-8 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-6 nest-hub-testimonials">
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Langes Deli
-              :</h3>
-              <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[85%] md:max-w-[80%]">
+              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg font-bold">Langes Deli:</h3>
+              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-xs md:text-sm lg:text-sm xl:text-base leading-relaxed">
                 &ldquo;Five months ago I reluctantly switched Langes Deli to the Cash Discount Program.
                 I anticipated resistance from my customers. There truly has been none.
                  
                  The monthly savings are as advertised and it goes right to the bottom line.&rdquo;
               </p>
-              <p className="text-white text-xs md:text-xs lg:text-sm">Thomas Bass, Owner</p>
+              <p className="text-white text-xs md:text-sm lg:text-sm xl:text-base">Thomas Bass, Owner</p>
             </div>
 
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-0.5 lg:mb-1 text-xs sm:text-sm md:text-xs lg:text-base font-bold">Tryforos and Pernice Florist:
-              </h3>
-              <p className="text-white mb-1 sm:mb-2 md:mb-0.5 lg:mb-2 text-xs md:text-xs lg:text-sm leading-relaxed md:leading-tight lg:leading-relaxed max-w-[85%] md:max-w-[80%]">
+              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg font-bold">Tryforos and Pernice Florist:</h3>
+              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-xs md:text-sm lg:text-sm xl:text-base leading-relaxed">
               "The Cash Discount Program has delivered all that was promised.
                There has been virtually no pushback on the fees and the savings are real."
               </p>
-              <p className="text-white text-xs md:text-xs lg:text-sm">Gary Tryforos, Owner</p>
+              <p className="text-white text-xs md:text-sm lg:text-sm xl:text-base">Gary Tryforos, Owner</p>
             </div>
 
-            <div className="md:hidden lg:block">
-              <h3 className="text-[#23F972] mb-1 text-xs sm:text-sm md:text-base font-bold">Park Place Meats, Inc.:
-              </h3>
-              <p className="text-white mb-1 sm:mb-2 text-xs md:text-sm leading-relaxed max-w-[85%] md:max-w-[70%]">
+            <div>
+              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg font-bold">Park Place Meats, Inc.:</h3>
+              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-xs md:text-sm lg:text-sm xl:text-base leading-relaxed">
               "I am extremely satisfied with our conversion to the Cash Discount Program.
                The transition was simple and the customer service is exceptional. 
                My clients understand the need for businesses to reduce costs in this unprecedented time, 
                and my credit card fees have been reduced by almost 90%."
-
               </p>
-              <p className="text-white text-xs md:text-sm">Paul Chietro, Owner</p>
+              <p className="text-white text-xs md:text-sm lg:text-sm xl:text-base">Paul Chietro, Owner</p>
             </div>
           </div>
         </div>
 
         <div className="w-full md:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-center md:items-end relative overflow-visible">
           <div className="text-center md:text-right mb-4 z-10 relative w-full mt-0 sm:mt-2 md:mt-2 lg:mt-12 nest-hub-cta">
-            <p className="text-[#23F972] text-sm sm:text-base md:text-xs lg:text-lg mb-3 md:mb-0.5 lg:mb-2 font-arial">
+            <p className="text-[#23F972] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-3 md:mb-4 lg:mb-5 font-arial">
               Call now for U.S.-based<br/>
               single-ring concierge service
             </p>
             <a
               href="tel:18009411544"
-              className="inline-block border border-[#23F972] text-[#23F972] rounded-full py-2 sm:py-2 md:py-0.5 lg:py-2 px-4 sm:px-6 md:px-2 lg:px-6 text-xs sm:text-sm md:text-xs lg:text-base mt-2"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-full py-2 sm:py-2.5 md:py-3 lg:py-4 px-4 sm:px-6 md:px-8 lg:px-10 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-2 hover:bg-[#23F972] hover:text-black transition-colors duration-300"
             >
-              Call 1 (800) 941-1544
+              Call + 1 (800) 941-1544
             </a>
           </div>
-        </div>
-      </div>
-
-      <div className="standard-flag hidden sm:block absolute bottom-0 right-0 pointer-events-none z-0">
-        <div className="relative lg:w-[700px] lg:h-[800px] xl:w-[900px] xl:h-[1000px]">
-          <Image
+           <Image
             src="/flag.svg"
             alt="Rebellion Flag"
             fill
-            className="object-contain object-bottom"
+            className="hidden lg:block object-contain absolute bottom-0 right-0 w-[3000px] h-[4500px]"
+            style={{ transform: 'translateY(25%)' }}
             priority
           />
         </div>
       </div>
-      
-      <div className="nest-hub-flag">
-        <Image
-          src="/flag.svg"
-          alt="Rebellion Flag"
-          width={500}
-          height={500}
-          className="flag-image"
-          priority
-        />
-      </div>
+
+
+     
+  
 
       <style jsx>{`
         @media not all and (width: 1280px) {
@@ -109,6 +94,8 @@ export default function Testimonials() {
         @media screen and (width: 1280px) {
           .standard-flag {
             display: block !important;
+            bottom: 0 !important;
+            right: 40px !important;
           }
            
           #testimonials {
@@ -119,7 +106,7 @@ export default function Testimonials() {
           }
           
           .nest-hub-title div {
-            font-size: 35px !important;
+            font-size: 28px !important;
             margin-bottom: 5px !important;
           }
           
@@ -136,14 +123,9 @@ export default function Testimonials() {
             display: none;
           }
           
-          .standard-flag {
-            bottom: 30px !important;
-            right: -50px !important;
-          }
-          
           .standard-flag div {
-            width: 600px !important;
-            height: 600px !important;
+            width: 1500px !important;
+            height: 1500px !important;
           }
         }
         
@@ -156,6 +138,57 @@ export default function Testimonials() {
           #testimonials p {
             word-spacing: 2px;
             line-height: 1.7;
+          }
+        }
+        
+        /* Tablet and small tablet responsive styles */
+        @media screen and (min-width: 641px) and (max-width: 1024px) {
+          .nest-hub-title div {
+            font-size: 32px !important;
+          }
+          
+          .standard-flag div {
+            width: 800px !important;
+            height: 1000px !important;
+            bottom: -15% !important;
+            right: -5% !important;
+            transform: translateY(15%) !important;
+          }
+        }
+        
+        @media screen and (min-width: 1025px) {
+          .nest-hub-testimonials {
+            margin-top: 2rem !important;
+            space-y: 2rem !important;
+          }
+          
+          .nest-hub-testimonials p {
+            font-size: 0.875rem !important;
+            line-height: 1.5 !important;
+            margin-bottom: 0.75rem !important;
+          }
+          
+          .nest-hub-testimonials h3 {
+            font-size: 1rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+        }
+        
+        @media screen and (min-width: 1281px) {
+          .nest-hub-testimonials {
+            margin-top: 2.5rem !important;
+            space-y: 2.5rem !important;
+          }
+          
+          .nest-hub-testimonials p {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 1rem !important;
+          }
+          
+          .nest-hub-testimonials h3 {
+            font-size: 1.125rem !important;
+            margin-bottom: 0.75rem !important;
           }
         }
       `}</style>

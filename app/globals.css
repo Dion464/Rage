@@ -30,8 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Full Page Scrolling - Disabled */
-/* 
+/* Full Page Scrolling */
 .fullpage-container {
   height: 100vh;
   overflow-y: scroll;
@@ -45,7 +44,6 @@ body {
   scroll-snap-stop: always;
   position: relative;
 }
-*/
 
 @media (prefers-color-scheme: dark) {
   :root {

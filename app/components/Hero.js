@@ -21,25 +21,25 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 md:mt-10 lg:mt-12 font-charter space-y-3 md:space-y-4">
-            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed">
+            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed text-center md:text-left md:ml-3">
               U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span>{" "}
               dollars in swipe fees in 2023. Many{" "}
               merchants rank them as their second{" "}
               highest operating cost.
             </p>
-            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl">It&apos;s time to stop the squeeze.</p>
+            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl text-center md:text-left md:ml-3">It&apos;s time to stop the squeeze.</p>
           </div>
         </div>
 
         <div className="md:col-span-6 flex justify-center items-center md:order-none py-0">
           <div className="logo-container w-full h-full flex items-center justify-center">
             <Image
-              src="/MR_Splash Identity_01.svg"
+              src="/logo.svg"
               alt="Merchant Rebellion Logo"
-              width={1500}
-              height={1500}
+              width={1200}
+              height={1200}
               className="logo-image"
-              style={{ width: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain' }}
+              style={{ width: '90%', height: 'auto', maxHeight: '70vh', objectFit: 'contain' }}
               priority
             />
           </div>
@@ -55,7 +55,7 @@ export default function Hero() {
               href="tel:18009411544"
               className="inline-block border border-[#23F972] text-[#23F972] rounded-full px-6 py-2 text-sm lg:text-base xl:text-lg font-charter-bold hover:bg-[#23F972] hover:text-black transition-colors whitespace-nowrap mt-2"
             >
-              Call 1 (800) 941-1544
+              Call +1 (800) 941-1544
             </a>
           </div>
         </div>
@@ -63,36 +63,36 @@ export default function Hero() {
       
       <style jsx global>{`
         .logo-container {
-          min-height: 260px;
+          min-height: 240px;
         }
         
         @media (min-width: 640px) {
           .logo-container {
-            min-height: 320px;
+            min-height: 300px;
           }
         }
         
         @media (min-width: 768px) {
           .logo-container {
-            min-height: 500px;
+            min-height: 450px;
           }
         }
         
         @media (min-width: 1024px) {
           .logo-container {
-            min-height: 600px;
+            min-height: 550px;
           }
           .logo-image {
-            transform: scale(1.3);
+            transform: scale(1.2);
           }
         }
         
         @media (min-width: 1280px) {
           .logo-container {
-            min-height: 700px;
+            min-height: 650px;
           }
           .logo-image {
-            transform: scale(1.5);
+            transform: scale(1.3);
           }
         }
         

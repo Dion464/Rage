@@ -75,6 +75,9 @@ export default function JoinForm() {
   };
 
   const handleFinalSubmit = async () => {
+    // Show submission message immediately
+    setSubmitted(true);
+
     try {
       const finalData = {
         ...formData,
@@ -88,24 +91,24 @@ export default function JoinForm() {
         },
         body: JSON.stringify(finalData),
       });
-
-      // Set submitted to true regardless of email success
-      setSubmitted(true);
       
       if (response.ok) {
         console.log('Form submitted successfully');
-        // Optional: redirect after a delay
-        // setTimeout(() => {
-        //   router.push('/success');
-        // }, 3000);
       } else {
         console.error('Submission failed');
       }
     } catch (error) {
       console.error('Submission error:', error);
-      // Still show thank you message even if email fails
-      setSubmitted(true);
     }
+
+    // Wait 5 seconds before resetting the form
+    setTimeout(() => {
+      // Clear form data from state
+      setFormData({});
+      setStepAnswers({});
+      setCurrentStep(0);
+      setSubmitted(false);
+    }, 5000);
   };
 
   const renderStepContent = () => {
@@ -301,13 +304,15 @@ export default function JoinForm() {
                     stepAnswers.step2 === 'no' 
                       ? 'bg-[#1EEB7A] text-[#0A3B2E]' 
                       : 'text-[#1EEB7A]'
-                  } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors`}
+                  } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors opacity-50 cursor-not-allowed`}
+                  disabled
                 >
                   No
                 </button>
+                <p className="text-[#1EEB7A] text-sm mt-2">We currently only serve U.S.-based businesses.</p>
                 <button
                   onClick={() => stepAnswers.step2 && handleStepSubmit(2, stepAnswers.step2)}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold hover:bg-[#0A3B2E] hover:text-[#1EEB7A] hover:border hover:border-[#1EEB7A] transition-colors"
                 >
                   Submit
                 </button>
@@ -455,7 +460,7 @@ export default function JoinForm() {
                 />
                 <button
                   onClick={handleFinalSubmit}
-                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold hover:bg-[#0A3B2E] hover:text-[#1EEB7A] hover:border hover:border-[#1EEB7A] transition-colors"
                 >
                   Submit
                 </button>
@@ -493,14 +498,14 @@ export default function JoinForm() {
       {/* Main content section */}
       <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-8 sm:pt-16 md:pt-12">
         <div className="w-full sm:w-1/2 pt-4 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
-          <h1 className="text-[45px] sm:text-[70px] md:text-[100px] lg:text-[120px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
+          <h1 className="text-[45px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
           
           <div className="mt-8 sm:mt-16 flex flex-col items-center sm:items-start">
-            <p className="text-[#1EEB7A] text-base sm:text-lg md:text-xl font-arial text-center sm:text-left">
+            <p className="text-[#1EEB7A] text-base sm:text-lg md:text-xl font-arial text-center sm:text-left sm:ml-4">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
@@ -513,10 +518,18 @@ export default function JoinForm() {
           </div>
 
           <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16 mx-auto sm:mx-0">
-            <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
-            <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
-            <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
-            <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <a href="https://www.instagram.com/merchantrebellion" target="_blank" rel="noopener noreferrer">
+              <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+            </a>
+            <a href="https://www.facebook.com/merchantrebellion" target="_blank" rel="noopener noreferrer">
+              <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+            </a>
+            <a href="https://twitter.com/MerchantRebel" target="_blank" rel="noopener noreferrer">
+              <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+            </a>
+            <a href="https://www.linkedin.com/company/merchant-rebellion" target="_blank" rel="noopener noreferrer">
+              <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+            </a>
           </div>
         </div>
 

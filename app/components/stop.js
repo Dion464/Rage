@@ -13,7 +13,7 @@ export default function Stop() {
    
       <div className="mt-16 sm:mt-24 md:mt-0 flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">
         <div className="pt-4 md:pt-8 w-full md:max-w-[85%] text-center md:text-left">
-          <h1 className="text-[#23F972] text-3xl md:text-[90px] leading-tight font-chamelton-blk tracking-tight">
+          <h1 className="text-[#23F972] text-3xl md:text-[45px] lg:text-[65px]  xl:text-[80px]  2xl:text-[100px] leading-tight font-chamelton-blk tracking-tight">
             STOP SWIPING AWAY<br />
             YOUR PROFITS.<br />
             SWIPE FEES<br />
@@ -25,7 +25,7 @@ export default function Stop() {
           </h1>
 
           <div className="mt-6 md:mt-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <p className="text-white text-lg md:text-xl text-center md:text-left font-charter">
+            <p className="text-white text-lg md:text-xl text-center md:text-left font-charter ml-4">
               Call the <span className="text-[#23F972]">Merchant Rebellion</span> and talk<br className="hidden md:block" />
               <span className="inline md:hidden">&nbsp;</span>to a real person with real solutions.
             </p>
@@ -40,11 +40,11 @@ export default function Stop() {
               alt="Merchant Rebellion Badge"
               width={384}
               height={384}
-              className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+              className="w-40 h-40 sm:w-54 sm:h-54 md:w-60 md:h-60 lg:w-76 lg:h-76 xl:w-80 xl:h-80 2xl:w-98 2xl:h-98"
             />
           </div>
           
-          <div className="mt-2 sm:mt-4 flex flex-col items-center md:items-end md:pr-14">
+          <div className="mt-2 sm:mt-4 flex flex-col items-center md:items-end md:pr-14 lg:ml-10">
             <p className="text-[#23F972] text-base sm:text-lg md:text-xl mb-2 sm:mb-4 font-arial">
               Call now for U.S.-based<br />
               single-ring concierge service
