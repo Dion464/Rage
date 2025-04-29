@@ -32,14 +32,14 @@ export default function Hero() {
         </div>
 
         <div className="md:col-span-6 flex justify-center items-center md:order-none py-0">
-          <div className="logo-container w-full h-full flex items-center justify-center">
+          <div className="logo-container w-full h-full flex items-center justify-center relative">
             <Image
               src="/logo.svg"
               alt="Merchant Rebellion Logo"
               width={1200}
               height={1200}
-              className="logo-image"
-              style={{ width: '90%', height: 'auto', maxHeight: '70vh', objectFit: 'contain' }}
+              className="logo-image absolute"
+              style={{ width: '90%', height: 'auto', maxHeight: '70vh', objectFit: 'contain', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
               priority
             />
           </div>
@@ -64,6 +64,10 @@ export default function Hero() {
       <style jsx global>{`
         .logo-container {
           min-height: 240px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
         
         @media (min-width: 640px) {
@@ -83,7 +87,7 @@ export default function Hero() {
             min-height: 550px;
           }
           .logo-image {
-            transform: scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2) !important;
           }
         }
         
@@ -92,7 +96,7 @@ export default function Hero() {
             min-height: 650px;
           }
           .logo-image {
-            transform: scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3) !important;
           }
         }
         

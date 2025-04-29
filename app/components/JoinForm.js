@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { useFormStore } from '../store/formStore';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -18,8 +17,6 @@ export default function JoinForm() {
     step5: null
   });
   const [submitted, setSubmitted] = useState(false);
-
-  const { formData, updateFormField, setFormData } = useFormStore();
   const router = useRouter();
 
   useEffect(() => {
@@ -50,7 +47,6 @@ export default function JoinForm() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    updateFormField(name, value);
   };
 
   const handleSubmit = (e) => {
@@ -59,56 +55,29 @@ export default function JoinForm() {
   };
 
   const handleStepSubmit = (step, answer) => {
-    setStepAnswers(prev => ({
-      ...prev,
-      [`step${step}`]: answer
-    }));
-    
     if (step === 2 && answer === 'no') {
-      // Handle US-based business requirement
       return;
     } else if (step === 5) {
-      setCurrentStep(6); // Progress to step 6
+      setCurrentStep(6);
     } else {
       setCurrentStep(step + 1);
     }
   };
 
   const handleFinalSubmit = async () => {
-    // Show submission message immediately
     setSubmitted(true);
-
-    try {
-      const finalData = {
-        ...formData,
-        ...stepAnswers
-      };
-
-      const response = await fetch('/api/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(finalData),
-      });
-      
-      if (response.ok) {
-        console.log('Form submitted successfully');
-      } else {
-        console.error('Submission failed');
-      }
-    } catch (error) {
-      console.error('Submission error:', error);
-    }
-
-    // Wait 5 seconds before resetting the form
+    
     setTimeout(() => {
-      // Clear form data from state
-      setFormData({});
-      setStepAnswers({});
       setCurrentStep(0);
       setSubmitted(false);
-    }, 5000);
+      setStepAnswers({
+        step1: null,
+        step2: null,
+        step3: null,
+        step4: null,
+        step5: null
+      });
+    }, 3000);
   };
 
   const renderStepContent = () => {
@@ -122,8 +91,6 @@ export default function JoinForm() {
                 id="firstName"
                 type="text"
                 name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
                 placeholder="Jane"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
               />
@@ -135,8 +102,6 @@ export default function JoinForm() {
                 id="lastName"
                 type="text"
                 name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
                 placeholder="Smith"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
               />
@@ -184,8 +149,6 @@ export default function JoinForm() {
                   id="phone"
                   type="tel"
                   name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
                   placeholder=" "
                   className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                 />
@@ -198,8 +161,6 @@ export default function JoinForm() {
                 id="email"
                 type="email"
                 name="email"
-                value={formData.email}
-                onChange={handleInputChange}
                 placeholder="name@example.com"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
               />
@@ -211,8 +172,6 @@ export default function JoinForm() {
                 id="company"
                 type="text"
                 name="company"
-                value={formData.company}
-                onChange={handleInputChange}
                 placeholder="Acme Corporation"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
               />
@@ -467,7 +426,7 @@ export default function JoinForm() {
               </div>
 
               {submitted && (
-                <div className="mt-12">
+                <div className="mt-12 transition-opacity duration-300">
                   <p className="text-[#1EEB7A] text-2xl mb-4 font-charter">
                     Thank you for your interest in joining<br />
                     the Merchant Rebellion.
@@ -556,8 +515,6 @@ export default function JoinForm() {
                       id="firstName"
                       type="text"
                       name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
                       placeholder="Jane"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                     />
@@ -569,8 +526,6 @@ export default function JoinForm() {
                       id="lastName"
                       type="text"
                       name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
                       placeholder="Smith"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                     />
@@ -618,8 +573,6 @@ export default function JoinForm() {
                         id="phone"
                         type="tel"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
                         placeholder=" 555-0123"
                         className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                       />
@@ -632,8 +585,6 @@ export default function JoinForm() {
                       id="email"
                       type="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
                       placeholder="name@example.com"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                     />
@@ -645,8 +596,6 @@ export default function JoinForm() {
                       id="company"
                       type="text"
                       name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
                       placeholder="Acme Corporation"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                     />
