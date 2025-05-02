@@ -35,7 +35,7 @@ export async function POST(request) {
             <div style="background-color: rgba(30, 235, 122, 0.1); border-radius: 16px; overflow: hidden;">
               <!-- Header -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="https://rage-neon.vercel.app/logo.png" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
+                <img src="https://rage-neon.vercel.app/logo.svg" alt="Merchant Rebellion" style="width: 180px; margin-bottom: 20px;">
                 <h1 style="color: #1EEB7A; font-size: 28px; margin: 0;">New Rebellion Application</h1>
               </div>
 
@@ -76,23 +76,13 @@ export async function POST(request) {
                   </tr>
                 </table>
 
-                <!-- Call to Action -->
-                <div style="margin-top: 30px; text-align: center; padding-top: 20px; border-top: 1px solid rgba(30, 235, 122, 0.2);">
-                  <p style="color: white; margin: 0 0 15px; font-size: 16px;">
-                    For immediate assistance, contact our U.S.-based concierge service
-                  </p>
-                  <a href="tel:18009411544" style="display: inline-block; background-color: #1EEB7A; color: #0A3B2E; text-decoration: none; padding: 12px 30px; border-radius: 24px; font-weight: bold; font-size: 16px;">
-                    Call 1 (800) 941-1544
-                  </a>
+              
+                
                 </div>
               </div>
             </div>
 
-            <!-- Footer -->
-            <div style="text-align: center; margin-top: 20px;">
-              <p style="color: #1EEB7A; margin: 0; font-size: 14px;">
-                Supported by Transaction Acceptance Corp.
-              </p>
+           
             </div>
           </div>
         </body>
@@ -121,7 +111,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: ["inquiries@merchantrebellion.com","curridion31@gmail.com"],
+      to: ["curridion31@gmail.com"],
       subject: 'New Merchant Rebellion Application',
       html: htmlContent,
       
