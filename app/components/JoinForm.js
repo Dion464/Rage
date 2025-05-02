@@ -17,6 +17,13 @@ export default function JoinForm() {
     step5: null
   });
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    company: ''
+  });
   const router = useRouter();
 
   useEffect(() => {
@@ -47,10 +54,23 @@ export default function JoinForm() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Validate required fields
+    const requiredFields = ['firstName', 'lastName', 'phone', 'email', 'company'];
+    const missingFields = requiredFields.filter(field => !formData[field]);
+    
+    if (missingFields.length > 0) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    
     setCurrentStep(1);
   };
 
@@ -65,19 +85,55 @@ export default function JoinForm() {
   };
 
   const handleFinalSubmit = async () => {
-    setSubmitted(true);
-    
-    setTimeout(() => {
-      setCurrentStep(0);
-      setSubmitted(false);
-      setStepAnswers({
-        step1: null,
-        step2: null,
-        step3: null,
-        step4: null,
-        step5: null
+    try {
+      // Combine form data with step answers
+      const finalData = {
+        ...formData,
+        ...stepAnswers
+      };
+
+      // Send data to API
+      const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(finalData)
       });
-    }, 3000);
+
+      const result = await response.json();
+      
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to submit form');
+      }
+
+      console.log('Form submitted successfully:', finalData);
+      setSubmitted(true);
+      
+      setTimeout(() => {
+        setCurrentStep(0);
+        setSubmitted(false);
+        // Reset both form data and step answers
+        setFormData({
+          firstName: '',
+          lastName: '',
+          phone: '',
+          email: '',
+          company: ''
+        });
+        setStepAnswers({
+          step1: null,
+          step2: null,
+          step3: null,
+          step4: null,
+          step5: null,
+          step6: null
+        });
+      }, 3000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to submit form. Please try again.');
+    }
   };
 
   const renderStepContent = () => {
@@ -91,8 +147,11 @@ export default function JoinForm() {
                 id="firstName"
                 type="text"
                 name="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
                 placeholder="Jane"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                required
               />
             </div>
 
@@ -102,8 +161,11 @@ export default function JoinForm() {
                 id="lastName"
                 type="text"
                 name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
                 placeholder="Smith"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                required
               />
             </div>
 
@@ -149,8 +211,11 @@ export default function JoinForm() {
                   id="phone"
                   type="tel"
                   name="phone"
-                  placeholder=" "
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder=" 555-0123"
                   className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                  required
                 />
               </div>
             </div>
@@ -161,8 +226,11 @@ export default function JoinForm() {
                 id="email"
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 placeholder="name@example.com"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                required
               />
             </div>
 
@@ -172,8 +240,11 @@ export default function JoinForm() {
                 id="company"
                 type="text"
                 name="company"
+                value={formData.company}
+                onChange={handleInputChange}
                 placeholder="Acme Corporation"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                required
               />
             </div>
 
@@ -515,8 +586,11 @@ export default function JoinForm() {
                       id="firstName"
                       type="text"
                       name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       placeholder="Jane"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      required
                     />
                   </div>
 
@@ -526,8 +600,11 @@ export default function JoinForm() {
                       id="lastName"
                       type="text"
                       name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       placeholder="Smith"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      required
                     />
                   </div>
 
@@ -573,8 +650,11 @@ export default function JoinForm() {
                         id="phone"
                         type="tel"
                         name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         placeholder=" 555-0123"
                         className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                        required
                       />
                     </div>
                   </div>
@@ -585,8 +665,11 @@ export default function JoinForm() {
                       id="email"
                       type="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="name@example.com"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      required
                     />
                   </div>
 
@@ -596,8 +679,11 @@ export default function JoinForm() {
                       id="company"
                       type="text"
                       name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
                       placeholder="Acme Corporation"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      required
                     />
                   </div>
 

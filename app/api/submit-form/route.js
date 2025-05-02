@@ -99,26 +99,52 @@ export async function POST(request) {
 
     // Otherwise, proceed with sending email
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: true
       }
     });
 
-    // Get the absolute path to the SVG file and convert to base64
-   
+    // Verify SMTP connection configuration
+    try {
+      await transporter.verify();
+      console.log('SMTP connection verified successfully');
+    } catch (verifyError) {
+      console.error('SMTP Verification failed:', verifyError);
+      return NextResponse.json({ 
+        success: false, 
+        error: 'Email server connection failed' 
+      }, { status: 500 });
+    }
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: ["curridion31@gmail.com"],
       subject: 'New Merchant Rebellion Application',
       html: htmlContent,
-      
     };
 
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json({ success: true });
+    try {
+      const info = await transporter.sendMail(mailOptions);
+      console.log('Email sent successfully:', info);
+      return NextResponse.json({ success: true });
+    } catch (emailError) {
+      console.error('Failed to send email:', {
+        error: emailError.message,
+        code: emailError.code,
+        command: emailError.command
+      });
+      return NextResponse.json({ 
+        success: false, 
+        error: 'Failed to send email: ' + emailError.message 
+      }, { status: 500 });
+    }
   } catch (error) {
     console.error('Form submission error:', error);
     return NextResponse.json({ success: false, error: 'Failed to process form' }, { status: 500 });
