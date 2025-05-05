@@ -125,7 +125,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: ["curridion31@gmail.com"],
+      to: [" dion@timeless.nyc"],
       subject: 'New Merchant Rebellion Application',
       html: htmlContent,
     };
