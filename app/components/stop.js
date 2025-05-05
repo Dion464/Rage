@@ -51,7 +51,7 @@ export default function Stop() {
             </p>
             <a 
               href="tel:18009411544"
-              className="inline-block px-6 sm:px-8 md:px-12 py-2 md:py-3 border border-[#23F972] rounded-full text-[#23F972] hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors text-base sm:text-lg md:text-xl font-arial-bold"
+              className="inline-block px-6 sm:px-8 md:px-12 py-2 md:py-3 border border-[#23F972] rounded-full text-[#23F972] hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors text-base sm:text-lg md:text-xl font-arial"
             >
               Call + 1 (800) 941-1544
             </a>
