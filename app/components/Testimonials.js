@@ -13,12 +13,12 @@ export default function Testimonials() {
       <div className="flex flex-col md:flex-row px-4 sm:px-8 md:px-16 mt-2 sm:mt-4 md:mt-6 flex-1 pb-8 sm:pb-12 md:pb-16 z-10">
         <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4">
           <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
-            <div className="text-[#23F972] text-[30px] sm:text-[38px] md:text-[45px] lg:text-[80px] xl:text-[100px] leading-[0.9] font-extrabold tracking-tighter whitespace-nowrap md:leading-tight">
+            <div className="text-[#23F972] text-[30px] sm:text-[30px] md:text-[35px] lg:text-[70px] xl:text-[80px] leading-[0.9] font-extrabold tracking-tighter whitespace-nowrap md:leading-tight">
               REAL MERCHANTS.
             </div>
             <div className="flex leading-[0.9]">
-              <div className="text-[#23F972] text-[30px] sm:text-[38px] md:text-[45px] lg:text-[80px] xl:text-[100px] font-extrabold tracking-tighter md:leading-tight">REAL</div>
-              <div className="text-white text-[30px] sm:text-[38px] md:text-[45px] lg:text-[80px] xl:text-[100px] font-extrabold tracking-tighter ml-2 sm:ml-4 md:ml-2 md:leading-tight lg:ml-4">ACTION.</div>
+              <div className="text-[#23F972] text-[30px] sm:text-[30px] md:text-[35px] lg:text-[70px] xl:text-[80px] font-extrabold tracking-tighter md:leading-tight">REAL</div>
+              <div className="text-white text-[30px] sm:text-[30px] md:text-[35px] lg:text-[70px] xl:text-[80px] font-extrabold tracking-tighter ml-2 sm:ml-4 md:ml-2 md:leading-tight lg:ml-4">ACTION.</div>
             </div>
           </div>
 
@@ -73,7 +73,7 @@ export default function Testimonials() {
             src="/flag.svg"
             alt="Rebellion Flag"
             fill
-            className="hidden lg:block object-contain absolute bottom-0 right-0 w-[3000px] h-[4500px]"
+            className="hidden lg:block absolute bottom-16 right-4 w-16 sm:w-24 md:w-32 lg:w-48 xl:w-64 rounded-lg shadow-lg"
             style={{ transform: 'translateY(25%)' }}
             priority
           />
@@ -84,114 +84,7 @@ export default function Testimonials() {
      
   
 
-      <style jsx>{`
-        @media not all and (width: 1280px) {
-          .nest-hub-flag {
-            display: none;
-          }
-        }
-        
-        @media screen and (width: 1280px) {
-          .standard-flag {
-            display: block !important;
-            bottom: 0 !important;
-            right: 40px !important;
-          }
-           
-          #testimonials {
-            min-height: 85vh !important;
-            padding-bottom: 0 !important;
-            border-bottom: none !important;
-            margin-bottom: 0 !important;
-          }
-          
-          .nest-hub-title div {
-            font-size: 28px !important;
-            margin-bottom: 5px !important;
-          }
-          
-          .nest-hub-testimonials {
-            margin-top: 10px !important;
-            space-y: 3px !important;
-          }
-          
-          .nest-hub-cta {
-            margin-top: -20px !important;
-          }
-          
-          .nest-hub-flag {
-            display: none;
-          }
-          
-          .standard-flag div {
-            width: 1500px !important;
-            height: 1500px !important;
-          }
-        }
-        
-        @media screen and (max-width: 640px) {
-          #testimonials {
-            min-height: calc(100vh - 20px);
-            padding-bottom: 40px;
-          }
-          
-          #testimonials p {
-            word-spacing: 2px;
-            line-height: 1.7;
-          }
-        }
-        
-        /* Tablet and small tablet responsive styles */
-        @media screen and (min-width: 641px) and (max-width: 1024px) {
-          .nest-hub-title div {
-            font-size: 32px !important;
-          }
-          
-          .standard-flag div {
-            width: 800px !important;
-            height: 1000px !important;
-            bottom: -15% !important;
-            right: -5% !important;
-            transform: translateY(15%) !important;
-          }
-        }
-        
-        @media screen and (min-width: 1025px) {
-          .nest-hub-testimonials {
-            margin-top: 2rem !important;
-            space-y: 2rem !important;
-          }
-          
-          .nest-hub-testimonials p {
-            font-size: 0.875rem !important;
-            line-height: 1.5 !important;
-            margin-bottom: 0.75rem !important;
-          }
-          
-          .nest-hub-testimonials h3 {
-            font-size: 1rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-        }
-        
-        @media screen and (min-width: 1281px) {
-          .nest-hub-testimonials {
-            margin-top: 2.5rem !important;
-            space-y: 2.5rem !important;
-          }
-          
-          .nest-hub-testimonials p {
-            font-size: 1rem !important;
-            line-height: 1.6 !important;
-            margin-bottom: 1rem !important;
-          }
-          
-          .nest-hub-testimonials h3 {
-            font-size: 1.125rem !important;
-            margin-bottom: 0.75rem !important;
-          }
-        }
-      `}</style>
+      <style ></style>
     </div>
   );
 }
