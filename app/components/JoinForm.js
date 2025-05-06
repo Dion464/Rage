@@ -542,7 +542,7 @@ export default function JoinForm() {
 
             <a href="tel:1-800-941-1544" className="inline-block mt-4 sm:mt-6">
               <div className="border border-[#1EEB7A] text-[#1EEB7A] px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-arial">
-                Call + 1(800)941-1544
+                Call +1(800)941-1544
               </div>
             </a>
           </div>
