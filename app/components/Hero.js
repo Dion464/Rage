@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col items-center justify-center -mt-24 pb-12 md:py-0 md:-ml-12">
+        <div className="md:col-span-2 flex flex-col items-center justify-center mt-16 md:-mt-36 pb-12 md:py-0 md:-ml-12">
           <div className="text-center flex flex-col items-center gap-2 ">
             <p className="text-[#23F972] text-[1.4rem] leading-relaxed font-arial text-center max-w-[320px]">
               Call now for U.S.-based

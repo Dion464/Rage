@@ -15,7 +15,7 @@ export default function Testimonials() {
         {/* Left section */}
         <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4 order-1 md:order-none">
           <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
-            <div className="text-[#23F972] font-chamelton-blk text-5xl sm:text-6xl md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
+            <div className="text-[#23F972] font-chamelton-blk text-4xl sm:text-[22px] md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
               REAL MERCHANTS.<br />REAL <span className="text-white">ACTION.</span>
             </div>
           </div>
