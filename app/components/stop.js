@@ -5,15 +5,15 @@ export default function Stop() {
   return (
     <div id="stop" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col">
     
-      <div className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
-      <Link href="#stop" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</Link>
-      <Link href="#testimonials" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
-      <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</Link>
+      <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
+      <Link href="#stop" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
+      <Link href="#testimonials" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
+      <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
    
       <div className="mt-16 sm:mt-24 md:mt-0 flex-1 flex flex-col md:flex-row px-4 md:px-16 relative">
         <div className="pt-12 md:pt-24 w-full md:max-w-[85%] text-center md:text-left">
-          <h1 className="text-[#23F972] text-3xl md:text-[45px] lg:text-[65px] xl:text-[80px] 2xl:text-[100px] leading-none font-chamelton-blk tracking-tight">
+          <h1 className="text-[#23F972] text-4xl sm:text-[45px] md:text-[45px] lg:text-[65px] xl:text-[80px] 2xl:text-[100px] leading-none font-chamelton-blk tracking-tight">
             SWIPE FEES<br />
             HAVE INCREASED<br />
             <div className="flex items-baseline justify-center md:justify-start">
@@ -41,7 +41,7 @@ export default function Stop() {
               alt="Merchant Rebellion Badge"
               width={384}
               height={384}
-              className="w-40 h-40 sm:w-54 sm:h-54 md:w-60 md:h-60 lg:w-76 lg:h-76 xl:w-80 xl:h-80 2xl:w-98 2xl:h-98"
+              className="w-53 h-53 sm:w-54 sm:h-65 md:w-80 md:h-60 lg:w-76 lg:h-76 xl:w-80 xl:h-80 2xl:w-98 2xl:h-98"
             />
           </div>
           
