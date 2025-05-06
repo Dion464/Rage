@@ -72,39 +72,20 @@ export default function Testimonials() {
 </div>
 
       {/* Flag image on desktop */}
-      <div className="absolute right-0 bottom-0 w-full h-[85%] overflow-hidden pointer-events-none hidden md:block">
-  <Image
-    src="/flag.svg"
-    alt="Rebellion Flag"
-    fill
-    className="object-contain object-right-bottom flag-image"
-    style={{ 
-      transform: 'scale(0.65) translateX(0%)', // default smaller scale
-      transformOrigin: 'bottom right',
-      opacity: 0.9
-    }}
-    priority
-  />
-</div>
-
-      <style jsx>{`
-        @media (min-width: 1300px) {
-          .flag-image {
-            transform: scale(0.85) !important;
-            transformOrigin: 'bottom right',
-            height: '900px'
-            width: '800px'
-          }
-        }
-        @media (min-width: 1536px) {
-          .flag-image {
-            transform: scale(1) !important;
-            transformOrigin: 'bottom right',
-            height: '1000px'
-            width: '900px'
-          }
-        }
-      `}</style>
+      <div className="absolute right-0 bottom-0 overflow-visible pointer-events-none hidden md:block z-[5]">
+        <Image
+          src="/flag.svg"
+          alt="Rebellion Flag"
+          width={1000}
+          height={1000}
+          className="w-[500px] md:w-[550px] lg:w-[700px] xl:w-[900px] 2xl:w-[1000px] h-auto object-contain"
+          style={{
+            marginBottom: "-10px",
+            marginRight: "-80px",
+          }}
+          priority
+        />
+      </div>
     </div>
   );
 }
