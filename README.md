@@ -1,6 +1,6 @@
 ## Getting Started
 
-This project was created by **Dion Curri** (dion@timelles.nyc).
+This project was created by **Dion Curri** (dion@timeles.nyc).
 
 ### Clone the Repository
 
