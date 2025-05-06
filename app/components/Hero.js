@@ -45,17 +45,17 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col items-center md:items-end justify-center pt-0 pb-12 md:py-0">
-          <div className="text-center md:text-right mb-4 relative">
-            <p className="text-[#23F972] text-sm lg:text-lg xl:text-xl mb-3 md:mb-2 font-charter text-right whitespace-nowrap">
-              Call now for U.S.-based<br/>
+        <div className="md:col-span-2 flex flex-col items-center justify-center pt-0 pb-12 md:py-0 md:-ml-12">
+          <div className="text-center flex flex-col items-center gap-8">
+            <p className="text-[#23F972] text-[1.2rem] leading-relaxed font-arial text-center max-w-[320px]">
+              Call now for U.S.-based
               single-ring concierge service
             </p>
             <a
               href="tel:18009411544"
-              className="inline-block border border-[#23F972] text-[#23F972] rounded-full px-6 py-2 text-sm lg:text-base xl:text-lg font-charter-bold hover:bg-[#23F972] hover:text-black transition-colors whitespace-nowrap mt-2"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-10 py-3 text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
             >
-              Call +1 (800) 941-1544
+              Call +1(800)941-1544
             </a>
           </div>
         </div>

@@ -5,20 +5,16 @@ export default function Testimonials() {
   return (
     <div id="testimonials" className="min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden">
       <div className="flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
-      <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">THE REBELLION</Link>
-      <Link href="#testimonials" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
-      <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold cursor-pointer whitespace-nowrap">JOIN US</Link>
+      <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
+      <Link href="#testimonials" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
+      <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
 
       <div className="flex flex-col md:flex-row px-4 sm:px-8 md:px-16 mt-2 sm:mt-4 md:mt-6 flex-1 pb-8 sm:pb-12 md:pb-16 z-10">
         <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4">
           <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
-            <div className="text-[#23F972] text-[30px] sm:text-[30px] md:text-[35px] lg:text-[70px] xl:text-[80px] leading-[0.9] font-extrabold tracking-tighter whitespace-nowrap md:leading-tight">
-              REAL MERCHANTS.
-            </div>
-            <div className="flex leading-[0.9]">
-              <div className="text-[#23F972] text-[30px] sm:text-[30px] md:text-[35px] lg:text-[70px] xl:text-[80px] font-extrabold tracking-tighter md:leading-tight">REAL</div>
-              <div className="text-white text-[30px] sm:text-[30px] md:text-[35px] lg:text-[70px] xl:text-[80px] font-extrabold tracking-tighter ml-2 sm:ml-4 md:ml-2 md:leading-tight lg:ml-4">ACTION.</div>
+            <div className="text-[#23F972] font-chamelton-blk text-4xl md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
+              REAL MERCHANTS.<br />REAL <span className="text-white">ACTION.</span>
             </div>
           </div>
 
@@ -56,33 +52,36 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="w-full md:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-center md:items-end relative overflow-visible">
-          <div className="text-center md:text-right mb-4 z-10 relative w-full mt-0 sm:mt-2 md:mt-2 lg:mt-12 nest-hub-cta">
-            <p className="text-[#23F972] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-3 md:mb-4 lg:mb-5 font-arial">
+        <div className="w-full md:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-end justify-start relative">
+          <div className="text-center flex flex-col items-center gap-3">
+            <p className="text-[#23F972] text-[1.5rem] leading-relaxed font-arial text-center">
               Call now for U.S.-based<br/>
               single-ring concierge service
             </p>
             <a
               href="tel:18009411544"
-              className="inline-block border border-[#23F972] text-[#23F972] rounded-full py-2 sm:py-2.5 md:py-3 lg:py-4 px-4 sm:px-6 md:px-8 lg:px-10 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-2 hover:bg-[#23F972] hover:text-black transition-colors duration-300"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-10 py-3 text-[1.2rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
             >
-              Call + 1 (800) 941-1544
+              Call +1 (800) 941-1544
             </a>
           </div>
-           <Image
-            src="/flag.svg"
-            alt="Rebellion Flag"
-            fill
-            className="hidden lg:block absolute bottom-16 right-4 w-16 sm:w-24 md:w-32 lg:w-48 xl:w-64 rounded-lg shadow-lg"
-            style={{ transform: 'translateY(25%)' }}
-            priority
-          />
         </div>
       </div>
-
-
-     
-  
+      
+      <div className="absolute right-0 bottom-0 w-full h-[75%] overflow-hidden pointer-events-none">
+        <Image
+          src="/flag.svg"
+          alt="Rebellion Flag"
+          fill
+          className="object-contain object-right-bottom"
+          style={{ 
+            transform: 'scale(1.1)', 
+            transformOrigin: 'bottom right',
+            opacity: 0.9
+          }}
+          priority
+        />
+      </div>
 
       <style ></style>
     </div>
