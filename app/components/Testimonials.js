@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Testimonials() {
   return (
-    <div id="testimonials" className="h-screen md:min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden pt-16 md:pt-0">
+    <div id="testimonials" className="min-h-screen bg-[#1A1A1A] flex flex-col relative pt-16 md:pt-0">
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
         <Link href="#testimonials" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>

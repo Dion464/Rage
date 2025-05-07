@@ -517,7 +517,7 @@ export default function JoinForm() {
   };
 
   return (
-    <div id="join" className="h-screen md:min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-16 md:pt-0">
+    <div id="join" className="min-h-screen bg-[#0A3B2E] flex flex-col relative pt-16 md:pt-0">
       {/* Component-specific navigation */}
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
@@ -526,7 +526,7 @@ export default function JoinForm() {
       </div>
 
       {/* Main content section */}
-      <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-4 sm:pt-16 md:pt-12">
+      <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-4 sm:pt-16 md:pt-12 pb-8">
         <div className="w-full sm:w-1/2 pt-2 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
           <h1 className="text-[38px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
