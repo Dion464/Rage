@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Testimonials() {
   return (
-    <div id="testimonials" className="min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden">
+    <div id="testimonials" className="min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden pt-16 md:pt-0">
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
         <Link href="#testimonials" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
@@ -15,8 +15,8 @@ export default function Testimonials() {
         {/* Left section */}
         <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4 order-1 md:order-none">
           <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
-            <div className="text-[#23F972] font-chamelton-blk text-4xl sm:text-[22px] md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
-              REAL MERCHANTS.<br />REAL <span className="text-white">ACTION.</span>
+            <div className="tracking-tighter text-[#23F972] font-chamelton-blk text-4xl sm:text-[22px] md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
+              REAL MERCHANTS.<br/>REAL<span className="text-white"> ACTION.</span>
             </div>
           </div>
 

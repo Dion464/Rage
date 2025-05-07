@@ -47,16 +47,16 @@ export default function Hero() {
 
         <div className="md:col-span-2 flex flex-col items-center justify-center mt-16 md:-mt-32 pb-12 md:py-0 md:-ml-12">
           <div className="text-center flex flex-col items-center gap-2 ">
-            <p className="text-[#23F972] text-[1.3rem] leading-relaxed font-arial text-center max-w-[320px]">
-              Call now for U.S.-based
-              single-ring concierge service
-            </p>
-            <a
-              href="tel:18009411544"
-              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-10 py-3 text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
-            >
-              Call +1(800)941-1544
-            </a>
+          <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
+      Call now for U.S.-based<br />
+      single-ring concierge service
+    </p>
+    <a
+      href="tel:18009411544"
+      className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
+    >
+      Call +1(800) 941-1544
+    </a>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function Stop() {
           </div>
         </div>
 
-        <div className="relative md:absolute md:right-16 md:top-24 text-center md:text-right mt-6 mb-10 md:mt-0 flex flex-col items-center md:items-end">
+        <div className="relative md:absolute md:right-16 md:top-24 text-center mt-6 mb-10 md:mt-0 flex flex-col items-center">
           <div className="mb-8 z-10">
             <Image
               src="/MR_Badge.svg"
@@ -45,16 +45,16 @@ export default function Stop() {
             />
           </div>
           
-          <div className="text-center flex flex-col items-center gap-8">
-            <p className="text-[#23F972] text-[1.2rem] leading-relaxed font-arial text-center max-w-[320px]">
-              Call now for U.S.-based
+          <div className="text-center flex flex-col items-center gap-4">
+            <p className="text-[#23F972] text-[1.2rem] leading-relaxed font-arial text-center">
+              Call now for U.S.-based<br />
               single-ring concierge service
             </p>
             <a 
               href="tel:18009411544"
               className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-10 py-3 text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
             >
-              Call +1(800)941-1544
+              Call +1(800) 941-1544
             </a>
           </div>
         </div>

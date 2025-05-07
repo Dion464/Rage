@@ -535,16 +535,16 @@ export default function JoinForm() {
           </h1>
           
           <div className="mt-8 sm:mt-16 flex flex-col items-center sm:items-start">
-            <p className="text-[#1EEB7A] text-base sm:text-lg md:text-xl font-arial text-center sm:text-left sm:ml-4">
-              Call now for U.S.-based<br />
-              single-ring concierge service
-            </p>
-
-            <a href="tel:1-800-941-1544" className="inline-block mt-4 sm:mt-6">
-              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-arial">
-                Call +1(800)941-1544
-              </div>
-            </a>
+          <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
+      Call now for U.S.-based<br />
+      single-ring concierge service
+    </p>
+    <a
+      href="tel:18009411544"
+      className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
+    >
+      Call +1(800) 941-1544
+    </a>
           </div>
 
           <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16 mx-auto sm:mx-0">
