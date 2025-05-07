@@ -4,16 +4,16 @@ import Link from 'next/link';
 
 export default function Testimonials() {
   return (
-    <div id="testimonials" className="min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden pt-16 md:pt-0">
+    <div id="testimonials" className="h-screen md:min-h-[100vh] bg-[#1A1A1A] flex flex-col relative overflow-hidden pt-16 md:pt-0">
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
         <Link href="#testimonials" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
         <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
 
-      <div className="flex flex-col md:flex-row px-4 sm:px-6 md:px-16 mt-1 sm:mt-2 md:mt-6 flex-1 pb-6 sm:pb-8 md:pb-16 z-10">
+      <div className="flex flex-col md:flex-row px-4 sm:px-6 md:px-16 mt-4 sm:mt-2 md:mt-6 flex-1 pb-6 sm:pb-8 md:pb-16 z-10 h-[calc(100vh-4rem)] md:h-auto overflow-y-auto md:overflow-visible">
         {/* Left section */}
-        <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4 order-1 md:order-none">
+        <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4 order-1 md:order-none pt-4 md:pt-0">
           <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
             <div className="tracking-tighter text-[#23F972] font-chamelton-blk text-4xl sm:text-[22px] md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
               REAL MERCHANTS.<br/>REAL<span className="text-white"> ACTION.</span>
@@ -55,21 +55,21 @@ export default function Testimonials() {
         </div>
 
         {/* Call to action */}
-        <div className="w-full md:w-full lg:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-center lg:items-end justify-end lg:justify-start relative order-2 md:order-none lg:pl-8 lg:ml-auto">
-  <div className="text-center flex flex-col gap-3 w-full sm:items-center lg:items-end">
-    <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
-      Call now for U.S.-based<br />
-      single-ring concierge service
-    </p>
-    <a
-      href="tel:18009411544"
-      className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
-    >
-      Call +1(800) 941-1544
-    </a>
-  </div>
-</div>
-</div>
+        <div className="w-full md:w-full lg:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-center justify-center md:justify-end lg:justify-start relative order-2 md:order-none lg:pl-8 lg:ml-auto">
+          <div className="text-center flex flex-col items-center gap-3 w-full md:items-center lg:items-end">
+            <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center lg:text-right mb-2 lg:text-[1.5rem]">
+              Call now for U.S.-based<br />
+              single-ring concierge service
+            </p>
+            <a
+              href="tel:18009411544"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-4 sm:px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[0.9rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap w-[200px] sm:w-auto"
+            >
+              Call +1(800) 941-1544
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Flag image on desktop */}
       <div className="absolute right-0 bottom-0 overflow-visible pointer-events-none hidden md:block z-[5]">

@@ -9,15 +9,32 @@ export default function Hero() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['stop', 'testimonials', 'join'];
+      const heroElement = document.getElementById('hero');
+      const heroRect = heroElement?.getBoundingClientRect();
+      
+      // If we're in the hero section, keep all nav items white
+      if (heroRect && heroRect.top <= 100 && heroRect.bottom >= 100) {
+        setActiveSection('');
+        return;
+      }
+
+      // Check other sections
+      let foundActive = false;
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top <= 100 && rect.bottom >= 100) {
             setActiveSection(section);
+            foundActive = true;
             break;
           }
         }
+      }
+      
+      // If no section is active, reset to white
+      if (!foundActive) {
+        setActiveSection('');
       }
     };
 
@@ -26,7 +43,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div  className="min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-16 md:pt-0">
+    <div id="hero" className="h-screen md:min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-16 md:pt-0">
       {/* Mobile Navigation */}
       <div className="fixed top-0 left-0 right-0 md:hidden bg-[#0A3B2E] z-50 border-b border-[#23F972]/20">
         <div className="flex justify-between px-4 py-4">
@@ -58,7 +75,7 @@ export default function Hero() {
         <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
 
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center pb-16 md:pb-0 pt-8 md:pt-0">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-16 md:pb-0 pt-8 md:pt-0">
         <div className="md:col-span-4 text-center md:text-left pt-8 md:pt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
