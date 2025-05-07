@@ -517,7 +517,7 @@ export default function JoinForm() {
   };
 
   return (
-    <div id="join" className="min-h-screen bg-[#0A3B2E] flex flex-col relative pt-16 md:pt-0">
+    <div id="join" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col font-arial-bold">
       {/* Component-specific navigation */}
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
@@ -526,45 +526,45 @@ export default function JoinForm() {
       </div>
 
       {/* Main content section */}
-      <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-4 sm:pt-16 md:pt-12 pb-8">
-        <div className="w-full sm:w-1/2 pt-2 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
-          <h1 className="text-[38px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
+      <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-8 sm:pt-16 md:pt-12">
+        <div className="w-full sm:w-1/2 pt-4 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
+          <h1 className="text-[45px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
           
-          <div className="mt-4 sm:mt-16 flex flex-col items-center">
-            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
+          <div className="mt-8 sm:mt-16 flex flex-col items-center sm:items-start">
+            <p className="text-[#1EEB7A] text-base sm:text-lg md:text-xl font-arial text-center sm:text-left sm:ml-4">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
-            <a
-              href="tel:18009411544"
-              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-4 sm:px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[0.9rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap w-[200px] sm:w-auto"
-            >
-              Call +1(800) 941-1544
+
+            <a href="tel:1-800-941-1544" className="inline-block mt-4 sm:mt-6">
+              <div className="border border-[#1EEB7A] text-[#1EEB7A] px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-arial">
+                Call +1(800)941-1544
+              </div>
             </a>
           </div>
 
-          <div className="flex justify-center sm:justify-start gap-3 sm:gap-6 mt-4 sm:mt-16 mx-auto sm:mx-0">
+          <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16 mx-auto sm:mx-0">
             <a href="https://www.instagram.com/merchantrebellion" target="_blank" rel="noopener noreferrer">
-              <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+              <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
             </a>
             <a href="https://www.facebook.com/merchantrebellion" target="_blank" rel="noopener noreferrer">
-              <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+              <Image src="/facebookicon.svg" alt="Facebook" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
             </a>
             <a href="https://twitter.com/MerchantRebel" target="_blank" rel="noopener noreferrer">
-              <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+              <Image src="/xicon.svg" alt="X" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
             </a>
             <a href="https://www.linkedin.com/company/merchant-rebellion" target="_blank" rel="noopener noreferrer">
-              <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
+              <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
             </a>
           </div>
         </div>
 
-        <div className="w-full sm:w-1/2 mt-4 sm:mt-0">
-          <div className="relative h-[600px] sm:h-[800px]">
+        <div className="w-full sm:w-1/2 mt-8 sm:mt-0">
+          <div className="relative h-[800px]">
             {/* Border Design */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute left-0 bottom-0 w-[2px] h-[calc(100%-120px)] bg-[#1EEB7A]" />
