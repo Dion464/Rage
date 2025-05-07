@@ -150,7 +150,7 @@ export default function JoinForm() {
                 value={formData.firstName}
                 onChange={handleInputChange}
                 placeholder="Jane"
-                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                 required
               />
             </div>
@@ -164,7 +164,7 @@ export default function JoinForm() {
                 value={formData.lastName}
                 onChange={handleInputChange}
                 placeholder="Smith"
-                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                 required
               />
             </div>
@@ -176,7 +176,7 @@ export default function JoinForm() {
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2 border-b border-white pb-2 min-w-[120px] text-white"
+                    className="flex items-center gap-2 border-b border-white pb-2 min-w-[120px] text-white rounded-none"
                   >
                     {selectedCountry && (
                       <>
@@ -214,7 +214,7 @@ export default function JoinForm() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder=" 555-0123"
-                  className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                  className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                   required
                 />
               </div>
@@ -229,7 +229,7 @@ export default function JoinForm() {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="name@example.com"
-                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                 required
               />
             </div>
@@ -243,7 +243,7 @@ export default function JoinForm() {
                 value={formData.company}
                 onChange={handleInputChange}
                 placeholder="Acme Corporation"
-                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                 required
               />
             </div>
@@ -517,7 +517,7 @@ export default function JoinForm() {
   };
 
   return (
-    <div id="join" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col font-arial-bold">
+    <div id="join" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col font-arial-bold scroll-mt-20">
       {/* Component-specific navigation */}
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
@@ -589,7 +589,7 @@ export default function JoinForm() {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       placeholder="Jane"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                       required
                     />
                   </div>
@@ -603,7 +603,7 @@ export default function JoinForm() {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       placeholder="Smith"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                       required
                     />
                   </div>
@@ -615,7 +615,7 @@ export default function JoinForm() {
                         <button
                           type="button"
                           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                          className="flex items-center gap-2 border-b border-white pb-2 min-w-[120px] text-white"
+                          className="flex items-center gap-2 border-b border-white pb-2 min-w-[120px] text-white rounded-none"
                         >
                           {selectedCountry && (
                             <>
@@ -653,7 +653,7 @@ export default function JoinForm() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder=" 555-0123"
-                        className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                        className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                         required
                       />
                     </div>
@@ -668,7 +668,7 @@ export default function JoinForm() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="name@example.com"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                       required
                     />
                   </div>
@@ -682,7 +682,7 @@ export default function JoinForm() {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Acme Corporation"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
                       required
                     />
                   </div>
