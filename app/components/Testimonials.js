@@ -11,54 +11,54 @@ export default function Testimonials() {
         <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
 
-      <div className="flex flex-col md:flex-row px-4 sm:px-6 md:px-16 mt-4 sm:mt-2 md:mt-6 flex-1 pb-6 sm:pb-8 md:pb-16 z-10 h-[calc(100vh-4rem)] md:h-auto overflow-y-auto md:overflow-visible">
+      <div className="flex flex-col md:flex-row px-4 sm:px-6 md:px-16 mt-2 md:mt-6 flex-1 pb-4 md:pb-16 z-10">
         {/* Left section */}
-        <div className="w-full md:w-[55%] mb-6 sm:mb-8 md:mb-0 pr-0 md:pr-4 order-1 md:order-none pt-4 md:pt-0">
-          <div className="mb-4 sm:mb-6 md:mb-6 lg:mb-10 text-left nest-hub-title">
-            <div className="tracking-tighter text-[#23F972] font-chamelton-blk text-4xl sm:text-[22px] md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
+        <div className="w-full md:w-[55%] mb-4 md:mb-0 pr-0 md:pr-4 order-1 md:order-none">
+          <div className="mb-3 md:mb-6 lg:mb-10 text-left nest-hub-title">
+            <div className="tracking-tighter text-[#23F972] font-chamelton-blk text-3xl sm:text-[22px] md:text-[60px] lg:text-[80px] xl:text-[90px] leading-tight tracking-tight whitespace-nowrap md:leading-tight">
               REAL MERCHANTS.<br/>REAL<span className="text-white"> ACTION.</span>
             </div>
           </div>
 
-          <div className="border-l border-gray-700 pl-3 sm:pl-4 md:pl-6 lg:pl-8 mt-4 sm:mt-6 md:mt-3 lg:mt-8 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-6 nest-hub-testimonials">
+          <div className="border-l border-gray-700 pl-3 sm:pl-4 md:pl-6 lg:pl-8 mt-3 md:mt-3 lg:mt-8 space-y-3 md:space-y-6 lg:space-y-6 nest-hub-testimonials">
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-base sm:text-lg md:text-base lg:text-lg xl:text-lg font-bold lg:text-base xl:text-lg">Langes Deli:</h3>
-              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-base sm:text-lg md:text-sm lg:text-sm xl:text-base leading-relaxed lg:text-sm xl:text-base">
+              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-sm md:text-base lg:text-lg xl:text-lg font-bold">Langes Deli:</h3>
+              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-sm md:text-sm lg:text-sm xl:text-base leading-relaxed">
                 &ldquo;Five months ago I reluctantly switched Langes Deli to the Cash Discount Program.
                 I anticipated resistance from my customers. There truly has been none.
                  
                  The monthly savings are as advertised and it goes right to the bottom line.&rdquo;
               </p>
-              <p className="mt-6 text-white text-m md:text-sm lg:text-sm xl:text-base font-bold">Thomas Bass, Owner</p>
+              <p className="mt-2 md:mt-6 text-white text-sm md:text-sm lg:text-sm xl:text-base font-bold">Thomas Bass, Owner</p>
             </div>
 
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-base sm:text-lg md:text-base lg:text-lg xl:text-lg font-bold lg:text-base xl:text-lg">Tryforos and Pernice Florist:</h3>
-              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-base sm:text-lg md:text-sm lg:text-sm xl:text-base leading-relaxed lg:text-sm xl:text-base">
+              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-sm md:text-base lg:text-lg xl:text-lg font-bold">Tryforos and Pernice Florist:</h3>
+              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-sm md:text-sm lg:text-sm xl:text-base leading-relaxed">
               "The Cash Discount Program has delivered all that was promised.
                There has been virtually no pushback on the fees and the savings are real."
               </p>
-              <p className="mt-6 text-white text-m md:text-sm lg:text-sm xl:text-base font-bold">Gary Tryforos, Owner</p>
+              <p className="mt-2 md:mt-6 text-white text-sm md:text-sm lg:text-sm xl:text-base font-bold">Gary Tryforos, Owner</p>
             </div>
 
             <div>
-              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-base sm:text-lg md:text-base lg:text-lg xl:text-lg font-bold lg:text-base xl:text-lg">Park Place Meats, Inc.:</h3>
-              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-base sm:text-lg md:text-sm lg:text-sm xl:text-base leading-relaxed lg:text-sm xl:text-base">
+              <h3 className="text-[#23F972] mb-1 md:mb-2 lg:mb-2 text-sm md:text-base lg:text-lg xl:text-lg font-bold">Park Place Meats, Inc.:</h3>
+              <p className="text-white w-full max-w-[90%] md:max-w-[85%] lg:max-w-[80%] mb-1 sm:mb-2 md:mb-2 lg:mb-3 text-sm md:text-sm lg:text-sm xl:text-base leading-relaxed">
               "I am extremely satisfied with our conversion to the Cash Discount Program.
                The transition was simple and the customer service is exceptional. 
                My clients understand the need for businesses to reduce costs in this unprecedented time, 
                and my credit card fees have been reduced by almost 90%."
               </p>
-              <p className=" mt-6 text-white text-m md:text-sm lg:text-sm xl:text-base font-bold">Paul Chietro, Owner</p>
+              <p className="mt-2 md:mt-6 text-white text-sm md:text-sm lg:text-sm xl:text-base font-bold">Paul Chietro, Owner</p>
             </div>
           </div>
         </div>
 
         {/* Call to action */}
-        <div className="w-full md:w-full lg:w-[45%] mt-4 sm:mt-6 md:mt-0 flex flex-col items-center justify-center md:justify-end lg:justify-start relative order-2 md:order-none lg:pl-8 lg:ml-auto">
-          <div className="text-center flex flex-col items-center gap-3 w-full md:items-center lg:items-end">
-            <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center lg:text-right mb-2 lg:text-[1.5rem]">
-              Call now for U.S.-based<br />
+        <div className="w-full md:w-full lg:w-[45%] mt-2 md:mt-0 flex flex-col items-center justify-center md:justify-end lg:justify-start relative order-2 md:order-none lg:pl-8 lg:ml-auto">
+          <div className="text-center flex flex-col items-center gap-2 w-full md:items-center lg:items-end lg:text-center">
+            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center lg:text-centermb-2 lg:text-[1.5rem]">
+              Call now for U.S.-based <br />
               single-ring concierge service
             </p>
             <a
