@@ -527,19 +527,15 @@ export default function JoinForm() {
 
       {/* Main content section */}
       <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-4 sm:pt-16 md:pt-12">
-        {/* Left side with title */}
         <div className="w-full sm:w-1/2 pt-2 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
           <h1 className="text-[38px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
             <span className="text-[#1EEB7A]">JOIN OUR<br />
             REBELLION<br /></span>
             <span className="text-white">TODAY!</span>
           </h1>
-        </div>
-
-        {/* Right side with contact info */}
-        <div className="w-full sm:w-1/2 flex flex-col items-center sm:items-end mt-4 sm:mt-16">
-          <div className="flex flex-col items-center sm:items-end">
-            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center sm:text-right mb-2 lg:text-[1.5rem]">
+          
+          <div className="mt-4 sm:mt-16 flex flex-col items-center">
+            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
@@ -551,7 +547,7 @@ export default function JoinForm() {
             </a>
           </div>
 
-          <div className="flex justify-center sm:justify-end gap-3 sm:gap-6 mt-4 sm:mt-16">
+          <div className="flex justify-center sm:justify-start gap-3 sm:gap-6 mt-4 sm:mt-16 mx-auto sm:mx-0">
             <a href="https://www.instagram.com/merchantrebellion" target="_blank" rel="noopener noreferrer">
               <Image src="/instagram.svg" alt="Instagram" width={36} height={36} className="w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity" />
             </a>
