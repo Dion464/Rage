@@ -1,13 +1,63 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Navigation from "./Navigation";
-
+import Link from 'next/link';
 
 export default function Hero() {
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['stop', 'testimonials', 'join'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div id="hero" className="min-h-[100vh] flex flex-col bg-[#0A3B2E] relative">
-      <Navigation />
-      
+    <div  className="min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-16 md:pt-0">
+      {/* Mobile Navigation */}
+      <div className="fixed top-0 left-0 right-0 md:hidden bg-[#0A3B2E] z-50 border-b border-[#23F972]/20">
+        <div className="flex justify-between px-4 py-4">
+          <Link 
+            href="#stop" 
+            className={`text-sm font-chamelton-blk cursor-pointer whitespace-nowrap transition-colors ${activeSection === 'stop' ? 'text-[#23F972]' : 'text-white'}`}
+          >
+            THE REBELLION
+          </Link>
+          <Link 
+            href="#testimonials" 
+            className={`text-sm font-chamelton-blk cursor-pointer whitespace-nowrap transition-colors ${activeSection === 'testimonials' ? 'text-[#23F972]' : 'text-white'}`}
+          >
+            TESTIMONIALS
+          </Link>
+          <Link 
+            href="#join" 
+            className={`text-sm font-chamelton-blk cursor-pointer whitespace-nowrap transition-colors ${activeSection === 'join' ? 'text-[#23F972]' : 'text-white'}`}
+          >
+            JOIN US
+          </Link>
+        </div>
+      </div>
+
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
+        <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
+        <Link href="#testimonials" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
+        <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
+      </div>
+
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center pb-16 md:pb-0 pt-8 md:pt-0">
         <div className="md:col-span-4 text-center md:text-left pt-8 md:pt-0">
           <div className="font-chamelton-blk">
