@@ -517,7 +517,7 @@ export default function JoinForm() {
   };
 
   return (
-    <div id="join" className="min-h-[88vh] bg-[#0A3B2E] flex flex-col font-arial-bold scroll-mt-4 md:scroll-mt-0">
+    <div id="join" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col font-arial-bold scroll-mt-4 md:scroll-mt-0">
       {/* Component-specific navigation */}
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
@@ -527,11 +527,11 @@ export default function JoinForm() {
 
       {/* Main content section */}
       <div className="flex flex-col sm:flex-row px-4 sm:px-8 md:px-16 relative pt-8 sm:pt-16 md:pt-12">
-        <div className="w-full sm:w-1/2 pt-4 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
-          <h1 className="text-[45px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[0.9] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
-            <span className="text-[#1EEB7A]">JOIN OUR<br />
-            REBELLION<br /></span>
-            <span className="text-white">TODAY!</span>
+        <div className="w-full  sm:w-1/2 pt-4 sm:pt-8 md:pt-16 flex flex-col items-center sm:items-start sm:text-left">
+          <h1 className="text-[45px] sm:text-[40px] md:text-[60px] lg:text-[80px] leading-[1] font-bold font-chamelton-blk text-center sm:text-left mx-auto sm:mx-0 join-title">
+            <span className="text-[#1EEB7A] block mb-1 md:mb-3">JOIN OUR</span>
+            <span className="text-[#1EEB7A] block mb-1 md:mb-3">REBELLION</span>
+            <span className="text-white block">TODAY!</span>
           </h1>
           
           <div className="mt-8 sm:mt-16 flex flex-col items-center sm:items-start">
