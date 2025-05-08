@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="md:col-span-6 flex justify-center items-center md:order-none -mt-6 md:mt-0">
+        <div className="md:col-span-6 flex justify-center items-center md:order-none -mt-20 md:mt-0">
           <div className="logo-container w-full h-full flex items-center justify-center relative">
             <Image
               src="/logo.svg"
@@ -107,13 +107,13 @@ export default function Hero() {
               width={1200}
               height={1200}
               className="logo-image absolute"
-              style={{ width: '90%', height: 'auto', maxHeight: '60vh', objectFit: 'contain', top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}
+              style={{ width: '90%', height: 'auto', maxHeight: '65vh', objectFit: 'contain', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
               priority
             />
           </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col items-center justify-center -mt-24 sm:mt-0 md:-mt-32 pb-2 sm:pb-8 md:py-0 md:-ml-12">
+        <div className="md:col-span-2 flex flex-col items-center justify-center -mt-32 sm:mt-0 md:-mt-32 pb-2 sm:pb-8 md:py-0 md:-ml-12">
           <div className="text-center flex flex-col items-center gap-2">
             <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
               Call now for U.S.-based<br />
@@ -131,22 +131,18 @@ export default function Hero() {
       
       <style jsx global>{`
         .logo-container {
-          min-height: 140px;
+          min-height: 100px;
+          margin-top: -80px;
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
         }
         
-        @media (min-width: 640px) {
-          .logo-container {
-            min-height: 300px;
-          }
-        }
-        
         @media (min-width: 768px) {
           .logo-container {
             min-height: 450px;
+            margin-top: 0;
           }
         }
         
