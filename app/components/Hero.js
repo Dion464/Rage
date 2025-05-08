@@ -80,22 +80,22 @@ export default function Hero() {
         <div className="md:col-span-4 text-center md:text-left pt-4 md:pt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
-              <span className="text-white text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
-              <span className="text-[#23F972] text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">AGAINST</span>
+              <span className="text-white text-[60px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
+              <span className="text-[#23F972] text-[60px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">AGAINST</span>
             </div>
             <div>
-              <span className="text-[#23F972] text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">THE FEES!</span>
+              <span className="text-[#23F972] text-[60px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">THE FEES!</span>
             </div>
           </div>
 
           <div className="mt-6 md:mt-10 lg:mt-12 font-charter space-y-2 md:space-y-4">
-            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed text-center md:text-left md:ml-3">
+            <p className="text-white text-[20px] sm:text-base lg:text-xl xl:text-2xl leading-relaxed text-center md:text-left md:ml-3">
               U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span>{" "}
               dollars in swipe fees in 2023. Many{" "}
               merchants rank them as their second{" "}
               highest operating cost.
             </p>
-            <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl text-center md:text-left md:ml-3">It&apos;s time to stop the squeeze.</p>
+            <p className="text-white text-[20px] sm:text-base lg:text-xl xl:text-2xl text-center md:text-left md:ml-3">It&apos;s time to stop the squeeze.</p>
           </div>
         </div>
 
