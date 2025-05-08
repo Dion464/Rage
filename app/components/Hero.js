@@ -80,11 +80,11 @@ export default function Hero() {
         <div className="md:col-span-4 text-center md:text-left pt-4 md:pt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
-              <span className="text-white text-[60px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
-              <span className="text-[#23F972] text-[60px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">AGAINST</span>
+              <span className="text-white text-[40px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
+              <span className="text-[#23F972] text-[40px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">AGAINST</span>
             </div>
             <div>
-              <span className="text-[#23F972] text-[60px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">THE FEES!</span>
+              <span className="text-[#23F972] text-[40px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">THE FEES!</span>
             </div>
           </div>
 
