@@ -77,7 +77,7 @@ export default function Hero() {
       </div>
 
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-12 md:pb-0 pt-4 md:pt-0">
-        <div className="md:col-span-4 text-center md:text-left pt-4 md:pt-0">
+        <div className="md:col-span-4 text-center md:text-left pt-2 md:pt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
               <span className="text-white text-[40px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="md:col-span-6 flex justify-center items-center md:order-none py-0">
+        <div className="md:col-span-6 flex justify-center items-center md:order-none -mt-6 md:mt-0">
           <div className="logo-container w-full h-full flex items-center justify-center relative">
             <Image
               src="/logo.svg"
@@ -107,13 +107,13 @@ export default function Hero() {
               width={1200}
               height={1200}
               className="logo-image absolute"
-              style={{ width: '90%', height: 'auto', maxHeight: '65vh', objectFit: 'contain', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+              style={{ width: '90%', height: 'auto', maxHeight: '60vh', objectFit: 'contain', top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}
               priority
             />
           </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col items-center justify-center -mt-12 sm:mt-0 md:-mt-32 pb-2 sm:pb-8 md:py-0 md:-ml-12">
+        <div className="md:col-span-2 flex flex-col items-center justify-center -mt-24 sm:mt-0 md:-mt-32 pb-2 sm:pb-8 md:py-0 md:-ml-12">
           <div className="text-center flex flex-col items-center gap-2">
             <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
               Call now for U.S.-based<br />
@@ -131,7 +131,7 @@ export default function Hero() {
       
       <style jsx global>{`
         .logo-container {
-          min-height: 180px;
+          min-height: 140px;
           position: relative;
           display: flex;
           justify-content: center;
