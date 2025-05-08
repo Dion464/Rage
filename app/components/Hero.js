@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Navigation from "./Navigation";
@@ -43,10 +44,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <div id="hero" className="min-h-[100vh]  bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-16 md:pt-0">
+    <div id="hero" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-12 md:pt-0">
       {/* Mobile Navigation */}
       <div className="fixed top-0 left-0 right-0 md:hidden bg-[#0A3B2E] z-50 border-b border-[#23F972]/20">
-        <div className="flex justify-between px-4 py-4">
+        <div className="flex justify-between px-4 py-3">
           <Link 
             href="#stop" 
             className={`text-sm font-chamelton-blk cursor-pointer whitespace-nowrap transition-colors ${activeSection === 'stop' ? 'text-[#23F972]' : 'text-white'}`}
@@ -75,8 +76,8 @@ export default function Hero() {
         <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
 
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-16 md:pb-0 pt-8 md:pt-0">
-        <div className="md:col-span-4 text-center md:text-left pt-8 md:pt-0">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-4 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-12 md:pb-0 pt-4 md:pt-0">
+        <div className="md:col-span-4 text-center md:text-left pt-4 md:pt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
               <span className="text-white text-3xl sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
@@ -87,7 +88,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="mt-8 md:mt-10 lg:mt-12 font-charter space-y-3 md:space-y-4">
+          <div className="mt-6 md:mt-10 lg:mt-12 font-charter space-y-2 md:space-y-4">
             <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed text-center md:text-left md:ml-3">
               U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span>{" "}
               dollars in swipe fees in 2023. Many{" "}
@@ -106,31 +107,31 @@ export default function Hero() {
               width={1200}
               height={1200}
               className="logo-image absolute"
-              style={{ width: '90%', height: 'auto', maxHeight: '70vh', objectFit: 'contain', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+              style={{ width: '90%', height: 'auto', maxHeight: '65vh', objectFit: 'contain', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
               priority
             />
           </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col items-center justify-center mt-16 md:-mt-32 pb-12 md:py-0 md:-ml-12">
-          <div className="text-center flex flex-col items-center gap-2 ">
-          <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
-      Call now for U.S.-based<br />
-      single-ring concierge service
-    </p>
-    <a
-      href="tel:18009411544"
-      className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
-    >
-      Call +1(800) 941-1544
-    </a>
+        <div className="md:col-span-2 flex flex-col items-center justify-center mt-8 md:-mt-32 pb-8 md:py-0 md:-ml-12">
+          <div className="text-center flex flex-col items-center gap-2">
+            <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
+              Call now for U.S.-based<br />
+              single-ring concierge service
+            </p>
+            <a
+              href="tel:18009411544"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
+            >
+              Call +1(800) 941-1544
+            </a>
           </div>
         </div>
       </div>
       
       <style jsx global>{`
         .logo-container {
-          min-height: 240px;
+          min-height: 200px;
           position: relative;
           display: flex;
           justify-content: center;
@@ -170,7 +171,7 @@ export default function Hero() {
         @media (max-width: 767px) {
           #hero p {
             word-spacing: 2px;
-            line-height: 1.6;
+            line-height: 1.5;
           }
         }
       `}</style>
