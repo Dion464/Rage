@@ -55,15 +55,15 @@ export default function Testimonials() {
         </div>
 
         {/* Call to action */}
-        <div className="w-full md:w-full lg:w-[45%] mt-2 md:mt-5 flex flex-col items-center justify-center md:justify-end lg:justify-start relative order-2 md:order-none lg:pl-8 lg:ml-auto">
+        <div className="w-full md:w-full lg:w-[45%] mt-8 md:mt-16 flex flex-col items-center justify-center md:justify-end lg:justify-start relative order-2 md:order-none lg:pl-8 lg:ml-auto">
           <div className="text-center flex flex-col items-center gap-4 w-full md:items-center lg:items-end lg:text-center">
             <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.3rem] leading-relaxed font-arial text-center lg:text-centermb-2 lg:text-[1.5rem]">
               Call now for U.S.-based <br />
-            single-ring concierge service
+              single-ring concierge service
             </p>
             <a
               href="tel:18009411544"
-              className=" items-center inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-10 sm:px-8 md:px-9 lg:px-10 py-2 md:py-2.5 lg:py-4 text-[0.9rem] md:text-[1.1rem] lg:text-[1.1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap w-[200px] sm:w-auto"
+              className="items-center inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-10 sm:px-8 md:px-9 lg:px-10 py-2 md:py-2.5 lg:py-4 text-[0.9rem] md:text-[1.1rem] lg:text-[1.1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap w-[200px] sm:w-auto"
             >
               Call +1(800) 941-1544
             </a>
