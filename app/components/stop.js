@@ -41,7 +41,7 @@ export default function Stop() {
               alt="Merchant Rebellion Badge"
               width={384}
               height={384}
-              className="w-53 h-53 sm:w-56 sm:h-56 md:w-80 md:h-60 lg:w-76 lg:h-76 xl:w-80 xl:h-80 2xl:w-98 2xl:h-98"
+              className="w-48 h-48sm:w-56 sm:h-56 md:w-80 md:h-60 lg:w-76 lg:h-76 xl:w-80 xl:h-80 2xl:w-98 2xl:h-98"
             />
           </div>
           
