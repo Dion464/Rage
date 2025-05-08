@@ -76,7 +76,7 @@ export default function Hero() {
         <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
 
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-4 md:gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-12 md:pb-0 pt-4 md:pt-0">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-12 md:pb-0 pt-4 md:pt-0">
         <div className="md:col-span-4 text-center md:text-left pt-4 md:pt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
@@ -113,15 +113,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="md:col-span-2 flex flex-col items-center justify-center mt-8 md:-mt-32 pb-8 md:py-0 md:-ml-12">
+        <div className="md:col-span-2 flex flex-col items-center justify-center -mt-12 sm:mt-0 md:-mt-32 pb-2 sm:pb-8 md:py-0 md:-ml-12">
           <div className="text-center flex flex-col items-center gap-2">
-            <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
+            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>
             <a
               href="tel:18009411544"
-              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-6 sm:px-8 md:px-9 lg:px-12 py-1.5 sm:py-2 md:py-2.5 lg:py-4 text-[0.9rem] sm:text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
             >
               Call +1(800) 941-1544
             </a>
@@ -131,7 +131,7 @@ export default function Hero() {
       
       <style jsx global>{`
         .logo-container {
-          min-height: 200px;
+          min-height: 180px;
           position: relative;
           display: flex;
           justify-content: center;
