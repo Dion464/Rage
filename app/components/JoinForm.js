@@ -172,17 +172,17 @@ export default function JoinForm() {
             <div>
               <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
               <div className="flex gap-2 sm:gap-4 relative">
-                <div className="relative">
+                <div className="relative min-w-[140px] lg:min-w-[160px]">
                   <button
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2 border-b border-white pb-2 min-w-[120px] text-white rounded-none"
+                    className="flex items-center gap-2 border-b border-white pb-2 w-full text-white rounded-none"
                   >
                     {selectedCountry && (
                       <>
                         <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-6 h-4" />
-                        <span className="text-gray-400">{selectedCountry.code}</span>
-                        <span className="text-gray-400 ml-1">▼</span>
+                        <span className="text-gray-400 whitespace-nowrap">{selectedCountry.code}</span>
+                        <span className="text-gray-400 ml-auto">▼</span>
                       </>
                     )}
                   </button>
@@ -213,8 +213,8 @@ export default function JoinForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder=" 555-0123"
-                  className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
+                  placeholder="555-0123"
+                  className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none pl-2"
                   required
                 />
               </div>
@@ -611,17 +611,17 @@ export default function JoinForm() {
                   <div>
                     <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
                     <div className="flex gap-2 sm:gap-4 relative">
-                      <div className="relative">
+                      <div className="relative min-w-[140px] lg:min-w-[160px]">
                         <button
                           type="button"
                           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                          className="flex items-center gap-2 border-b border-white pb-2 min-w-[120px] text-white rounded-none"
+                          className="flex items-center gap-2 border-b border-white pb-2 w-full text-white rounded-none"
                         >
                           {selectedCountry && (
                             <>
                               <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-6 h-4" />
-                              <span className="text-gray-400">{selectedCountry.code}</span>
-                              <span className="text-gray-400 ml-1">▼</span>
+                              <span className="text-gray-400 whitespace-nowrap">{selectedCountry.code}</span>
+                              <span className="text-gray-400 ml-auto">▼</span>
                             </>
                           )}
                         </button>
@@ -652,8 +652,8 @@ export default function JoinForm() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder=" 555-0123"
-                        className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
+                        placeholder="555-0123"
+                        className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none pl-2"
                         required
                       />
                     </div>

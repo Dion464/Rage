@@ -125,7 +125,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: ["  inquiries@merchantrebellion.com"],
+      to: [" inquiries@merchantrebellion.com"],
       subject: 'New Merchant Rebellion Application',
       html: htmlContent,
     };
