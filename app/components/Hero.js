@@ -44,7 +44,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div id="hero" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-12 md:pt-0">
+    <div id="hero" className="min-h-[100vh] bg-[#0A3B2E] flex flex-col relative overflow-hidden pt-5 md:pt-0">
       {/* Mobile Navigation */}
       <div className="fixed top-0 left-0 right-0 md:hidden bg-[#0A3B2E] z-50 border-b border-[#23F972]/20">
         <div className="flex justify-between px-4 py-3">
