@@ -77,7 +77,7 @@ export default function Hero() {
       </div>
 
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-0 px-4 sm:px-8 md:px-12 lg:px-16 md:items-center h-[calc(100vh-4rem)] md:h-auto pb-12 md:pb-0 pt-4 md:pt-0">
-        <div className="md:col-span-4 text-center md:text-left pt-2 md:pt-0">
+        <div className="md:col-span-4 text-center md:text-left pt-2 md:pt-0 mt-4 md:mt-0">
           <div className="font-chamelton-blk">
             <div className="flex flex-row items-baseline gap-2 sm:gap-4 justify-center md:justify-start">
               <span className="text-white text-[40px] sm:text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl leading-none">RAGE</span>
