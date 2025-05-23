@@ -14,7 +14,9 @@ export default function JoinForm() {
     step2: null,
     step3: null,
     step4: null,
-    step5: null
+    step5: null,
+    step6: null,
+    step7: null
   });
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -77,8 +79,8 @@ export default function JoinForm() {
   const handleStepSubmit = (step, answer) => {
     if (step === 2 && answer === 'no') {
       return;
-    } else if (step === 5) {
-      setCurrentStep(6);
+    } else if (step === 6) {
+      setCurrentStep(7);
     } else {
       setCurrentStep(step + 1);
     }
@@ -127,7 +129,8 @@ export default function JoinForm() {
           step3: null,
           step4: null,
           step5: null,
-          step6: null
+          step6: null,
+          step7: null
         });
       }, 3000);
     } catch (error) {
@@ -469,6 +472,50 @@ export default function JoinForm() {
         );
       case 6:
         return (
+          <div className="space-y-6 sm:space-y-8">
+            <h2 className="text-[#1EEB7A] text-[32px] sm:text-[38px] lg:text-[42px] leading-tight mb-8 sm:mb-12">
+              Tell us more about yourself<br />
+              and your business.
+            </h2>
+            
+            <div className="pl-4 sm:pl-8">
+              <div className="flex items-start gap-4 text-white text-xl sm:text-2xl mb-6 sm:mb-8">
+                <span className="text-[#1EEB7A] font-arial-bold">6 →</span>
+                <p className="pr-4">How many years has your company been in business?</p>
+              </div>
+              <div className="flex flex-col gap-3 sm:gap-4 ml-8 sm:ml-12">
+                {[
+                  { label: 'Less than 1 year', value: 'less1year' },
+                  { label: '1-3 years', value: '1to3years' },
+                  { label: '3-5 years', value: '3to5years' },
+                  { label: '5-10 years', value: '5to10years' },
+                  { label: 'More than 10 years', value: 'more10years' }
+                ].map((option) => (
+                  <button 
+                    key={option.value}
+                    type="button"
+                    onClick={() => setStepAnswers(prev => ({ ...prev, step6: option.value }))}
+                    className={`w-full max-w-[280px] py-2 px-6 rounded-full border border-[#1EEB7A] text-left ${
+                      stepAnswers.step6 === option.value 
+                        ? 'bg-[#1EEB7A] text-[#0A3B2E]' 
+                        : 'text-[#1EEB7A]'
+                    } hover:bg-[#1EEB7A] hover:text-[#0A3B2E] transition-colors text-sm sm:text-base`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+                <button
+                  onClick={() => stepAnswers.step6 && handleStepSubmit(6, stepAnswers.step6)}
+                  className="w-[120px] bg-[#1EEB7A] text-[#0A3B2E] py-2 rounded-full mt-4 font-medium font-arial-bold"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      case 7:
+        return (
           <div className="space-y-8">
             <h2 className="text-[#1EEB7A] text-[42px] leading-tight mb-12">
               Tell us more about yourself<br />
@@ -477,14 +524,14 @@ export default function JoinForm() {
             
             <div className="pl-8">
               <div className="flex items-start gap-4 text-white text-2xl mb-8">
-                <span className="text-[#1EEB7A] font-arial-bold">6 →</span>
+                <span className="text-[#1EEB7A] font-arial-bold">7 →</span>
                 <p>What is your job title?</p>
               </div>
               <div className="flex flex-col gap-4 ml-12">
                 <input
                   type="text"
-                  value={stepAnswers.step6 || ''}
-                  onChange={(e) => setStepAnswers(prev => ({ ...prev, step6: e.target.value }))}
+                  value={stepAnswers.step7 || ''}
+                  onChange={(e) => setStepAnswers(prev => ({ ...prev, step7: e.target.value }))}
                   placeholder="Type your answere here..."
                   className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                 />
