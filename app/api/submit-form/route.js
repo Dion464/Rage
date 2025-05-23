@@ -80,11 +80,11 @@ export async function POST(request) {
                   </tr>
                   <tr>
                     <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">Years in Business</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step7 || 'Not specified'}</td>
+                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step6 || 'Not specified'}</td>
                   </tr>
                   <tr>
                     <td style="padding: 12px 0; color: #1EEB7A;">Job Title</td>
-                    <td style="padding: 12px 0; color: white;">${data.step6 || 'Not specified'}</td>
+                    <td style="padding: 12px 0; color: white;">${data.step7 || 'Not specified'}</td>
                   </tr>
                 </table>
 
