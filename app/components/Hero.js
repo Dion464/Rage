@@ -55,6 +55,12 @@ export default function Hero() {
             THE REBELLION
           </Link>
           <Link 
+            href="#our-mission" 
+            className={`text-sm font-chamelton-blk cursor-pointer whitespace-nowrap transition-colors ${activeSection === 'our-mission' ? 'text-[#23F972]' : 'text-white'}`}
+          >
+            OUR MISSION
+          </Link>
+          <Link 
             href="#testimonials" 
             className={`text-sm font-chamelton-blk cursor-pointer whitespace-nowrap transition-colors ${activeSection === 'testimonials' ? 'text-[#23F972]' : 'text-white'}`}
           >
@@ -72,6 +78,7 @@ export default function Hero() {
       {/* Desktop Navigation */}
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
+        <Link href="#our-mission" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">OUR MISSION</Link>
         <Link href="#testimonials" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
         <Link href="#join" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
@@ -90,10 +97,9 @@ export default function Hero() {
 
           <div className="mt-6 md:mt-10 lg:mt-12 font-charter space-y-2 md:space-y-4">
             <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl leading-relaxed text-center md:text-left md:ml-3">
-              U.S. Merchants paid <span className="text-[#23F972] font-charter-bold">$224 billion</span>{" "}
-              dollars in swipe fees in 2023. Many{" "}
-              merchants rank them as their second{" "}
-              highest operating cost.
+              Swipe fees have increased 700% since 2001.<br />
+              Call the Merchant Rebellion and talk to a<br />
+              real person with real solutions.
             </p>
             <p className="text-white text-sm sm:text-base lg:text-xl xl:text-2xl text-center md:text-left md:ml-3">It&apos;s time to stop the squeeze.</p>
           </div>
@@ -115,7 +121,7 @@ export default function Hero() {
 
         <div className="md:col-span-2 flex flex-col items-center justify-center -mt-32 sm:mt-0 md:-mt-32 pb-2 sm:pb-8 md:py-0 md:-ml-12">
           <div className="text-center flex flex-col items-center gap-2">
-            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
+            <p className="text-[#23F972] text-base sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem] max-w-[540px] mx-auto">
               Call now for U.S.-based<br />
               single-ring concierge service
             </p>

@@ -77,7 +77,7 @@ const Rebellion = () => {
             <Image src="/linkedinicon.svg" alt="LinkedIn" width={36} height={36} className="w-[36px] sm:w-[46px]" />
           </div>
         </div>
-        <p className="text-center md:text-right text-[#1EEB7A] text-xs sm:text-sm" style={{ fontFamily: 'Arial-Regular' }}>
+        <p className="text-center md:text-right text-[#1EEB7A] text-xs sm:text-sm ml-auto" style={{ fontFamily: 'Arial-Regular' }}>
           Supported by Transaction Acceptance Corp. Copyright 2025
         </p>
       </div>

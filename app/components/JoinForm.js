@@ -174,50 +174,15 @@ export default function JoinForm() {
 
             <div>
               <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
-              <div className="flex gap-2 sm:gap-4 relative">
-                <div className="relative min-w-[140px] lg:min-w-[160px]">
-                  <button
-                    type="button"
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-2 border-b border-white pb-2 w-full text-white rounded-none"
-                  >
-                    {selectedCountry && (
-                      <>
-                        <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-6 h-4" />
-                        <span className="text-gray-400 whitespace-nowrap">{selectedCountry.code}</span>
-                        <span className="text-gray-400 ml-auto">▼</span>
-                      </>
-                    )}
-                  </button>
-
-                  {isDropdownOpen && (
-                    <div className="absolute left-0 top-full mt-2 w-[300px] max-h-[300px] overflow-y-auto bg-[#0A3B2E] border border-[#1EEB7A] rounded-lg z-50">
-                      {countries.map((country) => (
-                        <button
-                          key={country.name}
-                          type="button"
-                          className="flex items-center gap-3 w-full p-3 hover:bg-[#1EEB7A] hover:text-[#0A3B2E] text-white"
-                          onClick={() => {
-                            setSelectedCountry(country);
-                            setIsDropdownOpen(false);
-                          }}
-                        >
-                          <img src={country.flag} alt={country.name} className="w-6 h-4" />
-                          <span>{country.name}</span>
-                          <span className="text-gray-400">{country.code}</span>
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
+              <div className="flex w-full">
                 <input
                   id="phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="555-0123"
-                  className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none pl-2"
+                  placeholder="+1 (212) 555-0123"
+                  className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                   required
                 />
               </div>
@@ -568,6 +533,7 @@ export default function JoinForm() {
       {/* Component-specific navigation */}
       <div className="hidden md:flex justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-8">
         <Link href="#stop" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">THE REBELLION</Link>
+        <Link href="#our-mission" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">OUR MISSION</Link>
         <Link href="#testimonials" className="text-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">TESTIMONIALS</Link>
         <Link href="#join" className="text-[#23F972] text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-chamelton-blk cursor-pointer whitespace-nowrap">JOIN US</Link>
       </div>
@@ -582,16 +548,15 @@ export default function JoinForm() {
           </h1>
           
           <div className="mt-8 sm:mt-16 flex flex-col items-center sm:items-start">
-          <p className="text-[#23F972] text-[1.2rem] sm:text-[1.4rem] md:text-[1rem] lg:text-[1rem] xl:text-[1.2rem] leading-relaxed font-arial text-center mb-2 lg:text-[1.5rem]">
-      Call now for U.S.-based<br />
-      single-ring concierge service
-    </p>
-    <a
-      href="tel:18009411544"
-      className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-[1rem] md:text-[1.1rem] lg:text-[1rem] font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
-    >
-      Call +1(800) 941-1544
-    </a>
+            <p className="text-[#23F972] text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl leading-none font-arial text-center mb-4 max-w-[540px] mx-auto">
+              Call now for U.S.-based<br />single-ring concierge service
+            </p>
+            <a
+              href="tel:18009411544"
+              className="inline-block border border-[#23F972] text-[#23F972] rounded-[100px] px-8 md:px-9 lg:px-12 py-2 md:py-2.5 lg:py-4 text-lg md:text-xl lg:text-xl font-arial hover:bg-[#23F972] hover:text-[#0A3B2E] transition-colors whitespace-nowrap"
+            >
+              Call +1(800) 941-1544
+            </a>
           </div>
 
           <div className="flex justify-center sm:justify-start gap-4 sm:gap-6 mt-8 sm:mt-16 mx-auto sm:mx-0">
@@ -613,18 +578,10 @@ export default function JoinForm() {
         <div className="w-full sm:w-1/2 mt-8 sm:mt-0">
           <div className="relative h-[800px]">
             {/* Border Design */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute left-0 bottom-0 w-[2px] h-[calc(100%-120px)] bg-[#1EEB7A]" />
-              <div className="absolute right-0 bottom-0 w-[2px] h-[calc(100%-120px)] bg-[#1EEB7A]" />
-              <div className="absolute top-[80px] left-0 right-0">
-                <div className="absolute top-0 left-0 w-[40px] h-[40px] border-l-2 border-t-2 border-[#1EEB7A] rounded-tl-[40px]" />
-                <div className="absolute top-0 right-0 w-[40px] h-[40px] border-r-2 border-t-2 border-[#1EEB7A] rounded-tr-[40px]" />
-                <div className="absolute top-0 left-[40px] right-[40px] h-[2px] bg-[#1EEB7A]" />
-              </div>
-            </div>
-
+            <div className="absolute inset-0 mt-[80px] pointer-events-none border-2 border-[#1EEB7A] rounded-[40px]" />
+            
             {/* Form Content */}
-            <div className={`px-12 ${currentStep === 5 ? 'pt-24' : 'pt-32'} h-full ${currentStep === 5 ? '' : 'overflow-y-auto'}`}>
+            <div className="px-12 pt-32 h-full">
               {currentStep === 0 ? (
                 <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
                   <div>
@@ -657,50 +614,15 @@ export default function JoinForm() {
 
                   <div>
                     <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
-                    <div className="flex gap-2 sm:gap-4 relative">
-                      <div className="relative min-w-[140px] lg:min-w-[160px]">
-                        <button
-                          type="button"
-                          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                          className="flex items-center gap-2 border-b border-white pb-2 w-full text-white rounded-none"
-                        >
-                          {selectedCountry && (
-                            <>
-                              <img src={selectedCountry.flag} alt={selectedCountry.name} className="w-6 h-4" />
-                              <span className="text-gray-400 whitespace-nowrap">{selectedCountry.code}</span>
-                              <span className="text-gray-400 ml-auto">▼</span>
-                            </>
-                          )}
-                        </button>
-
-                        {isDropdownOpen && (
-                          <div className="absolute left-0 top-full mt-2 w-[300px] max-h-[300px] overflow-y-auto bg-[#0A3B2E] border border-[#1EEB7A] rounded-lg z-50">
-                            {countries.map((country) => (
-                              <button
-                                key={country.name}
-                                type="button"
-                                className="flex items-center gap-3 w-full p-3 hover:bg-[#1EEB7A] hover:text-[#0A3B2E] text-white"
-                                onClick={() => {
-                                  setSelectedCountry(country);
-                                  setIsDropdownOpen(false);
-                                }}
-                              >
-                                <img src={country.flag} alt={country.name} className="w-6 h-4" />
-                                <span>{country.name}</span>
-                                <span className="text-gray-400">{country.code}</span>
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+                    <div className="flex w-full">
                       <input
                         id="phone"
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="555-0123"
-                        className="flex-1 bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none pl-2"
+                        placeholder="+1 (212) 555-0123"
+                        className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
                         required
                       />
                     </div>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="250" cy="250" r="250" fill="#23F972"/>
-  <path d="M150 150h200v200H150z" fill="#1A1A1A"/>
-  <path d="M250 350v100h-100V350z" fill="#1A1A1A"/>
-</svg>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M325 175C325 175 325 325 325 325L175 325L175 175L325 175ZM250 325L250 385L180 385L180 325L250 325Z" fill="#1A1A1A"/>
+</svg> 
