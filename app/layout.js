@@ -16,6 +16,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
+            // Prevent duplicate pixel loading
+            if (window.fbqLoaded) return;
+            window.fbqLoaded = true;
+            
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -24,8 +28,15 @@ export default function RootLayout({ children }) {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '3811009842530661');
-            fbq('track', 'PageView');
+            
+            // Initialize pixel only once
+            setTimeout(function() {
+              if (typeof fbq !== 'undefined' && !window.fbqInitialized) {
+                fbq('init', '3811009842530661');
+                fbq('track', 'PageView');
+                window.fbqInitialized = true;
+              }
+            }, 100);
           `}
         </Script>
         <noscript>
