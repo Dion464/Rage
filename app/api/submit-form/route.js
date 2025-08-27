@@ -58,34 +58,7 @@ export async function POST(request) {
                     <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">Company</td>
                     <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.company}</td>
                   </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">Payment Processing</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step1 === 'yes' ? 'Yes' : 'No'}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">US-Based Business</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step2 === 'yes' ? 'Yes' : 'No'}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">Annual Processing Volume</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step3 || 'Not specified'}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">Business Type</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step4 || 'Not specified'}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">E-Commerce Type</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step5 || 'Not specified'}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">Years in Business</td>
-                    <td style="padding: 12px 0; color: white; border-bottom: 1px solid rgba(30, 235, 122, 0.2);">${data.step6 || 'Not specified'}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 0; color: #1EEB7A;">Job Title</td>
-                    <td style="padding: 12px 0; color: white;">${data.step7 || 'Not specified'}</td>
-                  </tr>
+               
                 </table>
 
               
