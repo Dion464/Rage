@@ -23,12 +23,8 @@ export default function JoinForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.company || !formData.name) {
-      alert('Please enter Company and Name.');
-      return;
-    }
-    if (!formData.email && !formData.phone) {
-      alert('Please provide at least Email or Phone.');
+    if (!formData.company || !formData.name || !formData.email || !formData.phone) {
+      alert('Please fill Company, Name, Email and Phone.');
       return;
     }
 
@@ -532,7 +528,7 @@ export default function JoinForm() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Email (optional)</label>
+                  <label htmlFor="email" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Email*</label>
                   <input
                     id="email"
                     type="email"
@@ -541,11 +537,12 @@ export default function JoinForm() {
                     onChange={handleInputChange}
                     placeholder="name@example.com"
                     className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
+                    required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone (optional)</label>
+                  <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
                   <div className="flex w-full">
                     <input
                       id="phone"
@@ -555,9 +552,9 @@ export default function JoinForm() {
                       onChange={handleInputChange}
                       placeholder="+1 (212) 555-0123"
                       className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                      required
                     />
                   </div>
-                  <p className="text-[#1EEB7A] text-xs mt-2">Provide at least one: Email or Phone.</p>
                 </div>
 
                 <button
@@ -590,6 +587,29 @@ export default function JoinForm() {
           #join nav h2 {
             font-size: 24px !important;
           }
+        }
+      `}</style>
+      <style jsx global>{`
+        /* Keep inputs dark: prevent white background/text on focus or autofill */
+        #join input,
+        #join input:focus {
+          background-color: #0A3B2E !important;
+          color: #ffffff !important;
+          -webkit-text-fill-color: #ffffff !important;
+          caret-color: #ffffff;
+          appearance: none;
+          -webkit-appearance: none;
+        }
+        #join input:-webkit-autofill,
+        #join input:-webkit-autofill:hover,
+        #join input:-webkit-autofill:focus,
+        #join input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0px 1000px #0A3B2E inset !important;
+          box-shadow: 0 0 0px 1000px #0A3B2E inset !important;
+          -webkit-text-fill-color: #ffffff !important;
+          background-color: #0A3B2E !important;
+          transition: background-color 9999s ease-in-out 0s;
+          -webkit-transition: background-color 9999s ease-in-out 0s;
         }
       `}</style>
     </div>
