@@ -1,58 +1,17 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function JoinForm() {
-  const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(null);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [currentStep, setCurrentStep] = useState(0);
-  const [stepAnswers, setStepAnswers] = useState({
-    step1: null,
-    step2: null,
-    step3: null,
-    step4: null,
-    step5: null,
-    step6: null,
-    step7: null
-  });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     phone: '',
     email: '',
     company: ''
   });
-  const router = useRouter();
-
-  useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
-      .then(response => response.json())
-      .then(data => {
-        const formattedCountries = data
-          .filter(country => country.idd.root)
-          .map(country => ({
-            name: country.name.common,
-            flag: country.flags.svg,
-            code: formatCountryCode(country)
-          }))
-          .sort((a, b) => a.name.localeCompare(b.name));
-        
-        setCountries(formattedCountries);
-        const us = formattedCountries.find(c => c.name === 'United States');
-        setSelectedCountry(us);
-      });
-  }, []);
-
-  const formatCountryCode = (country) => {
-    if (country.name.common === 'United States') {
-      return '+1 (201) ';
-    }
-    return country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : '');
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -62,39 +21,30 @@ export default function JoinForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Validate required fields
-    const requiredFields = ['firstName', 'lastName', 'phone', 'email', 'company'];
-    const missingFields = requiredFields.filter(field => !formData[field]);
-    
-    if (missingFields.length > 0) {
-      alert('Please fill in all required fields');
+    if (!formData.company || !formData.name) {
+      alert('Please enter Company and Name.');
       return;
     }
-    
-    setCurrentStep(1);
-  };
-
-  const handleStepSubmit = (step, answer) => {
-    if (step === 2 && answer === 'no') {
+    if (!formData.email && !formData.phone) {
+      alert('Please provide at least Email or Phone.');
       return;
-    } else if (step === 6) {
-      setCurrentStep(7);
-    } else {
-      setCurrentStep(step + 1);
     }
-  };
 
-  const handleFinalSubmit = async () => {
     try {
-      // Combine form data with step answers
+      setSubmitting(true);
+      const nameParts = formData.name.trim().split(/\s+/);
+      const firstName = nameParts.shift() || '';
+      const lastName = nameParts.join(' ');
       const finalData = {
-        ...formData,
-        ...stepAnswers
+        firstName,
+        lastName,
+        phone: formData.phone,
+        email: formData.email,
+        company: formData.company
       };
 
-      // Send data to API
       const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
@@ -104,38 +54,20 @@ export default function JoinForm() {
       });
 
       const result = await response.json();
-      
       if (!result.success) {
         throw new Error(result.error || 'Failed to submit form');
       }
 
-      console.log('Form submitted successfully:', finalData);
       setSubmitted(true);
-      
       setTimeout(() => {
-        setCurrentStep(0);
         setSubmitted(false);
-        // Reset both form data and step answers
-        setFormData({
-          firstName: '',
-          lastName: '',
-          phone: '',
-          email: '',
-          company: ''
-        });
-        setStepAnswers({
-          step1: null,
-          step2: null,
-          step3: null,
-          step4: null,
-          step5: null,
-          step6: null,
-          step7: null
-        });
+        setFormData({ name: '', phone: '', email: '', company: '' });
       }, 3000);
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('Failed to submit form. Please try again.');
+      alert((error && error.message) ? error.message : 'Failed to submit form. Please try again.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -145,12 +77,12 @@ export default function JoinForm() {
         return (
           <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
             <div>
-              <label htmlFor="firstName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">First Name*</label>
+              <label htmlFor="company" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Company Name</label>
               <input
-                id="firstName"
+                id="company"
                 type="text"
-                name="firstName"
-                value={formData.firstName}
+                name="company"
+                value={formData.company}
                 onChange={handleInputChange}
                 placeholder="Jane"
                 className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
@@ -159,7 +91,7 @@ export default function JoinForm() {
             </div>
 
             <div>
-              <label htmlFor="lastName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Last Name*</label>
+              <label htmlFor="lastName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Name§</label>
               <input
                 id="lastName"
                 type="text"
@@ -202,19 +134,7 @@ export default function JoinForm() {
               />
             </div>
 
-            <div>
-              <label htmlFor="company" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Company*</label>
-              <input
-                id="company"
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleInputChange}
-                placeholder="Acme Corporation"
-                className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
-                required
-              />
-            </div>
+       
 
             <button
               type="submit"
@@ -582,92 +502,78 @@ export default function JoinForm() {
             
             {/* Form Content */}
             <div className="px-12 pt-32 h-full">
-              {currentStep === 0 ? (
-                <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
-                  <div>
-                    <label htmlFor="firstName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">First Name*</label>
-                    <input
-                      id="firstName"
-                      type="text"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      placeholder="Jane"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="lastName" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Last Name*</label>
-                    <input
-                      id="lastName"
-                      type="text"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      placeholder="Smith"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone Number*</label>
-                    <div className="flex w-full">
-                      <input
-                        id="phone"
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="+1 (212) 555-0123"
-                        className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Email*</label>
-                    <input
-                      id="email"
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="name@example.com"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="company" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Company*</label>
-                    <input
-                      id="company"
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder="Acme Corporation"
-                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
-                      required
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-3 sm:py-4 rounded-full mt-8 sm:mt-12 text-base sm:text-lg font-bold font-arial-bold"
-                  >
-                    Submit
-                  </button>
-                </form>
-              ) : (
-                <div className={currentStep === 5 ? '' : 'pt-8'}>
-                  {renderStepContent()}
+              <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
+                <div>
+                  <label htmlFor="company" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Company Name*</label>
+                  <input
+                    id="company"
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    placeholder="Acme Corporation"
+                    className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
+                    required
+                  />
                 </div>
-              )}
+
+                <div>
+                  <label htmlFor="name" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Name*</label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Jane Smith"
+                    className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Email (optional)</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="name@example.com"
+                    className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400 rounded-none"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="text-white text-xs sm:text-sm mb-1 sm:mb-2 block">Phone (optional)</label>
+                  <div className="flex w-full">
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+1 (212) 555-0123"
+                      className="w-full bg-transparent border-b border-white text-white pb-2 focus:outline-none focus:border-[#1EEB7A] placeholder-gray-400"
+                    />
+                  </div>
+                  <p className="text-[#1EEB7A] text-xs mt-2">Provide at least one: Email or Phone.</p>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-[#1EEB7A] text-[#0A3B2E] py-3 sm:py-4 rounded-full mt-8 sm:mt-12 text-base sm:text-lg font-bold font-arial-bold"
+                  disabled={submitting}
+                >
+                  {submitting ? 'Submitting…' : 'Submit'}
+                </button>
+
+                {submitted && (
+                  <div className="mt-6 transition-opacity duration-300">
+                    <p className="text-[#1EEB7A] text-xl font-charter">Thank you. We will contact you soon.</p>
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </div>
